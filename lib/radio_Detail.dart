@@ -47,17 +47,7 @@ class _radio_DetailState extends State<radio_Detail> {
     }
     setState(() {});
   }
-    playeeAction2() {
-    if (isPlaying) {
-      _player.pause();
-      isPlaying = false;
-    } else {
-      _player.setUrl('assets/mahboon.mp3');
-      _player.play();
-      isPlaying = true;
-    }
-    setState(() {});
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -123,9 +113,13 @@ class _radio_DetailState extends State<radio_Detail> {
                                 : Icon(Icons.play_circle_outline)),
                          IconButton(
                          icon:Icon( Icons.skip_next),
+                          onPressed:() {
+                                _player.setAsset('assets/audio/mahboob.mp3');
+                                _player.play();
+                          } ,
                           iconSize: 24,
                           color: Color.fromARGB(255, 243, 7, 39),
-                          onPressed:playeeAction2(),
+                          
                         ),
                       ],
                     )

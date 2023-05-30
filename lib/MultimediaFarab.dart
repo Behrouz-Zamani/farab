@@ -3,6 +3,7 @@
 import 'package:farab/Gallery.dart';
 import 'package:farab/movieList.dart';
 import 'package:farab/radio_Farab.dart';
+import 'package:farab/radio_List.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -97,7 +98,7 @@ class _multiMediaF extends State<multiMediaF> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                 radioFarab()))
+                                                 radioList()))
                                   },
                             child: Image.asset("assets/images/radioR.png",
                                 fit: BoxFit.fill),

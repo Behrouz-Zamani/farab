@@ -78,7 +78,7 @@ class _radioFarabState extends State<radioFarab> {
                                     size: 32.0,
                                   ),
                                   onTap: () {
-                                     Navigator.push(
+                                     Navigator.push (
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
