@@ -51,9 +51,9 @@ child: Column(
             const SizedBox(height: 8.0,),
  Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
                  InkWell(
-                  child: const Text('آدرس',style: TextStyle(fontWeight: FontWeight.w700,color: Color.fromARGB(255, 3, 1, 112),fontFamily: 'vazir',fontSize: 18),),
+                  child: Text('آدرس',style: TextStyle(fontWeight: FontWeight.w700,color: Color.fromARGB(255, 3, 1, 112),fontFamily: 'vazir',fontSize: 18),),
                   // onTap: ()  {
                   //   Navigator.push(
                   //     context,
@@ -63,7 +63,7 @@ child: Column(
                   ),
                // Text('تاریخچه فراب'),
                 InkWell(
-                  child: const Text('شبکه های اجتماعی',style: TextStyle(fontWeight: FontWeight.w700,color: Color.fromARGB(255, 3, 1, 112),fontFamily: 'vazir',fontSize: 18),),
+                  child: Text('شبکه های اجتماعی',style: TextStyle(fontWeight: FontWeight.w700,color: Color.fromARGB(255, 3, 1, 112),fontFamily: 'vazir',fontSize: 18),),
 
                   // onTap: ()  {
                   //   Navigator.push(

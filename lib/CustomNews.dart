@@ -42,7 +42,7 @@ Widget CustomNews(NewsModel news, BuildContext context) {
           Container(
             padding: const EdgeInsets.all(6.0),
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 16, 4, 129),
+              color: const Color.fromARGB(255, 16, 4, 129),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(

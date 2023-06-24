@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:farab/Home.dart';
-import 'package:farab/main.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -110,7 +109,7 @@ class _MainPageState extends State<MainCompany> {
                                Navigator.push(
                                    context,
                                    MaterialPageRoute(
-                                       builder: (context) => homeScrean()));
+                                       builder: (context) => const homeScrean()));
                              }),
                           // InkWell(
                           //     child: Container(
