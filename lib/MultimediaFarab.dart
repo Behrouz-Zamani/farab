@@ -2,13 +2,17 @@
 
 import 'package:farab/Gallery.dart';
 import 'package:farab/movieList.dart';
-import 'package:farab/radio_Farab.dart';
 import 'package:farab/radio_List.dart';
+import 'package:farab/tvFarabList.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+
+import 'Company_Detail.dart';
+import 'models/CopmanyModel.dart';
 
 void main() {
-  runApp(multiMedia());
+  runApp(const multiMedia());
 }
 
 class multiMedia extends StatelessWidget {
@@ -34,118 +38,103 @@ class multiMediaF extends StatefulWidget {
 }
 
 class _multiMediaF extends State<multiMediaF> {
+
+
+   late VideoPlayerController _controller;
+   bool isPlaying = true ;
+@override
+   void initState(){
+     super.initState();
+      _controller=VideoPlayerController.network('https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-message-of-dr-vakili.mp4')
+      ..initialize().then((_) {
+        setState(() {
+          _controller.play();
+        });
+      });
+   }
+
+
+  
   int selected = 0;
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
+      
       body: SafeArea(
         child: Column(
           children: [
-            Container(
+            SizedBox(
                 width: double.infinity,
-                height: size.height / 1.7,
+                height: size.height /2.3,
                 // color: Colors.amber,
-                child: Image.asset(
-                  "assets/images/MultiR.jpg",
-                  fit: BoxFit.cover,
-                )),
-            Expanded(
-                child: Container(
-              color: Colors.blueAccent,
+                child: 
+                _controller.value.isInitialized
+              ? AspectRatio(
+                  aspectRatio: _controller.value.aspectRatio,
+                  child: VideoPlayer(_controller),
+                )
+              : Container(),
+
+              
+                ),
+                
+            Container(
+              color: Color.fromARGB(255, 255, 255, 255),
               width: double.infinity,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        children: [
-                          InkWell(
-                              onTap: () => {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const GalleryApp()))
-                                  },
-                              child: Image.asset("assets/images/gallery.png",
-                                  fit: BoxFit.fill)),
-                          Text(
-                            "گالری تصاویر",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        children: [
-                          InkWell(
-                                                          onTap: () => {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                 radioList()))
-                                  },
-                            child: Image.asset("assets/images/radioR.png",
-                                fit: BoxFit.fill),
-                          ),
-                          Text(
-                            "رادیو فراب",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        children: [
-                          InkWell(
-                              onTap: () => {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const MainMoview()))
-                                  },
-                              child: Image.asset("assets/images/tvR.png",
-                                  fit: BoxFit.fill)),
-                          Text(
-                            "تلویزیون فراب",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ))
+                          height: 400,
+              child:          SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: 
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: GridView.count(crossAxisCount:  2,
+              crossAxisSpacing: 24,
+              mainAxisSpacing: 24,
+              children: [
+                // ignore: avoid_unnecessary_containers
+                Container(child:  InkWell(child:  Image.asset("assets/images/radioR.png",fit: BoxFit.none,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => radioList()));}),),
+               
+                // ignore: avoid_unnecessary_containers
+                Container(child: InkWell(child: Image.asset("assets/images/tvR.png",fit: BoxFit.none,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => MainMoview()));}),),
+                // ignore: avoid_unnecessary_containers
+                Container(child: InkWell(child: Image.asset("assets/images/gallery.png",fit: BoxFit.none,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => GalleryApp()));}),),
+                // ignore: avoid_unnecessary_containers
+                Container(child: InkWell(child: Image.asset("assets/images/diary.png",fit: BoxFit.none,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[4])));}),),
+                // ignore: avoid_unnecessary_containers
+                
+
+                
+              ],),
+            )
+
+            
+          ),
+            )
           ],
         ),
+
+        
       ),
+       floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              _controller.value.isPlaying
+                  ? _controller.pause()
+                  : _controller.play();
+            });
+          },
+          child: Icon(
+            _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+          ),
+        ),
     );
+  }
+    @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
   }
 }

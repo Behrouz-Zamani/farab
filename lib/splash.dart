@@ -35,7 +35,7 @@ class _splashScreenState extends State<splashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Image(image: AssetImage('assets/images/logo.png'),height: 132,),
+              const Image(image: AssetImage('assets/images/farab-logo-header.png'),height: 132,),
 
               SizedBox(height: 56,),
               SpinKitWaveSpinner(
