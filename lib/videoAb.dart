@@ -30,16 +30,16 @@ class _videoAb extends State<Abvideo> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBar(title: Text('حوزه آب'),backgroundColor: Color.fromARGB (255  , 0, 199, 177),),
-           body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            height: size.height / 2.2,
-            color: Colors.amber,
-          ),
-          Container(
-            child: Column(
+      appBar: AppBar(title: Text('تلویزیون فراب - حوزه آب'),backgroundColor: Color.fromARGB (255  , 0, 199, 177),),
+           body: SingleChildScrollView(
+             child: Column(
+                   children: [
+                     Container(
+              width: double.infinity,
+              height: size.height / 3,
+              color: Colors.amber,
+                     ),
+                     Column(
               children: [
                Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -49,7 +49,7 @@ class _videoAb extends State<Abvideo> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: const Color.fromARGB(255, 57, 12, 141),
+                        color: const Color.fromARGB(255, 0, 199, 177),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -58,7 +58,7 @@ class _videoAb extends State<Abvideo> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'رادیو فراب',
+                              'نیزوگاه کارون 1 - 1000 مگاوات',
                               style: TextStyle(
                                   fontFamily: 'vazir',
                                   color: Colors.white,
@@ -85,7 +85,7 @@ class _videoAb extends State<Abvideo> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: const Color.fromARGB(255, 57, 12, 141),
+                        color: const Color.fromARGB(255, 0, 199, 177),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -94,7 +94,439 @@ class _videoAb extends State<Abvideo> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'دف‌نوازی آقای محمد وکیلی از همکاران گروه فراب',
+                              'نیروگاه کرخه - 400 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                 Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+'نیروگاه مسجد سلیمان - 1000 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                 Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+'نیروگاه کارون 3 - 2000 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                 Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه کوهرنگ - 39.3 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'توسعه نیروگاه مسجد سلیمان - 1000 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه کارون 4 - 1000 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه شهید رجایی - 13.5 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه لوراک - 47 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه گتوند علیا - 1000 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه تانا(کشور کنیا) - 25 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه تلمبه ذخیره ای سیاه بیشه - 1000 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه سنگ توده2(کشور تاجیکستان) - 220 مگاوات',
+                              style: TextStyle(
+                                  fontFamily: 'vazir',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  //await _player.setAsset('assets/images/dafnavazi.mp3');
+                                  //_player.play();
+                                },
+                                icon: const Icon(Icons.play_circle_outline),
+                                color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 64,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: const Color.fromARGB(255, 0, 199, 177),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'نیروگاه سیمره - 480 مگاوات',
                               style: TextStyle(
                                   fontFamily: 'vazir',
                                   color: Colors.white,
@@ -115,9 +547,9 @@ class _videoAb extends State<Abvideo> {
                 ),
                
               ],
-            ),
-          ),
-        ],
-      ),
+                     ),
+                   ],
+                 ),
+           ),
     );
 }}

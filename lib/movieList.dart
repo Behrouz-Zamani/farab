@@ -1,5 +1,7 @@
 // ignore_for_file: file_names
 
+import 'package:farab/videoNirogah.dart';
+
 import 'videoAb.dart';
 import 'package:farab/vakilimoview.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +64,7 @@ class _MainMoview extends State<MainMoview> {
         'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-message-of-dr-vakili.mp4')
       ..initialize().then((_) {
         setState(() {
-          _controller.play();
+        //  _controller.play();
         });
       });
 
@@ -70,7 +72,7 @@ class _MainMoview extends State<MainMoview> {
         'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
       ..initialize().then((_) {
         setState(() {
-          _controller2.play();
+         // _controller2.play();
         });
       });
 
@@ -78,7 +80,7 @@ class _MainMoview extends State<MainMoview> {
         'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-daf.mp4')
       ..initialize().then((_) {
         setState(() {
-          _controller3.play();
+         // _controller3.play();
         });
       });
   }
@@ -146,7 +148,11 @@ class _MainMoview extends State<MainMoview> {
                               "assets/images/niro.jpg",
                               fit: BoxFit.cover,
                             ),
-                            onTap: () => {changevideo(), stop()}),
+                           onTap: () => {                                Navigator.push(
+                                  context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Nirogahvideo()))
+                                        }),
                       ),
                       // ignore: avoid_unnecessary_containers
                       Container(

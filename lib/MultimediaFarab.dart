@@ -39,7 +39,7 @@ class multiMediaF extends StatefulWidget {
 
 class _multiMediaF extends State<multiMediaF> {
   late VideoPlayerController _controller;
-  bool isPlaying = true;
+  bool isPlaying = false;
   @override
   void initState() {
     super.initState();
@@ -47,7 +47,7 @@ class _multiMediaF extends State<multiMediaF> {
         'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-message-of-dr-vakili.mp4')
       ..initialize().then((_) {
         setState(() {
-          _controller.play();
+          //_controller.play();
         });
       });
   }
