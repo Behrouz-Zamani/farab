@@ -50,11 +50,11 @@ class _homeScreanPageState extends State<homeScreanPage> {
 children: [
              Container(
                width: double.infinity,
-                height: size.height/1.05,
+                height: size.height/1.04,
                 color: const Color.fromARGB(255, 33, 58, 148),
                 child: Image.asset("assets/images/ssp.jpg"),
               ),
-
+ 
               Positioned(
                 top: size.height / 3.4,
                 left:55,
@@ -71,9 +71,9 @@ children: [
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
-                                          Color.fromARGB(139, 253, 250, 250)),
+                                          Color.fromARGB(255, 253, 250, 250)),
                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                 child: Image(image: Image.asset("assets/images/information.png").image),
+                                 child: Image(image: Image.asset("assets/images/a5.png").image),
                                  
                                 ),
                                 onTap: () {
@@ -85,7 +85,7 @@ children: [
                                 }),
                                 const Padding(
                                   padding: EdgeInsets.only(left: 8),
-                                  child: Text("درباره فراب",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255),fontSize: 16,fontWeight: FontWeight.w600),),
+                                  child: Text("درباره فراب",style: TextStyle(color:Color.fromARGB(255, 255, 255, 1),fontSize: 16,fontWeight: FontWeight.w600),),
                                 )
                                 
                       ],
@@ -111,9 +111,9 @@ children: [
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
-                                          Color.fromARGB(139, 253, 250, 250)),
+                                          Color.fromARGB(255, 253, 250, 250)),
                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                 child: Image(image: Image.asset("assets/images/puzzle-pieces.png").image),
+                                 child: Image(image: Image.asset("assets/images/a2.png").image),
                                  
                                 ),
                                 onTap: () {
@@ -125,7 +125,7 @@ children: [
                                 }),
                                 const Padding(
                                   padding: EdgeInsets.only(left: 8),
-                                  child: Text("حوزه های فعالیت",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255),fontSize: 16,fontWeight: FontWeight.w600),),
+                                  child: Text("حوزه های فعالیت",style: TextStyle(color:Color.fromARGB(255, 255, 255, 1),fontSize: 16,fontWeight: FontWeight.w600),),
                                 )
                                 
                       ],
@@ -151,9 +151,9 @@ children: [
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
-                                          Color.fromARGB(139, 253, 250, 250)),
+                                          Color.fromARGB(255, 253, 250, 250)),
                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                 child: Image(image: Image.asset("assets/images/office.png").image),
+                                 child: Image(image: Image.asset("assets/images/a4.png").image),
                                  
                                 ),
                                 onTap: () {
@@ -165,7 +165,7 @@ children: [
                                 }),
                                 const Padding(
                                   padding: EdgeInsets.only(left: 8),
-                                  child: Text("شرکت های تابعه",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255),fontSize: 16,fontWeight: FontWeight.w600),),
+                                  child: Text("شرکت های تابعه",style: TextStyle(color:Color.fromARGB(255, 255, 255, 0),fontSize: 16,fontWeight: FontWeight.w600),),
                                 )
                                 
                       ],
@@ -191,9 +191,9 @@ children: [
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
-                                          Color.fromARGB(139, 253, 250, 250)),
+                                          Color.fromARGB(255, 253, 250, 250)),
                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                 child: Image(image: Image.asset("assets/images/multimedia.png").image),
+                                 child: Image(image: Image.asset("assets/images/a6.png").image),
                                  
                                 ),
                                 onTap: () {
@@ -205,7 +205,7 @@ children: [
                                 }),
                                 const Padding(
                                   padding: EdgeInsets.only(left: 8),
-                                  child: Text("چند رسانه ایی",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255),fontSize: 16,fontWeight: FontWeight.w600),),
+                                  child: Text("چند رسانه ایی",style: TextStyle(color:Color.fromARGB(255, 255, 255, 1),fontSize: 16,fontWeight: FontWeight.w600),),
                                 )
                                 
                       ],
@@ -231,9 +231,9 @@ children: [
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
-                                          Color.fromARGB(139, 253, 250, 250)),
+                                          Color.fromARGB(255, 253, 250, 250)),
                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                 child: Image(image: Image.asset("assets/images/newspaper.png").image),
+                                 child: Image(image: Image.asset("assets/images/a3.png").image),
                                  
                                 ),
                                 onTap: () {
@@ -245,7 +245,7 @@ children: [
                                 }),
                                 const Padding(
                                   padding: EdgeInsets.only(left: 8),
-                                  child: Text("اخبار فراب",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255),fontSize: 16,fontWeight: FontWeight.w600),),
+                                  child: Text("اخبار فراب",style: TextStyle(color:Color.fromARGB(255, 255, 255, 1),fontSize: 16,fontWeight: FontWeight.w600),),
                                 )
                                 
                       ],
