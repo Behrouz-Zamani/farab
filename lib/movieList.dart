@@ -1,6 +1,11 @@
 // ignore_for_file: file_names
 
+import 'package:farab/videoHoshmand.dart';
+import 'package:farab/videoNaft.dart';
 import 'package:farab/videoNirogah.dart';
+import 'package:farab/videoReili.dart';
+import 'package:farab/videoSakhteman.dart';
+import 'package:farab/videoTajdid.dart';
 
 import 'videoAb.dart';
 import 'package:farab/vakilimoview.dart';
@@ -174,7 +179,12 @@ class _MainMoview extends State<MainMoview> {
                               "assets/images/sakhteman.jpg",
                               fit: BoxFit.cover,
                             ),
-                            onTap: () => {}),
+                           onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Sakhtemanvideo()));
+                              }),
                       ),
                       // ignore: avoid_unnecessary_containers
                       Container(
@@ -183,7 +193,12 @@ class _MainMoview extends State<MainMoview> {
                               "assets/images/reil.jpg",
                               fit: BoxFit.cover,
                             ),
-                            onTap: () => {}),
+                             onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Reilivideo()));
+                              }),
                       ),
                       // ignore: avoid_unnecessary_containers
                       Container(
@@ -192,7 +207,12 @@ class _MainMoview extends State<MainMoview> {
                               "assets/images/hoshmand.jpg",
                               fit: BoxFit.cover,
                             ),
-                            onTap: () => {}),
+                            onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Hoshmandvideo()));
+                              }),
                       ),
                       // ignore: avoid_unnecessary_containers
                       Container(
@@ -201,7 +221,12 @@ class _MainMoview extends State<MainMoview> {
                               "assets/images/gaz.jpg",
                               fit: BoxFit.cover,
                             ),
-                            onTap: () => {}),
+                            onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Naftvideo()));
+                              }),
                       ),
                       // ignore: avoid_unnecessary_containers
 
@@ -215,7 +240,12 @@ class _MainMoview extends State<MainMoview> {
                               "assets/images/bahrebardari.jpg",
                               fit: BoxFit.cover,
                             ),
-                            onTap: () => {}),
+                            onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Tajdidvideo()));
+                              }),
                       ),
                       // ignore: avoid_unnecessary_containers
                       Container(
