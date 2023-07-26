@@ -37,10 +37,10 @@ class _splashScreenState extends State<splashScreen> {
             children: [
               const Image(image: AssetImage('assets/images/farab-logo-header.png'),height: 132,),
 
-              SizedBox(height: 56,),
-              SpinKitWaveSpinner(
+              SizedBox(height: 48,),
+              SpinKitFadingCube(
               color: Color.fromARGB(255, 14, 6, 114),
-              size: 100.0,),
+              size: 50.0,),
             ],
           ),
         ),

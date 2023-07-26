@@ -1,3 +1,4 @@
+
 import 'package:farab/azimivideos.dart';
 import 'package:farab/vakilimoview.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +13,45 @@ class Abvideo extends StatefulWidget{
     
 
   @override
-  State<Abvideo> createState() => _videoAb();
+  State<Abvideo> createState() => _Abvideo();
 }
-class _videoAb extends State<Abvideo> {
+class _Abvideo extends State<Abvideo> {
+   int selected = 0;
+  List<int> loc = [0, 0, 0, 0, 0, 0, 0];
+  late VideoPlayerController _controller;
+  late VideoPlayerController _controller2;
+  late VideoPlayerController _controller3;
+
+  bool isPlaying = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = VideoPlayerController.network(
+        'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-message-of-dr-vakili.mp4')
+      ..initialize().then((_) {
+        setState(() {
+         _controller.play();
+        });
+      });
+
+    _controller2 = VideoPlayerController.network(
+        'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
+      ..initialize().then((_) {
+        setState(() {
+         _controller2.play();
+        });
+      });
+
+    _controller3 = VideoPlayerController.network(
+        'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-daf.mp4')
+      ..initialize().then((_) {
+        setState(() {
+         _controller3.play();
+        });
+      });
+  }
     @override
   Widget build(BuildContext context) {
     localizationsDelegates:
@@ -28,17 +65,39 @@ class _videoAb extends State<Abvideo> {
       Locale('fa'), // English
     ];
     var size = MediaQuery.of(context).size;
-
     return Scaffold(
       appBar: AppBar(title: Text('تلویزیون فراب - حوزه آب'),backgroundColor: Color.fromARGB (255  , 0, 199, 177),),
            body: SingleChildScrollView(
              child: Column(
                    children: [
-                     Container(
-              width: double.infinity,
-              height: size.height / 3,
-              color: Colors.amber,
-                     ),
+              Container(
+                  width: double.infinity,
+                  height: size.height /3,
+               decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/mockup.png"),fit: BoxFit.cover,)),
+                
+                child: Container(
+                   margin: EdgeInsets.only(left: 16.0,top: 10.0,right: 16.0,bottom: 40.0),
+                  child: SizedBox(
+                     width: double.infinity,
+                    height: 80,
+                  
+                    
+                    // color: Colors.amber,
+                    child: _controller.value.isInitialized
+                        ? AspectRatio(
+                            aspectRatio: _controller.value.aspectRatio,
+                            child: selected == 0
+                                ? VideoPlayer(_controller)
+                                : selected == 1
+                                    ? VideoPlayer(_controller2)
+                                    : selected == 2
+                                        ? VideoPlayer(_controller3)
+                                        : null,
+                          )
+                        : Container(),
+                  ),
+                ),
+              ),
                      Column(
               children: [
                Padding(

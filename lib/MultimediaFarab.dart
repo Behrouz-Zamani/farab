@@ -63,7 +63,7 @@ class _multiMediaF extends State<multiMediaF> {
           children: [
             SizedBox(
               width: double.infinity,
-              height: size.height / 2.3,
+              height: size.height / 3,
               // color: Colors.amber,
               child: _controller.value.isInitialized
                   ? AspectRatio(
@@ -72,123 +72,161 @@ class _multiMediaF extends State<multiMediaF> {
                     )
                   : Container(),
             ),
-            Container(
-              color: Color.fromARGB(255, 213, 203, 159),
-              width: double.infinity,
-              height: 400,
-              child: SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: GridView.count(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 24,
-                      mainAxisSpacing: 24,
-                      children: [
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 3.0,
-                              )
-                            ]
+            
+            Padding(
+              padding: const EdgeInsets.only(top:32.0),
+              child: Container(
+                color: Color.fromARGB(255, 213, 203, 159),
+                width: double.infinity,
+                height: 400,
+                child: SizedBox(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: GridView.count(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 24,
+                        mainAxisSpacing: 24,
+                        children: [
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3.0,
+                                )
+                              ]
+                            ),
+                            child: InkWell(
+                              
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children:[ Image.asset(
+                                    "assets/images/a7.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text('رادیو فراب'),
+                                  )
+                                  ],
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => radioList()));
+                                }),
                           ),
-                          child: InkWell(
-                            
-                              child: Image.asset(
-                                "assets/images/a7.png",
-                                fit: BoxFit.none,
-                              ),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => radioList()));
-                              }),
-                        ),
-
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 3.0,
-                              )
-                            ]
+              
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                             decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3.0,
+                                )
+                              ]
+                            ),
+                            child: InkWell(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children:[ Image.asset(
+                                    "assets/images/a9.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text('تلویزیون فراب'),
+                                  )
+                                  ]
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => MainMoview()));
+                                }),
                           ),
-                          child: InkWell(
-                              child: Image.asset(
-                                "assets/images/a9.png",
-                                fit: BoxFit.none,
-                              ),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => MainMoview()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 3.0,
-                              )
-                            ]
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                             decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3.0,
+                                )
+                              ]
+                            ),
+                            child: InkWell(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children:[ Image.asset(
+                                    "assets/images/a11.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text('گالری تصاویر فراب'),
+                                  )
+                                  ]
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => GalleryApp()));
+                                }),
                           ),
-                          child: InkWell(
-                              child: Image.asset(
-                                "assets/images/a11.png",
-                                fit: BoxFit.none,
-                              ),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => GalleryApp()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 3.0,
-                              )
-                            ]
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                             decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3.0,
+                                )
+                              ]
+                            ),
+                            child: InkWell(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children:[ Image.asset(
+                                    "assets/images/a3.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                  Text('نشریه فراب')
+                                  ],
+                                ),
+              
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              CompanyPage(companyModel[4])));
+                                }),
                           ),
-                          child: InkWell(
-                              child: Image.asset(
-                                "assets/images/a3.png",
-                                fit: BoxFit.none,
-                              ),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            CompanyPage(companyModel[4])));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                      ],
-                    ),
-                  )),
+                          // ignore: avoid_unnecessary_containers
+                        ],
+                      ),
+                    )),
+              ),
             )
           ],
         ),
