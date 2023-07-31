@@ -48,7 +48,7 @@ class _hozeFarabState extends State<hoze_Farab> {
       child: Column(
         children: [
           Container(
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Color.fromARGB(255, 247, 247, 247),
             width: double.infinity,
             height: size.height / 1.7,
             child: Stack(

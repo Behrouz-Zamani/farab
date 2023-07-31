@@ -152,7 +152,7 @@ class _MainMoview extends State<MainMoview> {
                 ),
               ),
               Container(
-              color: Color.fromARGB(255, 213, 203, 159),
+             // color: Color.fromARGB(255, 213, 203, 159),
                 child: SizedBox(
                     width: double.infinity,
                       
@@ -280,12 +280,12 @@ class _MainMoview extends State<MainMoview> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children:[ Image.asset(
-                                    "assets/images/MultiR.jpg",
+                                    "assets/images/raily.png",
                                       width: 65,
                                       height: 65,
                                     fit: BoxFit.cover,
                                   ),
-                                                                    Text('نیروگاه حرارتی')
+                                                                    Text('ریلی')
                         
                                   ]
                                 ),
@@ -293,7 +293,7 @@ class _MainMoview extends State<MainMoview> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Reilivideo()));
+                                            builder: (context) => Reilvideo()));
                                   }),
                           ),
                           // ignore: avoid_unnecessary_containers
