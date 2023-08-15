@@ -85,10 +85,42 @@ class _multiMediaF extends State<multiMediaF> {
                     child: Padding(
                       padding: const EdgeInsets.all(24.0),
                       child: GridView.count(
-                        crossAxisCount: 2,
+                        crossAxisCount: 3,
                         crossAxisSpacing: 24,
                         mainAxisSpacing: 24,
                         children: [
+                          Container(
+                             decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3.0,
+                                )
+                              ]
+                            ),
+                            child: InkWell(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children:[ Image.asset(
+                                    "assets/images/a11.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text('گالری تصاویر '),
+                                  )
+                                  ]
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => GalleryApp()));
+                                }),
+                          ),
                           // ignore: avoid_unnecessary_containers
                           Container(
                             decoration: BoxDecoration(
@@ -158,38 +190,7 @@ class _multiMediaF extends State<multiMediaF> {
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
-                          Container(
-                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]
-                            ),
-                            child: InkWell(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children:[ Image.asset(
-                                    "assets/images/a11.png",
-                                    fit: BoxFit.none,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('گالری تصاویر فراب'),
-                                  )
-                                  ]
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => GalleryApp()));
-                                }),
-                          ),
+                          
                           // ignore: avoid_unnecessary_containers
                           Container(
                              decoration: BoxDecoration(
@@ -211,6 +212,37 @@ class _multiMediaF extends State<multiMediaF> {
                                     fit: BoxFit.none,
                                   ),
                                   Text('نشریه فراب')
+                                  ],
+                                ),
+              
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              CompanyPage(companyModel[4])));
+                                }),
+                          ),
+                                                    Container(
+                             decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 3.0,
+                                )
+                              ]
+                            ),
+                            child: InkWell(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children:[ Image.asset(
+                                    "assets/images/a3.png",
+                                    fit: BoxFit.none,
+                                  ),
+                                  Text('مسئولیت اجتماعی', style: TextStyle(fontSize: 12),)
                                   ],
                                 ),
               

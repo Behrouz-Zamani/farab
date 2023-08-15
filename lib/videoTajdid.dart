@@ -1,13 +1,31 @@
+import 'dart:convert';
+
 import 'package:farab/models/videosAbModels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';
-
+import 'models/MoviesListes.dart';
+import 'package:http/http.dart' as http;
+//import 'package:farab/dart.convert' as convert;
 import 'models/videoTajdidModels.dart';
 
 class Tajdidvideo extends StatefulWidget {
+
+    List<MoviewsListes> movielsit=[];
+    getResponse()
+    {
+      var url="https://sasansafari.com/flutter/api.php?access_key=flutter123456";
+      http.get(Uri.parse(url)).then((value) {
+
+List jsonList =jsonDecode(value.body)
+      });
+
+    }
+
   @override
   State<Tajdidvideo> createState() => _Tajdidvideo();
+
+
 }
 
 class _Tajdidvideo extends State<Tajdidvideo> {
