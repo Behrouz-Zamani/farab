@@ -1,51 +1,37 @@
-import 'dart:convert';
-
 import 'package:farab/models/videosAbModels.dart';
+import 'package:farab/services/dio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';
 import 'models/MoviesListes.dart';
 import 'package:http/http.dart' as http;
-//import 'package:farab/dart.convert' as convert;
+import 'dart:convert' as convert;
 import 'models/videoTajdidModels.dart';
 
 class Tajdidvideo extends StatefulWidget {
-
-    List<MoviewsListes> movielsit=[];
-    getResponse()
-    {
-      var url="https://sasansafari.com/flutter/api.php?access_key=flutter123456";
-      http.get(Uri.parse(url)).then((value) {
-
-List jsonList =jsonDecode(value.body)
-      });
-
-    }
-
   @override
   State<Tajdidvideo> createState() => _Tajdidvideo();
-
-
 }
 
 class _Tajdidvideo extends State<Tajdidvideo> {
   int selected = 0;
-  bool isPlaying = true;
+  bool isPlaying = false;
   late VideoPlayerController _controller;
   int _currentIndex = 0;
-
+ 
   void _playVideo({int index = 0, bool init = false}) {
     if (index < 0 || index >= videotajdidmodel.length) return;
     if (!init) {
       _controller.pause();
     }
-    setState(() {
-      this._currentIndex = index;
-    });
+    // setState(() {
+    //   this._currentIndex = index;
+    // });
 
-    _controller = VideoPlayerController.network(videotajdidmodel[_currentIndex].url)
-      ..addListener(() => setState(() {}))
-      ..initialize().then((value) => _controller.play());
+    _controller =
+        VideoPlayerController.network(videotajdidmodel[_currentIndex].url)
+          ..addListener(() => setState(() {}))
+          ..initialize().then((value) => _controller.play());
   }
 
   @override
@@ -53,9 +39,32 @@ class _Tajdidvideo extends State<Tajdidvideo> {
     super.initState();
     _playVideo(init: true);
   }
+       List<MoviewsListes> movielsit = [];
 
+  getResponse() {
+    var url =
+        "https://sasansafari.com/flutter/api.php?access_key=flutter123456";
+    http.get(Uri.parse(url)).then((value) {
+      print(value.statusCode);
+      List jsonList = convert.jsonDecode(value.body);
+
+      for (int i = 0; i < jsonList.length; i++) {
+        setState(() {
+          movielsit.add(MoviewsListes(
+            id: jsonList[i]["id"],
+            title: jsonList[i]["title"],
+            price: jsonList[i]["price"],
+            status: jsonList[i]["status"],
+          ));
+        });
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
+
+      DioService().getmethod('https://sasansafari.com/flutter/api.php?access_key=flutter123456');
+    
     [
       GlobalMaterialLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,
@@ -68,7 +77,10 @@ class _Tajdidvideo extends State<Tajdidvideo> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('تلویزیون فراب - حوزه انرژی تجدید پذیر',style: TextStyle(fontSize: 14),),
+        title: const Text(
+          'تلویزیون فراب - حوزه انرژی تجدید پذیر',
+          style: TextStyle(fontSize: 14),
+        ),
         backgroundColor: const Color.fromARGB(255, 184, 97, 37),
       ),
       body: SafeArea(
@@ -98,69 +110,27 @@ class _Tajdidvideo extends State<Tajdidvideo> {
                         : Container()),
               ),
             ),
-       
             Container(
-             // color: const Color.fromARGB(255, 255, 255, 255),
+              // color: const Color.fromARGB(255, 255, 255, 255),
               height: size.height / 1.8,
-              child: ListView.builder(
-                itemCount: videotajdidmodel.length,
-                itemBuilder: (context, indext) {
-                  return Padding(
-                    padding: const EdgeInsets.only(
-                        top: 8.0, left: 16.0, bottom: 8.0, right: 16.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: const Color.fromARGB(255, 184, 97, 37),
-                      ),
-                      height: 64,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Row(
-                              children: [
-                                InkWell(
-                                  onTap: () => _playVideo(index: indext),
-                                  child: Text(
-                                    videotajdidmodel[indext].name,
-                                    style: const TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'vazir',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
+              child:Text("data")
             ),
           ],
         ),
-            
       ),
-       floatingActionButton: FloatingActionButton(
-       backgroundColor: Color.fromARGB(255, 254, 80, 0),
-       onPressed: () {
-         setState(() {
-           _controller.value.isPlaying
-               ? _controller.pause()
-               : _controller.play();
-
-         });
-       },
-       child: Icon(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 254, 80, 0),
+        onPressed: () {
+          setState(() {
+            _controller.value.isPlaying
+                ? _controller.pause()
+                : _controller.play();
+          });
+        },
+        child: Icon(
           _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-       ),
-     ),
+        ),
+      ),
     );
   }
 

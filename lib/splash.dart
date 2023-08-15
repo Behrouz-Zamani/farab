@@ -1,4 +1,5 @@
 import 'package:farab/main.dart';
+import 'package:farab/services/dio_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -27,6 +28,8 @@ class _splashScreenState extends State<splashScreen> {
  
   @override
   Widget build(BuildContext context){
+      
+
     return Scaffold(
       body: SafeArea(
         child: Center(

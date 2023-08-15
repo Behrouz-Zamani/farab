@@ -3,6 +3,7 @@
 import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/hoze_Farab.dart';
 import 'package:farab/news_Farab.dart';
+import 'package:farab/services/dio_service.dart';
 import 'package:farab/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
@@ -41,6 +43,10 @@ class _MainPageState extends State<MainCompany> {
   int selected = 0;
   @override
   Widget build(BuildContext context) {
+
+    
+
+    
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(

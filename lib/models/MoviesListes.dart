@@ -1,16 +1,16 @@
 class MoviewsListes
 {
   String? id;
-  String? name;
-  String? videopic;
-  String? videourl;
+  String? title;
+  String? price;
+  String? status;
 
   MoviewsListes
   ({
       this.id,
-      this.name,
-      this.videopic,
-      this.videourl
+      this.title,
+      this.price,
+      this.status
   });
 
 }
