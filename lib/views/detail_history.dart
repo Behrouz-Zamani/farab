@@ -1,12 +1,12 @@
 // ignore: file_names
 // ignore_for_file: file_names, duplicate_ignore
 
-import 'package:farab/models/NewsModel.dart';
+import 'package:farab/models/history_model.dart';
 import 'package:flutter/material.dart';
 
-class Newspage extends StatelessWidget {
-  final NewsModel newse;
-  const Newspage(this.newse, {super.key});
+class HistoryPage extends StatelessWidget {
+  final HistoryModel history;
+  const HistoryPage(this.history, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Newspage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(newse.onvan),
+        title: Text(history.sal),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -27,7 +27,7 @@ class Newspage extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(newse.img), fit: BoxFit.cover),
+                    image: AssetImage(history.pic), fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(24.0),
               ),
             ),
@@ -39,8 +39,9 @@ class Newspage extends StatelessWidget {
               padding: const EdgeInsets.all(6.0),
               child: SingleChildScrollView(
                   child: Text(
-                newse.detail,
+                history.detail,
                 textDirection: TextDirection.rtl,
+                textAlign: TextAlign.justify,
                 style: const TextStyle(
                   color: Color.fromARGB(255, 0, 0, 0),
                   fontSize: 16,

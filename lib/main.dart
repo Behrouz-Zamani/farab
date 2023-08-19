@@ -44,7 +44,7 @@ class _MainPageState extends State<MainCompany> {
   @override
   Widget build(BuildContext context) {
 
-    
+
 
     
     var size = MediaQuery.of(context).size;
@@ -86,7 +86,7 @@ class _MainPageState extends State<MainCompany> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const aboutFarab()));
+                                              const AboutFarab()));
                                 }),
                             const Padding(
                               padding: EdgeInsets.only(left: 8),

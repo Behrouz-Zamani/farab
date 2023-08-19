@@ -81,7 +81,7 @@ children: [
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const aboutFarab()));
+                                              const AboutFarab()));
                                 }),
                                 const Padding(
                                   padding: EdgeInsets.only(left: 8),

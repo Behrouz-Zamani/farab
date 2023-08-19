@@ -1,109 +1,62 @@
-// ignore: file_names
-// ignore_for_file: file_names, duplicate_ignore
-
-import 'package:farab/eftekharatFarab.dart';
-import 'package:farab/ozviyatFarab.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:farab/models/history_model.dart';
+import 'package:farab/views/history_list.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'Home.dart';
+import 'eftekharatFarab.dart';
+import 'ozviyatFarab.dart';
 
-void main() {
-  runApp(const about());
+class AboutFarab extends StatefulWidget {
+  const AboutFarab({super.key});
+
+  @override
+  State<AboutFarab> createState() => _AboutFarabState();
 }
 
-// ignore: camel_case_types
-class about extends StatelessWidget {
-  const about({super.key});
+class _AboutFarabState extends State<AboutFarab> {
+
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: [
-        Locale('fa'), // English
-      ],
-      home: aboutFarab(),
-    );
-  }
-}
 
-// ignore: camel_case_types
-class aboutFarab extends StatefulWidget {
-  const aboutFarab({
-    Key? key,
-  }) : super(key: key);
+        var size = MediaQuery.of(context).size;
 
-  @override
-  State<aboutFarab> createState() => _aboutFarab();
-}
 
-// ignore: camel_case_types
-class _aboutFarab extends State<aboutFarab> {
-  @override
-  Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
-      //  backgroundColor: Colors.blueGrey,
-      body: SafeArea(
-          child: Column(
+        
+
+      appBar: AppBar(
+        title: Title(color: Colors.white, child: const Text('درباره فراب')),
+      ),
+    body: SafeArea(
+
+      child: 
+    Column(
         children: [
           SizedBox(
             width: double.infinity,
-            height: size.height / 2.3,
-            child: Stack(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: size.height / 2.3,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.only(
-                        bottomLeft: Radius.circular(55)),
-                    image: DecorationImage(
-                        image: Image.asset("assets/images/main.jpg").image,
-                        fit: BoxFit.cover),
-                  ),
-                ),
-                Positioned(
-                  right: 0,
-                  top: 0,
-                  left: 0,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          InkWell(
-                              child: Container(
-                                width: 36,
-                                height: 36,
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Color.fromARGB(139, 253, 250, 250)),
-                                child: const Icon(CupertinoIcons.home),
-                              ),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const homeScrean()));
-                              }),
-                        ]),
-                  ),
-                ),
-              ],
+            height: size.height / 2.6,
+            child: Container(
+              width: double.infinity,
+              height: size.height /2.6,
+              color:Colors.amber,
+              child: 
+              Image(image:Image.asset('assets/images/main.jpg').image , fit: BoxFit.cover,),
             ),
           ),
+
           SizedBox(
-            height: 75,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+            width: double.infinity,
+            height: 64,
+            child: Container(
+              width: double.infinity,
+              height: 64,
+              color: Colors.black12,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 InkWell(
                   child: const Text('افتخارات فراب'),
@@ -125,30 +78,33 @@ class _aboutFarab extends State<aboutFarab> {
                     );
                   },
                   ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: const Color.fromARGB(187, 255, 255, 255),
-              width: double.infinity,
-              height: size.height / 2 * 0.75,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.all(24.0),
-                      child: Text(' شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',textAlign: TextAlign.justify,textDirection: TextDirection.rtl,),
-                          
-
-                    ),
-                  ],
-                ),
+                                  InkWell(
+                  child: const Text('تاریخچه فراب'),
+                  onTap: ()  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HostoryList())
+                    );
+                  },
+                  ),
+              ],),
               ),
-            ),
-          )
+            )
+          ),
+          Container(
+        width: double.infinity,
+        height: size.height /2.4,
+        //color: Colors.yellow,
+        child: 
+        const Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Expanded(child: Text('شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',textAlign: TextAlign.justify,textDirection: TextDirection.rtl,style:TextStyle(fontSize:18,fontWeight: FontWeight.bold))),
+        ),
+      )
+
         ],
-      )),
+    ),
+    ),
     );
   }
 }

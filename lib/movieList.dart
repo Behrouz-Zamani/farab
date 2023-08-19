@@ -66,23 +66,23 @@ class _MainMoview extends State<MainMoview> {
     super.initState();
 
     _controller = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-message-of-dr-vakili.mp4')
+        'https://www.farab.com/fa/wp-content/upload/2023/03/nowruz-message-of-dr-vakili.mp4')
       ..initialize().then((_) {
         setState(() {
           _controller.play();
         });
       });
 
-    _controller2 = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
-      ..initialize().then((_) {
-        setState(() {
-          _controller2.play();
-        });
-      });
+    // _controller2 = VideoPlayerController.network(
+    // //    'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
+    //   //..initialize().then((_) {
+    //     setState(() {
+    //       _controller2.play();
+    //     });
+    //   });
 
     _controller3 = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-daf.mp4')
+        'https://www.farab.com/fa/wp-content/upload/2023/03/nowruz-daf.mp4')
       ..initialize().then((_) {
         setState(() {
           _controller3.play();
@@ -399,7 +399,7 @@ class _MainMoview extends State<MainMoview> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Tajdidvideo()));
+                                          builder: (context) => videoTajdid()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers

@@ -4,6 +4,7 @@ import 'package:farab/Gallery.dart';
 import 'package:farab/movieList.dart';
 import 'package:farab/radio_List.dart';
 import 'package:farab/tvFarabList.dart';
+import 'package:farab/views/tv_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -186,7 +187,7 @@ class _multiMediaF extends State<multiMediaF> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => MainMoview()));
+                                          builder: (context) => mainvideo()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
