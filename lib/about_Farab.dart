@@ -1,5 +1,6 @@
 import 'package:farab/models/history_model.dart';
 import 'package:farab/views/history_list.dart';
+import 'package:farab/views/tavanmandi.dart';
 import 'package:flutter/material.dart';
 
 import 'eftekharatFarab.dart';
@@ -58,6 +59,16 @@ class _AboutFarabState extends State<AboutFarab> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                                InkWell(
+                  child: const Text('توانمندی ها'),
+
+                  onTap: ()  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Tavanmandi())
+                    );
+                  },
+                  ),
                 InkWell(
                   child: const Text('افتخارات فراب'),
                   onTap: ()  {
@@ -74,7 +85,7 @@ class _AboutFarabState extends State<AboutFarab> {
                   onTap: ()  {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ozviyatFarab())
+                      MaterialPageRoute(builder: (context) => const OzviyatList())
                     );
                   },
                   ),
@@ -98,7 +109,7 @@ class _AboutFarabState extends State<AboutFarab> {
         child: 
         const Padding(
           padding: EdgeInsets.all(16.0),
-          child: Expanded(child: Text('شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',textAlign: TextAlign.justify,textDirection: TextDirection.rtl,style:TextStyle(fontSize:18,fontWeight: FontWeight.bold))),
+          child: SingleChildScrollView(child: Expanded(child: Text('شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',textAlign: TextAlign.justify,textDirection: TextDirection.rtl,style:TextStyle(fontSize:18,height: 2.3)))),
         ),
       )
 
