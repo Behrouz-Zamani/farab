@@ -40,10 +40,10 @@ class Newspage extends StatelessWidget {
               child: SingleChildScrollView(
                   child: Text(
                 newse.detail,
-                textDirection: TextDirection.rtl,
+                textDirection: TextDirection.rtl,textAlign: TextAlign.justify,
                 style: const TextStyle(
                   color: Color.fromARGB(255, 0, 0, 0),
-                  fontSize: 16,
+                  fontSize:16,fontFamily: 'vazir',height: 2
                 ),
               )),
             ),

@@ -81,7 +81,7 @@ child: Column(
           padding: const EdgeInsets.all(6.0),
         
         
-          child: SingleChildScrollView(child: Text(company.detail,textDirection: TextDirection.rtl, style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0),fontSize: 16,height: 2.2 ),)),
+          child: SingleChildScrollView(child: Text(company.detail,textDirection: TextDirection.rtl,textAlign: TextAlign.justify ,style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0),fontSize:16,fontFamily: 'vazir',height: 2),)),
         
         ),
       ),

@@ -4,8 +4,10 @@ import 'package:farab/main.dart';
 import 'package:farab/models/HozeModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'Home.dart';
+import 'Project.dart';
 
 void main() {
   runApp(const hozeMain());
@@ -44,11 +46,20 @@ class _hozeFarabState extends State<hoze_Farab> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+leading: IconButton(
+    icon: Icon(Icons.arrow_back, color: Colors.white),
+    onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const homeScrean()))),
+  
+  title: Text('حوزه های فراب'),
+    centerTitle: true,
+
+  ),
         body: SafeArea(
       child: Column(
         children: [
           Container(
-            color: Color.fromARGB(255, 247, 247, 247),
+            color: Color.fromARGB(255, 255, 255, 255),
             width: double.infinity,
             height: size.height / 1.7,
             child: Stack(
@@ -85,6 +96,7 @@ class _hozeFarabState extends State<hoze_Farab> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(24, 24, 0, 0),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         width: 36,
@@ -102,6 +114,13 @@ class _hozeFarabState extends State<hoze_Farab> {
                             },
                             child: const Icon(CupertinoIcons.home)),
                       ),
+
+                      ElevatedButton(
+                        
+                        onPressed: (){
+                          Navigator.push(context,MaterialPageRoute(builder: (context) => const ProjectList()));
+                        }, 
+                        child:Text('پروژه ها') )
                     ],
                   ),
                 ),
@@ -142,6 +161,8 @@ class _hozeFarabState extends State<hoze_Farab> {
                 )
               ],
             ),
+
+
           ),
           Expanded(
               child: Container(

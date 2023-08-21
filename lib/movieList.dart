@@ -28,14 +28,14 @@ class mainvideo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('fa'), // English
-      ],
+      // localizationsDelegates: const [
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      //   GlobalCupertinoLocalizations.delegate,
+      // ],
+      // supportedLocales: const [
+      //   Locale('fa'), // English
+      // ],
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
       home: const MainMoview(),
@@ -73,13 +73,14 @@ class _MainMoview extends State<MainMoview> {
         });
       });
 
-    // _controller2 = VideoPlayerController.network(
-    // //    'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
-    //   //..initialize().then((_) {
-    //     setState(() {
-    //       _controller2.play();
-    //     });
-    //   });
+    _controller2 = VideoPlayerController.network(
+       'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
+      //..initialize().then((_) {
+         ..initialize().then((_) {
+        setState(() {
+          _controller.play();
+        });
+      });
 
     _controller3 = VideoPlayerController.network(
         'https://www.farab.com/fa/wp-content/upload/2023/03/nowruz-daf.mp4')

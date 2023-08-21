@@ -38,16 +38,18 @@ class HistoryPage extends StatelessWidget {
               height: size.height / 1.9,
               padding: const EdgeInsets.all(6.0),
               child: SingleChildScrollView(
-                  child: Text(
-                history.detail,
-                textDirection: TextDirection.rtl,
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontSize: 16,
-                  height: 2.6
-                ),
-              )),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                                  history.detail,
+                                  textDirection: TextDirection.rtl,
+                                  textAlign: TextAlign.justify,
+                                  style: const TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontSize:16,fontFamily: 'vazir',height: 2
+                                  ),
+                                ),
+                  )),
             ),
           ],
         ),

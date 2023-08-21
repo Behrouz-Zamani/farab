@@ -1,11 +1,13 @@
 // ignore_for_file: file_names
 
 import 'package:farab/Home.dart';
+import 'package:farab/azimivideos.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'Company_Detail.dart';
+import 'main.dart';
 import 'models/CopmanyModel.dart';
 
 
@@ -47,6 +49,16 @@ class _MainPageState extends State<MainCompany> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+appBar: AppBar(
+leading: IconButton(
+    icon: Icon(Icons.arrow_back, color: Colors.white),
+    onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const homeScrean()))),
+  
+  title: Text('شرکت های فراب'),
+    centerTitle: true,
+
+  ),
+
       body: SafeArea(
           child: Column(
         children: [
@@ -87,46 +99,13 @@ class _MainPageState extends State<MainCompany> {
                           )
                 ,
                 ),
-                Positioned(
+                const Positioned(
                   right: 0,
                   top: 0,
                   left: 0,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 16, 8, 0),
-                    child: Row(
-                       mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                         InkWell(
-                             child: Container(
-                               width: 36,
-                               height: 36,
-                               decoration: const BoxDecoration(
-                                   shape: BoxShape.circle,
-                                   color: Color.fromARGB(139, 253, 250, 250)),
-                               child: const Icon(CupertinoIcons.home),
-                             ),
-                             onTap: () {
-                               Navigator.push(
-                                   context,
-                                   MaterialPageRoute(
-                                       builder: (context) => const homeScrean()));
-                             }),
-                          // InkWell(
-                          //     child: Container(
-                          //       width: 36,
-                          //       height: 36,
-                          //       decoration: const BoxDecoration(
-                          //           shape: BoxShape.circle,
-                          //           color: Color.fromARGB(139, 253, 250, 250)),
-                          //       child: const Icon(CupertinoIcons.home),
-                          //     ),
-                          //     onTap: () {
-                          //       Navigator.push(
-                          //          context,
-                          //          MaterialPageRoute(
-                          //              builder: (context) => const myApp()));
-                          //     }),
-                        ]),
+                    padding: EdgeInsets.fromLTRB(8, 16, 8, 0),
+
                   ),
                 ),
               ],
@@ -136,7 +115,7 @@ const SizedBox(height: 24,),
           //لیست شرکت ها
           SizedBox(
             width: double.infinity,
-            height: 400,
+            height: 380,
             child: 
             Padding(
               padding: const EdgeInsets.all(8.0),

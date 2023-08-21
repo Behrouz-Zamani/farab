@@ -41,7 +41,7 @@ class _AboutFarabState extends State<AboutFarab> {
               height: size.height /2.6,
               color:Colors.amber,
               child: 
-              Image(image:Image.asset('assets/images/main.jpg').image , fit: BoxFit.cover,),
+              Image(image:Image.asset('assets/images/about.jpg').image , fit: BoxFit.cover,),
             ),
           ),
 
@@ -70,7 +70,7 @@ class _AboutFarabState extends State<AboutFarab> {
                   },
                   ),
                 InkWell(
-                  child: const Text('افتخارات فراب'),
+                  child: const Text('گواهینامه‌ها و تقدیرنامه‌ها'),
                   onTap: ()  {
                     Navigator.push(
                       context,
@@ -104,12 +104,12 @@ class _AboutFarabState extends State<AboutFarab> {
           ),
           Container(
         width: double.infinity,
-        height: size.height /2.4,
+        height: size.height /2.5,
         //color: Colors.yellow,
         child: 
         const Padding(
           padding: EdgeInsets.all(16.0),
-          child: SingleChildScrollView(child: Expanded(child: Text('شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',textAlign: TextAlign.justify,textDirection: TextDirection.rtl,style:TextStyle(fontSize:18,height: 2.3)))),
+          child: SingleChildScrollView(child: Expanded(child: Text('شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',textDirection: TextDirection.rtl,textAlign: TextAlign.justify,style: TextStyle(fontSize:16,fontFamily: 'vazir',height: 2),))),
         ),
       )
 

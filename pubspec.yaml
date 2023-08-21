@@ -98,9 +98,12 @@ flutter:
   fonts:
     - family: vazir
       fonts:
-        - asset: assets/fonts/Vazir.ttf
-        - asset: assets/fonts/Vazir-Bold.ttf
-        - asset: assets/fonts/Vazir-Medium.ttf
+
+        - asset: assets/fonts/IRANYekanMobileBlack.ttf
+        - asset: assets/fonts/IRANYekanMobileBold.ttf
+        - asset: assets/fonts/IRANYekanMobileLight.ttf
+        - asset: assets/fonts/IRANYekanMobileMedium.ttf
+        - asset: assets/fonts/IRANYekanMobileThin.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
