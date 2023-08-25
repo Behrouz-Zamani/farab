@@ -3,6 +3,7 @@ import 'package:farab/views/history_list.dart';
 import 'package:farab/views/tavanmandi.dart';
 import 'package:flutter/material.dart';
 
+import 'Home.dart';
 import 'eftekharatFarab.dart';
 import 'ozviyatFarab.dart';
 
@@ -24,10 +25,15 @@ class _AboutFarabState extends State<AboutFarab> {
 
     return Scaffold(
         
+appBar: AppBar(
+leading: IconButton(
+    icon: Icon(Icons.arrow_back, color: Colors.white),
+    onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const homeScrean()))),
+  
+  title: Text('درباره فراب'),
+    centerTitle: true,
 
-      appBar: AppBar(
-        title: Title(color: Colors.white, child: const Text('درباره فراب')),
-      ),
+  ),
     body: SafeArea(
 
       child: 
@@ -60,7 +66,7 @@ class _AboutFarabState extends State<AboutFarab> {
                   crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                                 InkWell(
-                  child: const Text('توانمندی ها'),
+                  child: const Text('توانمندی ها',style: TextStyle(fontFamily: 'vazir')),
 
                   onTap: ()  {
                     Navigator.push(
@@ -70,7 +76,7 @@ class _AboutFarabState extends State<AboutFarab> {
                   },
                   ),
                 InkWell(
-                  child: const Text('گواهینامه‌ها و تقدیرنامه‌ها'),
+                  child: const Text('گواهینامه‌ها و تقدیرنامه‌ها',style: TextStyle(fontFamily:'vazir'),),
                   onTap: ()  {
                     Navigator.push(
                       context,
@@ -80,7 +86,7 @@ class _AboutFarabState extends State<AboutFarab> {
                   ),
                // Text('تاریخچه فراب'),
                 InkWell(
-                  child: const Text('عضویت ها'),
+                  child: const Text('عضویت ها',style: TextStyle(fontFamily: 'vazir'),),
 
                   onTap: ()  {
                     Navigator.push(
@@ -90,7 +96,7 @@ class _AboutFarabState extends State<AboutFarab> {
                   },
                   ),
                                   InkWell(
-                  child: const Text('تاریخچه فراب'),
+                  child: const Text('تاریخچه فراب',style: TextStyle(fontFamily: 'vazir')),
                   onTap: ()  {
                     Navigator.push(
                       context,

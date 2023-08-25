@@ -23,14 +23,14 @@ class Company_Frab extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-            localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: [
-        Locale('fa'), // English
-      ],
+      //       localizationsDelegates: [
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      //   GlobalCupertinoLocalizations.delegate,
+      // ],
+      // supportedLocales: [
+      //   Locale('fa'), // English
+      // ],
       home: MainCompany(),
     );
   }
@@ -124,23 +124,23 @@ const SizedBox(height: 24,),
               mainAxisSpacing: 8,
               children: [
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a4.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[0])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/sakhtok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[0])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a3.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[1])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/nardisok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[1])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a5.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[2])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/sakhtetajhizok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[2])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a7.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[4])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/naftok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[4])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a6.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[3])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/projeok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[3])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a1.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[5])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/bahrebardariok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[5])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a8.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[6])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/tajdidok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[6])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a9.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[7])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/saderatok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[7])));}),),
                 // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/a10.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[8])));}),),
+                Container(child: InkWell(child: Image.asset("assets/images/tejeratok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[8])));}),),
 
                 
               ],),
