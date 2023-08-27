@@ -7,6 +7,7 @@ import 'package:farab/videoReili.dart';
 import 'package:farab/videoSakhteman.dart';
 import 'package:farab/videoTajdid.dart';
 
+import 'Home.dart';
 import 'videoAb.dart';
 import 'package:farab/vakilimoview.dart';
 import 'package:flutter/material.dart';
@@ -97,21 +98,12 @@ class _MainMoview extends State<MainMoview> {
 
     return Scaffold(
       appBar: AppBar(
-        // toolbarHeight: 100,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        flexibleSpace: ClipPath(
-          child: Container(
-            height: 150,
-            width: MediaQuery.of(context).size.width,
-            color: const Color.fromARGB(255, 0, 88, 164),
-            child: const Center(
-                child: Text(
-              "تلویزیون فراب",
-              style: TextStyle(color: Colors.white, fontSize: 24),
-            )),
-          ),
-        ),
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const homeScrean()))),
+        title: const Text('تلویزیون فراب'),
+        centerTitle: true,
       ),
       body: SafeArea(
           child: SingleChildScrollView(

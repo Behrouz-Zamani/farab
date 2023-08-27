@@ -1,17 +1,15 @@
 // ignore_for_file: file_names
 
 import 'package:farab/Gallery.dart';
-import 'package:farab/models/masoliyat_video.dart';
+import 'package:farab/gallery_list.dart';
 import 'package:farab/movieList.dart';
 import 'package:farab/radio_List.dart';
-import 'package:farab/tvFarabList.dart';
-import 'package:farab/views/tv_list.dart';
 import 'package:farab/views/videomasoliyat.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 import 'Company_Detail.dart';
+import 'Home.dart';
 import 'models/CopmanyModel.dart';
 
 void main() {
@@ -61,6 +59,14 @@ class _multiMediaF extends State<multiMediaF> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const homeScrean()))),
+        title: const Text('چند رسانه ایی'),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -75,13 +81,12 @@ class _multiMediaF extends State<multiMediaF> {
                     )
                   : Container(),
             ),
-            
             Padding(
-              padding: const EdgeInsets.only(top:32.0),
+              padding: const EdgeInsets.only(top: 32.0),
               child: Container(
-                color: Color.fromARGB(255, 213, 203, 159),
+                color: const Color.fromARGB(255, 213, 203, 159),
                 width: double.infinity,
-                height: 400,
+                height: 350,
                 child: SizedBox(
                     width: double.infinity,
                     height: double.infinity,
@@ -93,131 +98,132 @@ class _multiMediaF extends State<multiMediaF> {
                         mainAxisSpacing: 24,
                         children: [
                           Container(
-                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]
-                            ),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
                             child: InkWell(
                                 child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children:[ Image.asset(
-                                    "assets/images/a11.png",
-                                    fit: BoxFit.none,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('گالری تصاویر '),
-                                  )
-                                  ]
-                                ),
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/a11.png",
+                                        fit: BoxFit.none,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text('گالری تصاویر '),
+                                      )
+                                    ]),
                                 onTap: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => GalleryApp()));
+                                          builder: (context) =>
+                                              const GalleryList()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]
-                            ),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
                             child: InkWell(
-                              
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  children:[ Image.asset(
-                                    "assets/images/a7.png",
-                                    fit: BoxFit.none,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('رادیو فراب'),
-                                  )
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/a7.png",
+                                      fit: BoxFit.none,
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Text('رادیو فراب'),
+                                    )
                                   ],
                                 ),
                                 onTap: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => radioList()));
+                                          builder: (context) =>
+                                              const radioList()));
                                 }),
                           ),
-              
+
                           // ignore: avoid_unnecessary_containers
                           Container(
-                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]
-                            ),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
                             child: InkWell(
                                 child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children:[ Image.asset(
-                                    "assets/images/a9.png",
-                                    fit: BoxFit.none,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('تلویزیون فراب'),
-                                  )
-                                  ]
-                                ),
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/a9.png",
+                                        fit: BoxFit.none,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text('تلویزیون فراب'),
+                                      )
+                                    ]),
                                 onTap: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => mainvideo()));
+                                          builder: (context) =>
+                                              const mainvideo()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
-                          
+
                           // ignore: avoid_unnecessary_containers
                           Container(
-                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]
-                            ),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
                             child: InkWell(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  children:[ Image.asset(
-                                    "assets/images/a3.png",
-                                    fit: BoxFit.none,
-                                  ),
-                                  Text('نشریه فراب')
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/a3.png",
+                                      fit: BoxFit.none,
+                                    ),
+                                    const Text('نشریه فراب')
                                   ],
                                 ),
-              
                                 onTap: () {
                                   Navigator.push(
                                       context,
@@ -226,29 +232,31 @@ class _multiMediaF extends State<multiMediaF> {
                                               CompanyPage(companyModel[4])));
                                 }),
                           ),
-                                                    Container(
-                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]
-                            ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
                             child: InkWell(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  children:[ Image.asset(
-                                    "assets/images/a3.png",
-                                    fit: BoxFit.none,
-                                  ),
-                                  Text('مسئولیت اجتماعی', style: TextStyle(fontSize: 12),)
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/a3.png",
+                                      fit: BoxFit.none,
+                                    ),
+                                    const Text(
+                                      'مسئولیت اجتماعی',
+                                      style: TextStyle(fontSize: 12),
+                                    )
                                   ],
                                 ),
-              
                                 onTap: () {
                                   Navigator.push(
                                       context,
@@ -267,7 +275,7 @@ class _multiMediaF extends State<multiMediaF> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 254, 80, 0),
+        backgroundColor: const Color.fromARGB(255, 254, 80, 0),
         onPressed: () {
           setState(() {
             _controller.value.isPlaying

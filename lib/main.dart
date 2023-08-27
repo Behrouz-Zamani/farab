@@ -1,18 +1,19 @@
 //import 'dart:js';
 
+import 'package:farab/Gallery.dart';
 import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/hoze_Farab.dart';
 import 'package:farab/news_Farab.dart';
-import 'package:farab/services/dio_service.dart';
 import 'package:farab/splash.dart';
 import 'package:flutter/material.dart';
 
 import 'Company_Farab.dart';
 import 'about_Farab.dart';
-import 'movieList.dart';
 
 void main() {
-  runApp(myApp(),);
+  runApp(
+    const myApp(),
+  );
 }
 
 // ignore: camel_case_types
@@ -21,7 +22,6 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
@@ -43,10 +43,6 @@ class _MainPageState extends State<MainCompany> {
   int selected = 0;
   @override
   Widget build(BuildContext context) {
-
-
-
-    
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
@@ -65,41 +61,21 @@ class _MainPageState extends State<MainCompany> {
                     left: 55,
                     child: Row(
                       children: [
-                        Row(
-                          children: [
+                       
                             InkWell(
-                                child: Container(
-                                  width: 48,
-                                  height: 48,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color:
-                                          Color.fromARGB(139, 253, 250, 250)),
-                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                  child: Image(
-                                      image: Image.asset(
-                                              "assets/images/information.png")
-                                          .image),
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const AboutFarab()));
-                                }),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 8),
-                              child: Text(
-                                "درباره فراب",
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              ),
-                            )
-                          ],
-                        )
+                              child:
+ Image(
+                                  image: Image.asset(
+                                          "assets/images/information.png")
+                                      .image),
+                                   onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const GalleryApp()));
+                            }
+                            ),
                       ],
                     )),
                 Positioned(
