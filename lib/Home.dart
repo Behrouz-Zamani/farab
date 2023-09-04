@@ -51,11 +51,11 @@ class _homeScreanPageState extends State<homeScreanPage> {
                   width: double.infinity,
                   height: size.height / 1.04,
                   color: const Color.fromARGB(255, 33, 58, 148),
-                  child: Image.asset("assets/images/ssp.jpg"),
+                  child: Image.asset("assets/images/sspmain.jpg"),
                 ),
                 Positioned(
                     top: size.height / 3.4,
-                    left: 55,
+                    left: 65,
                     child: Row(
                       children: [
                         Row(
@@ -81,7 +81,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                               const AboutFarab()));
                                 }),
                             Padding(
-                              padding: const EdgeInsets.only(left: 8),
+                              padding: const EdgeInsets.only(left: 36),
                               child: InkWell(
                                   child: const Text(
                                     "درباره فراب",
@@ -103,8 +103,8 @@ class _homeScreanPageState extends State<homeScreanPage> {
                       ],
                     )),
                 Positioned(
-                    top: size.height / 2.6,
-                    left: 165,
+                    top: size.height / 2.5,
+                    left: 184,
                     child: Row(
                       children: [
                         Row(
@@ -130,9 +130,9 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                               const activity_farab()));
                                 }),
                             Padding(
-                              padding: const EdgeInsets.only(left:8.0),
+                              padding: const EdgeInsets.only(left: 8.0),
                               child: InkWell(
-                                child: const Text(
+                                  child: const Text(
                                     "حوزه های فعالیت",
                                     style: TextStyle(
                                         color: Color.fromARGB(255, 255, 255, 1),
@@ -145,68 +145,15 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 const activity_farab()));
-                                  }
-                              ),
+                                  }),
                             ),
-                            
                           ],
                         )
                       ],
                     )),
                 Positioned(
-                    top: size.height / 1.8,
-                    left: 195,
-                    child: Row(
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                                child: Container(
-                                  width: 48,
-                                  height: 48,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color:
-                                          Color.fromARGB(255, 253, 250, 250)),
-                                  //child:  Image.asset("assets/images/niro.jpg"),
-                                  child: Image(
-                                      image: Image.asset("assets/images/a4.png")
-                                          .image),
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const Company_Frab()));
-                                }),
-                             Padding(
-                               padding: const EdgeInsets.only(left:8.0),
-                               child: InkWell(
-                                 child: const Text(
-                                    "شرکت های تابعه",
-                                    style: TextStyle(
-                                        color: Color.fromARGB(255, 255, 255, 0),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                   onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const Company_Frab()));
-                                  }
-                               ),
-                             ),
-                            
-                          ],
-                        )
-                      ],
-                    )),
-                Positioned(
-                    top: size.height / 1.4,
-                    left: 155,
+                    top: size.height / 1.5,
+                    left: 185,
                     child: Row(
                       children: [
                         Row(
@@ -232,9 +179,9 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                               const multiMedia()));
                                 }),
                             Padding(
-                              padding: const EdgeInsets.only(left:8.0),
+                              padding: const EdgeInsets.only(left: 8.0),
                               child: InkWell(
-                                child: const Text(
+                                  child: const Text(
                                     "چند رسانه ایی",
                                     style: TextStyle(
                                         color: Color.fromARGB(255, 255, 255, 1),
@@ -247,18 +194,15 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 const multiMedia()));
-                                  }
-                              ),
+                                  }),
                             ),
-                            
-                            
                           ],
                         )
                       ],
                     )),
                 Positioned(
                     top: size.height / 1.25,
-                    left: 55,
+                    left: 65,
                     child: Row(
                       children: [
                         Row(
@@ -283,26 +227,24 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                           builder: (context) =>
                                               const news_Farab()));
                                 }),
-                             Padding(
-                               padding: const EdgeInsets.only(left:8.0),
-                               child: InkWell(
-                                 child: const Text(
-                                    "اخبار فراب",
+                            Padding(
+                              padding: const EdgeInsets.only(left: 36.0),
+                              child: InkWell(
+                                  child: const Text(
+                                    "نشریه فراب",
                                     style: TextStyle(
                                         color: Color.fromARGB(255, 255, 255, 1),
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                   onTap: () {
+                                  onTap: () {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 const news_Farab()));
-                                  }
-                               ),
-                             ),
-                           
+                                  }),
+                            ),
                           ],
                         )
                       ],
