@@ -72,21 +72,17 @@ class _multiMediaF extends State<multiMediaF> {
           children: [
             SizedBox(
               width: double.infinity,
-              height: size.height / 3,
+              height: size.height / 3.5,
               // color: Colors.amber,
-              child: _controller.value.isInitialized
-                  ? AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: VideoPlayer(_controller),
-                    )
-                  : Container(),
+              child:
+          Image.asset("assets/images/lfarab.gif")
             ),
             Padding(
               padding: const EdgeInsets.only(top: 32.0),
               child: Container(
                 color: const Color.fromARGB(255, 213, 203, 159),
                 width: double.infinity,
-                height: 350,
+               height: 424,
                 child: SizedBox(
                     width: double.infinity,
                     height: double.infinity,
@@ -164,7 +160,7 @@ class _multiMediaF extends State<multiMediaF> {
                                               const radioList()));
                                 }),
                           ),
-
+              
                           // ignore: avoid_unnecessary_containers
                           Container(
                             decoration: BoxDecoration(
@@ -200,7 +196,7 @@ class _multiMediaF extends State<multiMediaF> {
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
-
+              
                           // ignore: avoid_unnecessary_containers
                           Container(
                             decoration: BoxDecoration(
@@ -274,25 +270,9 @@ class _multiMediaF extends State<multiMediaF> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(255, 254, 80, 0),
-        onPressed: () {
-          setState(() {
-            _controller.value.isPlaying
-                ? _controller.pause()
-                : _controller.play();
-          });
-        },
-        child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
-      ),
+      
     );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
+
 }

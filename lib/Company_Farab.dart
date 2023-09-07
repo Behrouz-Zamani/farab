@@ -74,30 +74,8 @@ leading: IconButton(
                   height: size.height / 2,
                   child: 
 
-                         ImageSlideshow(indicatorColor: Colors.blue,onPageChanged: (value){
-                            debugPrint('page change :$value');
-                          },
-                                    autoPlayInterval: 3000,
-          isLoop: true,
-          children: [
-            Image.asset(
-              'assets/images/niro.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/images/gaz.jpg',
-              fit: BoxFit.cover,
-            ),
-            Image.asset(
-              'assets/images/reil.jpg',
-              fit: BoxFit.cover,
-            ),
-          ],
-                          
-                          
-                          
-                          )
-                ,
+                         Image.asset("assets/images/lfarab.gif", fit: BoxFit.cover,),
+               
                 ),
                 const Positioned(
                   right: 0,

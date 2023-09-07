@@ -35,93 +35,56 @@ void dispose(){
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('رادیو فراب، خدمتی نوین از گروه فراب'),
+        title: const Text('رادیو فراب، خدمتی نوین از گروه فراب'),
       ),
       body: Column(
         children: [
           Container(
             width: double.infinity,
-            height: size.height / 2.2,
+            height: size.height / 3.3,
             color: Colors.amber,
+            child:
+            Image.asset("assets/images/radiogif.gif"),
           ),
-          Container(
-            child: Column(
-              children: [
-               Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 64,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: const Color.fromARGB(255, 57, 12, 141),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text(
-                              'رادیو فراب',
-                              style: TextStyle(
-                                  fontFamily: 'vazir',
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            IconButton(
-                                onPressed: () async {
-                                  await _player.setAsset('assets/images/mahboob.mp3');
-                                  _player.play();
-                                },
-                                icon: const Icon(Icons.play_circle_outline),
-                                color: Colors.white),
-                          ],
-                        ),
+          Column(
+            children: [
+             Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 64,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: const Color.fromARGB(255, 57, 12, 141),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'رادیو فراب',
+                            style: TextStyle(
+                                fontFamily: 'vazir',
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          IconButton(
+                              onPressed: () async {
+                                await _player.setAsset('assets/images/mahboob.mp3');
+                                _player.play();
+                              },
+                              icon: const Icon(Icons.play_circle_outline),
+                              color: Colors.white),
+                        ],
                       ),
                     ),
                   ),
                 ),
-                               Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 64,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: const Color.fromARGB(255, 57, 12, 141),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text(
-                              'دف‌نوازی آقای محمد وکیلی از همکاران گروه فراب',
-                              style: TextStyle(
-                                  fontFamily: 'vazir',
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            IconButton(
-                                onPressed: () async {
-                                  await _player.setAsset('assets/images/dafnavazi.mp3');
-                                  _player.play();
-                                },
-                                icon: const Icon(Icons.play_circle_outline),
-                                color: Colors.white),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-               
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

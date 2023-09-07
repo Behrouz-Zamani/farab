@@ -3,6 +3,7 @@ import 'package:farab/views/history_list.dart';
 import 'package:farab/views/tavanmandi.dart';
 import 'package:flutter/material.dart';
 
+import 'Company_Farab.dart';
 import 'Home.dart';
 import 'eftekharatFarab.dart';
 import 'ozviyatFarab.dart';
@@ -57,19 +58,10 @@ class _AboutFarabState extends State<AboutFarab> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        InkWell(
-                          child: const Text('توانمندی ها',
-                              style: TextStyle(fontFamily: 'vazir')),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const Tavanmandi()));
-                          },
-                        ),
+
                         InkWell(
                           child: const Text(
-                            'گواهینامه‌ها و تقدیرنامه‌ها',
+                            'گواهینامه‌ها',
                             style: TextStyle(fontFamily: 'vazir'),
                           ),
                           onTap: () {
@@ -83,7 +75,7 @@ class _AboutFarabState extends State<AboutFarab> {
                         // Text('تاریخچه فراب'),
                         InkWell(
                           child: const Text(
-                            'عضویت ها',
+                            'افتخارات',
                             style: TextStyle(fontFamily: 'vazir'),
                           ),
                           onTap: () {
@@ -91,6 +83,18 @@ class _AboutFarabState extends State<AboutFarab> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => const OzviyatList()));
+                          },
+                        ),
+                                                InkWell(
+                          child: const Text(
+                            'شرکت های تابعه',
+                            style: TextStyle(fontFamily: 'vazir'),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Company_Frab()));
                           },
                         ),
                         InkWell(

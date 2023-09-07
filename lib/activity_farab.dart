@@ -75,347 +75,295 @@ class _MainMoview extends State<MainMoview> {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: size.height / 3,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage("assets/images/mockup.png"),
-                  fit: BoxFit.cover,
-                )),
-                child: Container(
-                  margin: const EdgeInsets.only(
-                      left: 16.0, top: 10.0, right: 16.0, bottom: 40.0),
-                  // child: SizedBox(
-                  //   width: double.infinity,
-                  //   height: 80,
-            
-                  //   // color: Colors.amber,
-                  //   child: _controller.value.isInitialized
-                  //       ? AspectRatio(
-                  //           aspectRatio: _controller.value.aspectRatio,
-                  //           child: selected == 0
-                  //               ? VideoPlayer(_controller)
-                  //               : selected == 1
-                  //                   ? VideoPlayer(_controller2)
-                  //                   : selected == 2
-                  //                       ? VideoPlayer(_controller3)
-                  //                       : null,
-                  //         )
-                  //       : Container(),
-                  // ),
+                    child:Image.asset("assets/images/lfarab.gif")
                 ),
-              ),
             ),
-            Container(
-              // color: Color.fromARGB(255, 213, 203, 159),
-              child: SizedBox(
-                  width: double.infinity,
-                  height: 400,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: GridView.count(
-                      crossAxisCount: 3,
-                      crossAxisSpacing: 8,
-                      mainAxisSpacing: 8,
-                      children: [
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/niro.jpg",
-                                      width: 95,
-                                      height:95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('حوزه نیرو')
-                                  ]),
-                              onTap: () => {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                NiroHoze()))
-                                  }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/reil.jpg",
-                                      width: 95,
-                                     height: 95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('صنایع ریلی')
-                                  ]),
-                              onTap: () => {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => Abvideo()))
-                                  }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/naftok.jpg",
-                                      width: 95,
-                                      height: 95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('نفت، گاز، پتروشیمی')
-                                  ]),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Sakhtemanvideo()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/ab.jpg",
-                                      width: 95,
-                                      height: 95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('حوزه آب')
-                                  ]),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Reilvideo()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/sakhteman.jpg",
-                                      width: 95,
-                                      height: 95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('حوزه ساختمان')
-                                  ]),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Hoshmandvideo()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/bahrebardari.jpg",
-                                      width: 95,
-                                      height: 95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('بهره برداری و نگهداری')
-                                  ]),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Naftvideo()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
+            SizedBox(
+                width: double.infinity,
+                height: 400,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GridView.count(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 8,
+                    mainAxisSpacing: 8,
+                    children: [
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/gaz.jpg",
+                                    width: 95,
+                                    height:95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('نفت، گاز، پتروشیمی')
+                                ]),
+                            onTap: () => {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              NiroHoze()))
+                                }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/niro.jpg",
+                                    width: 95,
+                                   height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('نیروگاه های حرارتی')
+                                ]),
+                            onTap: () => {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Abvideo()))
+                                }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/ab.jpg",
+                                    width: 95,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('نیروگاههای برق آبی')
+                                ]),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          Sakhtemanvideo()));
+                            }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/tajdidok.jpg",
+                                    width: 95,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('انرژی تجدید پذیر')
+                                ]),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Reilvideo()));
+                            }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/hoshmand.jpg",
+                                    width: 95,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('پروژه های هوشمند')
+                                ]),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          Hoshmandvideo()));
+                            }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/reil.jpg",
+                                    width: 95,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('پروژه های ریلی')
+                                ]),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Naftvideo()));
+                            }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
 
-                        Container(
-                          decoration: const BoxDecoration(
-                              // color: Colors.white,
-                              // borderRadius: BorderRadius.circular(16),
-                              // boxShadow: [
-                              //  BoxShadow(
-                              //  color: Colors.black12,
-                              //   blurRadius: 3.0,
-                              //  )
-                              // ]
-                              ),
-                          child: InkWell(),
-                        ),
+                      Container(
+                        decoration: const BoxDecoration(
+                             ),
+                        child: InkWell(),
+                      ),
 
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  blurRadius: 3.0,
-                                )
-                              ]),
-                          child: InkWell(
-                              child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/hoshmand.jpg",
-                                      width: 95,
-                                      height: 95,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const Text('شبکه های هوشمند')
-                                  ]),
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => videoTajdid()));
-                              }),
-                        ),
-                        // ignore: avoid_unnecessary_containers
-                        Container(
-                          child: InkWell(),
-                        ),
-
-                        // ignore: avoid_unnecessary_containers
-                      ],
-                    ),
-                  )),
-            )
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/bahrebardari.jpg",
+                                    width: 95,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('بهره برداری')
+                                ]),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => videoTajdid()));
+                            }),
+                      ),
+                      // ignore: avoid_unnecessary_containers
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                            child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/sakhteman.jpg",
+                                    width: 95,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const Text('پروژه های ساختمانی')
+                                ]),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => videoTajdid()));
+                            }),
+                      ),
+                    ],
+                  ),
+                ))
           ],
         ),
       )),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(255, 254, 80, 0),
-        onPressed: () {
-          setState(() {
-            // _controller.value.isPlaying
-            //     ? _controller.pause()
-            //     : _controller.play();
 
-            // _controller2.value.isPlaying
-            //     ? _controller2.pause()
-            //     : _controller2.play();
-
-            // _controller3.value.isPlaying
-            //     ? _controller3.pause()
-            //     : _controller3.play();
-          });
-        },
-        // child: Icon(
-        //   // _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        // ),
-      ),
     );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    // _controller.dispose();
-    // _controller2.dispose();
-    // _controller3.dispose();
-  }
-
-  changevideo() {
-    setState(() {
-      // selected = 1;
-    });
-  }
-
-  stop() {
-    setState(() {
-      // _controller.dispose();
-      // _controller3.dispose();
-    });
   }
 }
