@@ -16,6 +16,7 @@ class _HostoryListState extends State<HostoryList> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -51,58 +52,83 @@ class _HostoryListState extends State<HostoryList> {
               ),
               SizedBox(
                   width: double.infinity,
-                  height: 64,
+                  height: 65,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 213, 203, 159),
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(24.0))),
-                      width: double.infinity,
-                      height: 56,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            
-                            // SizedBox(
-                            //   width: 300,
-                            //   child: ListView.builder(
-                            //     scrollDirection: Axis.horizontal,
-                            //       itemCount: historyOkModel.length,
-                            //       itemBuilder: (context, index) {
-                            //         return imageItem(index);
-                                     
-                            //       }),
-                            // ),
-                            
-                          ],
-                        ),
-                      ),
-                    ),
-                  )),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                          decoration: const BoxDecoration(
+                              color: Color.fromARGB(255, 213, 203, 159),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(24.0))),
+                          width: double.infinity,
+                          height: 64,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      _selectedIndex = 3;
+                                    });
+                                  },
+                                  child: const Text('دهه چهارم'),
+                                ),
+                                InkWell(
+                                  child: const Text('دهه سوم'),
+                                  onTap: () {
+                                    setState(() {
+                                      _selectedIndex = 2;
+                                    });
+                                  },
+                                ),
+                                InkWell(
+                                  child: const Text('دهه دوم'),
+                                  onTap: () {
+                                    setState(() {
+                                      _selectedIndex = 1;
+                                    });
+                                  },
+                                ),
+                                InkWell(
+                                  child: const Text('دهه اول'),
+                                  onTap: () {
+                                    setState(() {
+                                      _selectedIndex = 0;
+                                    });
+                                  },
+                                ),
+                              ],
+                            ),
+                          )))),
               //لیست شرکت ها
               Expanded(
-                  child: Container(
-                color: Color.fromARGB(255, 255, 255, 255),
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: SingleChildScrollView(
-                    child: Text(
-                      historyOkModel[_selectedIndex].matn,
-                      style: const TextStyle(
-                          fontFamily: 'vazir',
-                          fontWeight: FontWeight.w500,
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          height: 2.6),
-                      textDirection: TextDirection.rtl,
-                      textAlign: TextAlign.justify,
+                child: Container(
+                decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 194, 192, 192),
+
+                  borderRadius: BorderRadius.all(Radius.circular(24)),
+                ),
+                  width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: SingleChildScrollView(
+                      child: Text(
+                        historyOkModel[_selectedIndex].matn,
+                        style: const TextStyle(
+                            fontFamily: 'vazir',
+                            fontWeight: FontWeight.w500,
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            height: 2.6),
+                        textDirection: TextDirection.rtl,
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ),
                 ),
-              )),
+              ),
             ],
           ),
         ));

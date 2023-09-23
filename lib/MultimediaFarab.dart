@@ -80,8 +80,8 @@ class _multiMediaF extends State<multiMediaF> {
             Padding(
               padding: const EdgeInsets.only(top: 32.0),
               child: Container(
-                decoration: BoxDecoration(
-color: const Color.fromARGB(122, 0  , 81, 165),
+                decoration: const BoxDecoration(
+color: Color.fromARGB(122, 0  , 81, 165),
 borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.circular(40))
                 ),
                 
