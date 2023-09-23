@@ -63,7 +63,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                             InkWell(
                                 child: Container(
                                   width: 48,
-                                  height: 48,
+                                  height:48,
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
@@ -144,7 +144,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const activity_farab()));
+                                                const hoze_Farab()));
                                   }),
                             ),
                           ],

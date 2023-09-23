@@ -1,4 +1,20 @@
-// ignore_for_file: file_names
+import 'package:farab/about_Farab.dart';
+import 'package:farab/bahrebardari.dart';
+import 'package:farab/naft.dart';
+import 'package:farab/nardis.dart';
+import 'package:farab/saderat.dart';
+import 'package:farab/sakhteman.dart';
+import 'package:farab/sangab.dart';
+import 'package:farab/sarmaye.dart';
+import 'package:farab/tajdid.dart';
+import 'package:farab/tajhizat.dart';
+import 'package:farab/videoAb.dart';
+import 'package:farab/videoHoshmand.dart';
+import 'package:farab/videoNaft.dart';
+import 'package:farab/videoNirogah.dart';
+import 'package:farab/videoReili.dart';
+import 'package:farab/videoSakhteman.dart';
+import 'package:farab/videoTajdid.dart'; // ignore_for_file: file_names
 
 import 'package:farab/Home.dart';
 import 'package:farab/azimivideos.dart';
@@ -6,10 +22,11 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'Company_Detail.dart';
 import 'main.dart';
 import 'models/CopmanyModel.dart';
-
+// import 'niro_hozeh.dart';
 
 void main() {
   runApp(const Company_Frab());
@@ -23,18 +40,11 @@ class Company_Frab extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      //       localizationsDelegates: [
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // supportedLocales: [
-      //   Locale('fa'), // English
-      // ],
       home: MainCompany(),
     );
   }
 }
+
 class MainCompany extends StatefulWidget {
   const MainCompany({
     Key? key,
@@ -49,16 +59,14 @@ class _MainPageState extends State<MainCompany> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-appBar: AppBar(
-leading: IconButton(
-    icon: Icon(Icons.arrow_back, color: Colors.white),
-    onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const homeScrean()))),
-  
-  title: Text('شرکت های فراب'),
-    centerTitle: true,
-
-  ),
-
+      appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const AboutFarab()))),
+        title: Text('شرکت های فراب',style: TextStyle(fontFamily: 'vazir'),),
+        centerTitle: true,
+      ),
       body: SafeArea(
           child: Column(
         children: [
@@ -72,10 +80,10 @@ leading: IconButton(
                 SizedBox(
                   width: double.infinity,
                   height: size.height / 2,
-                  child: 
-
-                         Image.asset("assets/images/lfarab.gif", fit: BoxFit.cover,),
-               
+                  child: Image.asset(
+                    "assets/images/lfarab.gif",
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 const Positioned(
                   right: 0,
@@ -83,55 +91,345 @@ leading: IconButton(
                   left: 0,
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(8, 16, 8, 0),
-
                   ),
                 ),
               ],
             ),
           ),
-const SizedBox(height: 24,),
+
           //لیست شرکت ها
+
+          //    SizedBox(
+          //     width: double.infinity,
+          //     height: size.height / 3,
+          //         child:Image.asset("assets/images/lfarab.gif")
+          //     ),
+          // ),
           SizedBox(
-            width: double.infinity,
-            height: 380,
-            child: 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GridView.count(crossAxisCount:  3,
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
-              children: [
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/sakhtok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[0])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/nardisok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[1])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/sakhtetajhizok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[2])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/naftok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[4])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/projeok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[3])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/bahrebardariok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[5])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/tajdidok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[6])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/saderatok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[7])));}),),
-                // ignore: avoid_unnecessary_containers
-                Container(child: InkWell(child: Image.asset("assets/images/tejeratok.jpg",fit: BoxFit.cover,),onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => CompanyPage(companyModel[8])));}),),
+              width: double.infinity,
+              height: 400,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
+                  children: [
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('ساختمان و نصب فراب')
+                              ]),
+                          onTap: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => sakhteman()))
+                              }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/nardislogo.jpg",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('شرکت ناردیس')
+                              ]),
+                          onTap: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => nardis()))
+                              }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text(' ساخت تجهیزات فراب')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => tajhisat()));
+                          }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('سنگاب')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sangab()));
+                          }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('نفت و گاز فراب')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => naft()));
+                          }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('بهره‌برداری و نگهداری')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => bahrebardari()));
+                          }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
 
-                
-              ],),
-            )
-
-            
-          ),
-
-
-
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('تجدید‌پدیر فراب')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => tajdid()));
+                          }),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('شرکت صادرات فراب')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => saderat()));
+                          }),
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 3.0,
+                            )
+                          ]),
+                      child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "assets/images/farab-logo-header.png",
+                                  width: 95,
+                                  height: 95,
+                                  fit: BoxFit.contain,
+                                ),
+                                const Text('تجارت و سرمایه‌گذاری')
+                              ]),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sarmaye()));
+                          }),
+                    ),
+                    // Container(
+                    //   alignment: AlignmentDirectional.center,
+                    //   decoration: BoxDecoration(
+                    //       color: Colors.white,
+                    //       borderRadius: BorderRadius.circular(16),
+                    //       boxShadow: const [
+                    //         BoxShadow(
+                    //           color: Colors.black12,
+                    //           blurRadius: 3.0,
+                    //         )
+                    //       ]),
+                    //   child: InkWell(
+                    //       child: Column(
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           mainAxisAlignment: MainAxisAlignment.center,
+                    //           children: [
+                    //             Image.asset(
+                    //               "assets/images/farab-logo-header.png",
+                    //               width: 95,
+                    //               height: 95,
+                    //               fit: BoxFit.contain,
+                    //             ),
+                    //             const Text('شرکت آرمان فراب')
+                    //           ]),
+                    //       onTap: () {
+                    //         Navigator.push(
+                    //             context,
+                    //             MaterialPageRoute(
+                    //                 builder: (context) => videoTajdid()));
+                    //       }),
+                    // ),
+                  ],
+                ),
+              ))
         ],
       )),
     );
   }
 }
-

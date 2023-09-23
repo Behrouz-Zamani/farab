@@ -193,6 +193,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  custom_accordion:
+    dependency: "direct main"
+    description:
+      name: custom_accordion
+      sha256: fb71edc1698fdce36d3ba958b4c68fd62f1c7478cde1b4f6efa4000808265cb5
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   dart_style:
     dependency: transitive
     description:

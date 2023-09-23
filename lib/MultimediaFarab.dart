@@ -80,7 +80,11 @@ class _multiMediaF extends State<multiMediaF> {
             Padding(
               padding: const EdgeInsets.only(top: 32.0),
               child: Container(
-                color: const Color.fromARGB(255, 213, 203, 159),
+                decoration: BoxDecoration(
+color: const Color.fromARGB(122, 0  , 81, 165),
+borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.circular(40))
+                ),
+                
                 width: double.infinity,
                height: 424,
                 child: SizedBox(
@@ -110,7 +114,7 @@ class _multiMediaF extends State<multiMediaF> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Image.asset(
-                                        "assets/images/a11.png",
+                                        "assets/images/galleryok.png",
                                         fit: BoxFit.none,
                                       ),
                                       const Padding(
@@ -143,7 +147,7 @@ class _multiMediaF extends State<multiMediaF> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Image.asset(
-                                      "assets/images/a7.png",
+                                      "assets/images/radioook.png",
                                       fit: BoxFit.none,
                                     ),
                                     const Padding(
@@ -179,7 +183,7 @@ class _multiMediaF extends State<multiMediaF> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Image.asset(
-                                        "assets/images/a9.png",
+                                        "assets/images/old-tv.png",
                                         fit: BoxFit.none,
                                       ),
                                       const Padding(
@@ -214,7 +218,7 @@ class _multiMediaF extends State<multiMediaF> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Image.asset(
-                                      "assets/images/a3.png",
+                                      "assets/images/communicationok.png",
                                       fit: BoxFit.none,
                                     ),
                                     const Text('نشریه فراب')
@@ -244,11 +248,44 @@ class _multiMediaF extends State<multiMediaF> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Image.asset(
-                                      "assets/images/a3.png",
+                                      "assets/images/ssoo.png",
                                       fit: BoxFit.none,
                                     ),
                                     const Text(
                                       'مسئولیت اجتماعی',
+                                      style: TextStyle(fontSize: 12),
+                                    )
+                                  ],
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              (Masoliyatvideo())));
+                                }),
+                          ),
+                                                    Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/events.png",
+                                      fit: BoxFit.none,
+                                    ),
+                                    const Text(
+                                      'رویدادها',
                                       style: TextStyle(fontSize: 12),
                                     )
                                   ],

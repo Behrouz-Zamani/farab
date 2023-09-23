@@ -58,7 +58,7 @@ leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.white),
     onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const AboutFarab()))),
   
-  title: Text('گواهینامه ها و تقدیر نامه ها'),
+  title: Text('گواهینامه‌ها',style: TextStyle(fontFamily: 'vazir'),),
     centerTitle: true,
 
   ),

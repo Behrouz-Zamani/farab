@@ -6,13 +6,13 @@ import 'package:farab/videoNirogah.dart';
 import 'package:farab/videoReili.dart';
 import 'package:farab/videoSakhteman.dart';
 import 'package:farab/videoTajdid.dart';
-
+import 'package:farab/views/Hoze/petroshimi_hoze.dart';
+import 'package:farab/views/Hoze/reili_hoze.dart';
+import 'views/Hoze/niro_hoze.dart';
 import 'Home.dart';
-import 'niro_hoze.dart';
 import 'videoAb.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-
 
 void main() {
   runApp(const activity_farab());
@@ -50,11 +50,7 @@ class MainMoview extends StatefulWidget {
 }
 
 class _MainMoview extends State<MainMoview> {
-
-
   bool isPlaying = false;
-
- 
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +62,7 @@ class _MainMoview extends State<MainMoview> {
             icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const homeScrean()))),
-        title: const Text('حوزه های فعالیت'),
+        title: const Text('حوزههای فعالیت'),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -76,10 +72,9 @@ class _MainMoview extends State<MainMoview> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                width: double.infinity,
-                height: size.height / 3,
-                    child:Image.asset("assets/images/lfarab.gif")
-                ),
+                  width: double.infinity,
+                  height: size.height / 3,
+                  child: Image.asset("assets/images/lfarab.gif")),
             ),
             SizedBox(
                 width: double.infinity,
@@ -104,24 +99,34 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/gaz.jpg",
-                                    width: 95,
-                                    height:95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/gaz.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('نفت، گاز، پتروشیمی')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('نفت، گاز، پتروشیمی'),
+                                  )
                                 ]),
                             onTap: () => {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              NiroHoze()))
+                                          builder: (context) => PetroshimiHozeFarab()))
                                 }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -137,23 +142,34 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/niro.jpg",
-                                    width: 95,
-                                   height: 95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/reil.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('نیروگاه های حرارتی')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('صنایع ریلی'),
+                                  )
                                 ]),
                             onTap: () => {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Abvideo()))
+                                          builder: (context) => ReiliHozeFarab()))
                                 }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -169,24 +185,34 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/ab.jpg",
-                                    width: 95,
-                                    height: 95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/niro.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('نیروگاههای برق آبی')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('نیـــرو'),
+                                  )
                                 ]),
                             onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          Sakhtemanvideo()));
+                                      builder: (context) => NiroHozehFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -202,17 +228,28 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/tajdidok.jpg",
-                                    width: 95,
-                                    height: 95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/bahrehoze.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('انرژی تجدید پذیر')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('بهره‌برداری و نگهداری'),
+                                  )
                                 ]),
                             onTap: () {
                               Navigator.push(
@@ -234,24 +271,34 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/hoshmand.jpg",
-                                    width: 95,
-                                    height: 95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/sakhteman.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('پروژه های هوشمند')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('ساختمان'),
+                                  )
                                 ]),
                             onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          Hoshmandvideo()));
+                                      builder: (context) => Hoshmandvideo()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -267,17 +314,28 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/reil.jpg",
-                                    width: 95,
-                                    height: 95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/ab.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('پروژه های ریلی')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('آب'),
+                                  )
                                 ]),
                             onTap: () {
                               Navigator.push(
@@ -289,8 +347,7 @@ class _MainMoview extends State<MainMoview> {
                       // ignore: avoid_unnecessary_containers
 
                       Container(
-                        decoration: const BoxDecoration(
-                             ),
+                        decoration: const BoxDecoration(),
                         child: InkWell(),
                       ),
 
@@ -306,64 +363,73 @@ class _MainMoview extends State<MainMoview> {
                             ]),
                         child: InkWell(
                             child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    "assets/images/bahrebardari.jpg",
-                                    width: 95,
-                                    height: 95,
-                                    fit: BoxFit.cover,
+                                  Container(
+                                    width: 85,
+                                    height: 85,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 1.0),
+                                    padding: const EdgeInsets.all(2.0),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/hoshmand.jpg',
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  const Text('بهره برداری')
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text('شبکه‌های هوشمند'),
+                                  )
                                 ]),
                             onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => videoTajdid()));
+                                      builder: (context) => NiroHozehFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
                       Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 3.0,
-                              )
-                            ]),
-                        child: InkWell(
-                            child: Column(
-                                crossAxisAlignment:
-                                    CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/images/sakhteman.jpg",
-                                    width: 95,
-                                    height: 95,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  const Text('پروژه های ساختمانی')
-                                ]),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => videoTajdid()));
-                            }),
-                      ),
+                          // decoration: BoxDecoration(
+                          //     color: Colors.white,
+                          //     borderRadius: BorderRadius.circular(16),
+                          //     boxShadow: const [
+                          //       BoxShadow(
+                          //         color: Colors.black12,
+                          //         blurRadius: 3.0,
+                          //       )
+                          //     ]),
+                          // child: InkWell(
+                          //     child: Column(
+                          //         crossAxisAlignment: CrossAxisAlignment.center,
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         children: [
+                          //           Image.asset(
+                          //             "assets/images/sakhteman.jpg",
+                          //             width: 95,
+                          //             height: 95,
+                          //             fit: BoxFit.cover,
+                          //           ),
+                          //           const Text('پروژه های ساختمانی')
+                          //         ]),
+                          //     onTap: () {
+                          //       Navigator.push(
+                          //           context,
+                          //           MaterialPageRoute(
+                          //               builder: (context) => videoTajdid()));
+                          //     }),
+                          ),
                     ],
                   ),
                 ))
           ],
         ),
       )),
-
     );
   }
 }

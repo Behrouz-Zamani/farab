@@ -1,10 +1,8 @@
 // ignore_for_file: file_names
 
-import 'package:farab/main.dart';
 import 'package:farab/models/HozeModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'Home.dart';
 import 'Project.dart';
@@ -46,147 +44,138 @@ class _hozeFarabState extends State<hoze_Farab> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-leading: IconButton(
-    icon: Icon(Icons.arrow_back, color: Colors.white),
-    onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const homeScrean()))),
-  
-  title: Text('حوزه های فراب'),
-    centerTitle: true,
-
-  ),
+        appBar: AppBar(
+          leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Colors.white),
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const homeScrean()))),
+          title: Text('حوزههای فراب'),
+          centerTitle: true,
+        ),
         body: SafeArea(
-      child: Column(
-        children: [
-          Container(
-            color: Color.fromARGB(255, 255, 255, 255),
-            width: double.infinity,
-            height: size.height / 1.7,
-            child: Stack(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: size.height / 2.1,
-                  foregroundDecoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(65),
-                        bottomRight: Radius.circular(65)),
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 38, 34, 94),
-                        Colors.transparent,
-                        Colors.transparent,
-                        Color.fromARGB(255, 38, 34, 94),
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      stops: [0, 0, 0.2, 1],
-                    ),
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(65),
-                          bottomRight: Radius.circular(65)),
-                      image: DecorationImage(
-                        image: AssetImage(hozeModel[_selectedIndex].img),
-                        fit: BoxFit.cover,
-                      )),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(24, 24, 0, 0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 36,
-                        height: 36,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color.fromARGB(186, 255, 255, 255),
+          child: Column(
+            children: [
+              Container(
+                color: Color.fromARGB(255, 255, 255, 255),
+                width: double.infinity,
+                height: size.height / 1.7,
+                child: Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: size.height / 2.1,
+                      foregroundDecoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(24),
+                            bottomRight: Radius.circular(24)),
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 38, 34, 94),
+                            Colors.transparent,
+                            Colors.transparent,
+                            Color.fromARGB(255, 38, 34, 94),
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          stops: [0, 0, 0.2, 1],
                         ),
-                        child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const homeScrean()));
-                            },
-                            child: const Icon(CupertinoIcons.home)),
                       ),
-
-                      ElevatedButton(
-                        
-                        onPressed: (){
-                          Navigator.push(context,MaterialPageRoute(builder: (context) => const ProjectList()));
-                        }, 
-                        child:Text('پروژه ها') )
-                    ],
-                  ),
-                ),
-
-                Positioned(
-                  right: 0,
-                  top: 80,
-                  child: SizedBox(
-                    width: 90,
-                    height: size.height / 2.3,
-                    child: ListView.builder(
-                      itemCount: hozeModel.length,
-                      itemBuilder: (context, index) {
-                        return imageItem(index);
-                      },
+                      decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.only(
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16)),
+                          image: DecorationImage(
+                            image: AssetImage(hozeModel[_selectedIndex].img),
+                            fit: BoxFit.cover,
+                          )),
                     ),
-                  ),
-                ),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(24, 24, 0, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 36,
+                            height: 36,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color.fromARGB(186, 255, 255, 255),
+                            ),
+                            child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const homeScrean()));
+                                },
+                                child: const Icon(CupertinoIcons.home)),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Positioned(
+                      right: 0,
+                      top: 80,
+                      child: SizedBox(
+                        width: 50,
+                        height: size.height / 2.3,
+                        child: ListView.builder(
+                          itemCount: hozeModel.length,
+                          itemBuilder: (context, index) {
+                            return imageItem(index);
+                          },
+                        ),
+                      ),
+                    ),
 
 //name
 
-                Positioned(
-                  bottom: 110,
-                  left: 32,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        hozeModel[_selectedIndex].name,
-                        style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontFamily: 'vazir',
-                            fontWeight: FontWeight.w700),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-
-
-          ),
-          Expanded(
-              child: Container(
-            color: Color.fromARGB(255, 255, 255, 255),
-            width: double.infinity,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: SingleChildScrollView(
-                child: Text(
-                  hozeModel[_selectedIndex].detail,
-                  style: const TextStyle(
-                      fontFamily: 'vazir',
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      height: 2.6),
-                  textDirection: TextDirection.rtl,
-                  textAlign: TextAlign.justify,
+                    Positioned(
+                      bottom: 110,
+                      left: 32,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            hozeModel[_selectedIndex].name,
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontFamily: 'vazir',
+                                fontWeight: FontWeight.w700),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
-            ),
-          )),
-        ],
-      ),
-    ));
+              Expanded(
+                  child: Container(
+                color: Color.fromARGB(255, 255, 255, 255),
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: SingleChildScrollView(
+                    child: Text(
+                      hozeModel[_selectedIndex].detail,
+                      style: const TextStyle(
+                          fontFamily: 'vazir',
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          height: 2.6),
+                      textDirection: TextDirection.rtl,
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                ),
+              )),
+            ],
+          ),
+        ));
   }
 
   Widget imageItem(int index) {

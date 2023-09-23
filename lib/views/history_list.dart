@@ -1,12 +1,7 @@
+import 'package:farab/about_Farab.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-
-import '../Company_Detail.dart';
-import '../eftekharatFarab.dart';
-import '../models/CopmanyModel.dart';
-import '../models/history_model.dart';
-import '../ozviyatFarab.dart';
-import 'custom_history.dart';
+import '../Home.dart';
+import '../models/historyok_model.dart';
 
 class HostoryList extends StatefulWidget {
   const HostoryList({super.key});
@@ -16,12 +11,19 @@ class HostoryList extends StatefulWidget {
 }
 
 class _HostoryListState extends State<HostoryList> {
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          title: Title(color: Colors.white, child: const Text('تاریخچه فراب')),
+          leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const AboutFarab()))),
+          title: const Text('تاریخچه فراب'),
+          centerTitle: true,
         ),
         body: SafeArea(
           child: Column(
@@ -47,92 +49,80 @@ class _HostoryListState extends State<HostoryList> {
                   ],
                 ),
               ),
-            SizedBox(
-                width: double.infinity,
-                height: 64,
-                child: Container(
+              SizedBox(
                   width: double.infinity,
                   height: 64,
-                  color: Colors.black12,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-
-                        InkWell(
-                          child: const Text(
-                            'دهه چهارم',
-                            style: TextStyle(fontFamily: 'vazir'),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const eftekharatFarab()));
-                          },
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 213, 203, 159),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(24.0))),
+                      width: double.infinity,
+                      height: 56,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            
+                            // SizedBox(
+                            //   width: 300,
+                            //   child: ListView.builder(
+                            //     scrollDirection: Axis.horizontal,
+                            //       itemCount: historyOkModel.length,
+                            //       itemBuilder: (context, index) {
+                            //         return imageItem(index);
+                                     
+                            //       }),
+                            // ),
+                            
+                          ],
                         ),
-                        // Text('تاریخچه فراب'),
-                        InkWell(
-                          child: const Text(
-                            'دهه سوم',
-                            style: TextStyle(fontFamily: 'vazir'),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const OzviyatList()));
-                          },
-                        ),
-                                                InkWell(
-                          child: const Text(
-                            'دهه دوم',
-                            style: TextStyle(fontFamily: 'vazir'),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const OzviyatList()));
-                          },
-                        ),
-                        InkWell(
-                          child: const Text('دهه اول',
-                              style: TextStyle(fontFamily: 'vazir')),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const HostoryList()));
-                          },
-                        ),
-                      ],
+                      ),
+                    ),
+                  )),
+              //لیست شرکت ها
+              Expanded(
+                  child: Container(
+                color: Color.fromARGB(255, 255, 255, 255),
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: SingleChildScrollView(
+                    child: Text(
+                      historyOkModel[_selectedIndex].matn,
+                      style: const TextStyle(
+                          fontFamily: 'vazir',
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          height: 2.6),
+                      textDirection: TextDirection.rtl,
+                      textAlign: TextAlign.justify,
                     ),
                   ),
-                )),
-              //لیست شرکت ها
-            Container(
-              width: double.infinity,
-              height: size.height / 2.5,
-              //color: Colors.yellow,
-              child: const Padding(
-                padding: EdgeInsets.all(16.0),
-                child: SingleChildScrollView(
-                    child: Expanded(
-                        child: Text(
-                  'شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',
-                  textDirection: TextDirection.rtl,
-                  textAlign: TextAlign.justify,
-                  style:
-                      TextStyle(fontSize: 16, fontFamily: 'vazir', height: 2),
-                ))),
-              ),
-            )
+                ),
+              )),
             ],
           ),
         ));
+  }
+
+  Widget imageItem(int index) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: InkWell(
+            onTap: () {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+            child: Text(historyOkModel[_selectedIndex].groupe),
+          ),
+        ),
+      ],
+    );
   }
 }

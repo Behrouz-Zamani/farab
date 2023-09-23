@@ -126,18 +126,15 @@ class _MainMoview extends State<MainMoview> {
                     height: 80,
 
                     // color: Colors.amber,
-                    child: _controller.value.isInitialized
-                        ? AspectRatio(
-                            aspectRatio: _controller.value.aspectRatio,
-                            child: selected == 0
-                                ? VideoPlayer(_controller)
-                                : selected == 1
-                                    ? VideoPlayer(_controller2)
-                                    : selected == 2
-                                        ? VideoPlayer(_controller3)
-                                        : null,
-                          )
-                        : Container(),
+                    child:             Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: double.infinity,
+                height: size.height / 3,
+                    child:Image.asset("assets/images/lfarab.gif")
+                ),
+            ),
+                        
                   ),
                 ),
               ),
@@ -397,7 +394,35 @@ class _MainMoview extends State<MainMoview> {
                           ),
                           // ignore: avoid_unnecessary_containers
                           Container(
-                            child: InkWell(),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 65,
+                                        height: 65,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Text('مصاحبه ها')
+                                    ]),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => videoTajdid()));
+                                }),
                           ),
 
                           // ignore: avoid_unnecessary_containers
@@ -409,27 +434,7 @@ class _MainMoview extends State<MainMoview> {
           ),
         ),
       )),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(255, 254, 80, 0),
-        onPressed: () {
-          setState(() {
-            _controller.value.isPlaying
-                ? _controller.pause()
-                : _controller.play();
 
-            _controller2.value.isPlaying
-                ? _controller2.pause()
-                : _controller2.play();
-
-            _controller3.value.isPlaying
-                ? _controller3.pause()
-                : _controller3.play();
-          });
-        },
-        child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
-      ),
     );
   }
 
