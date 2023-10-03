@@ -19,6 +19,7 @@ class VideoListController extends GetxController{
       response.data['price'];
 
 
+      // ignore: avoid_print
       print(response.data['title']);
     }
 }

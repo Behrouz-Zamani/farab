@@ -1,8 +1,7 @@
+import 'package:farab/Home.dart';
 import 'package:farab/activity_farab.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
-import '../../videoNaft.dart';
 
 class ReiliHozeFarab extends StatefulWidget {
   const ReiliHozeFarab({super.key});
@@ -15,14 +14,6 @@ class _ReiliHozeFarabState extends State<ReiliHozeFarab> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    const [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-      GlobalCupertinoLocalizations.delegate,
-    ];
-    const [
-      Locale('fa'), // English
-    ];
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -39,12 +30,12 @@ class _ReiliHozeFarabState extends State<ReiliHozeFarab> {
         children: [
           SizedBox(
             width: double.infinity,
-            height: size.height / 2.8,
+            height: size.height / 3.5,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: double.infinity,
-                height: size.height / 2.8,
+                height: size.height / 3,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: Image.asset('assets/images/reil.jpg').image,
@@ -173,312 +164,306 @@ class _ReiliHozeFarabState extends State<ReiliHozeFarab> {
           //باکس پایین
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(125, 213, 203, 159),
+                borderRadius: BorderRadius.all(Radius.circular(24)),
+              ),
+              width: double.infinity,
+              height: size.height / 2.4,
               child: SingleChildScrollView(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(125, 213, 203, 159),
-                    borderRadius: BorderRadius.all(Radius.circular(24)),
-                  ),
-                  width: double.infinity,
-                  height: size.height / 2.4,
-                  child: Expanded(
-                    child: SingleChildScrollView(
-                      child: Column(
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'توسعه صنایع ریلی، یکی از پیش‌نیازهای توسعه پایدار شهرهای بزرگ ایران است. فراب در سال 1388 به پشتوانه تجربیات موفق خود در سایر بخش‌های صنعتی و داخلی تصمیم گرفت تا در این حوزه ورود نماید.',
+                        textAlign: TextAlign.end,
+                        style: TextStyle(fontSize: 14, height: 2.2),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'توسعه صنایع ریلی، یکی از پیش‌نیازهای توسعه پایدار شهرهای بزرگ ایران است. فراب در سال 1388 به پشتوانه تجربیات موفق خود در سایر بخش‌های صنعتی و داخلی تصمیم گرفت تا در این حوزه ورود نماید.',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(fontSize: 14, height: 2.2),
-                            ),
+                          Container(
+                            width: 105,
+                            height: 105,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 75,
+                                        height: 75,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Text(
+                                          'قطار‌شهری گلشهر-هشتگرد',
+                                          textDirection:
+                                              TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              overflow: TextOverflow.fade,
+                                              fontSize: 12))
+                                    ]),
+                                onTap: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  homeScrean()))
+                                    }),
                           ),
-                          const SizedBox(
-                            height: 16,
+                          Container(
+                            width: 105,
+                            height: 105,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 65,
+                                        height: 65,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Text(
+                                          'خط هفت متروی تهران',
+                                          textDirection:
+                                              TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              overflow: TextOverflow.fade,
+                                              fontSize: 12))
+                                    ]),
+                                onTap: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  homeScrean()))
+                                    }),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 105,
-                                  height: 105,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
-                                          blurRadius: 3.0,
-                                        )
-                                      ]),
-                                  child: InkWell(
-                                      child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/farab-logo-header.png",
-                                              width: 75,
-                                              height: 75,
-                                              fit: BoxFit.contain,
-                                            ),
-                                            const Text(
-                                                'قطار‌شهری گلشهر-هشتگرد',
-                                                textDirection:
-                                                    TextDirection.rtl,
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    overflow: TextOverflow.fade,
-                                                    fontSize: 12))
-                                          ]),
-                                      onTap: () => {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Naftvideo()))
-                                          }),
-                                ),
-                                Container(
-                                  width: 105,
-                                  height: 105,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
-                                          blurRadius: 3.0,
-                                        )
-                                      ]),
-                                  child: InkWell(
-                                      child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/farab-logo-header.png",
-                                              width: 65,
-                                              height: 65,
-                                              fit: BoxFit.contain,
-                                            ),
-                                            const Text(
-                                                'خط هفت متروی تهران',
-                                                textDirection:
-                                                    TextDirection.rtl,
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    overflow: TextOverflow.fade,
-                                                    fontSize: 12))
-                                          ]),
-                                      onTap: () => {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Naftvideo()))
-                                          }),
-                                ),
-                                Container(
-                                  width: 105,
-                                  height: 105,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
-                                          blurRadius: 3.0,
-                                        )
-                                      ]),
-                                  child: InkWell(
-                                      child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/farab-logo-header.png",
-                                              width: 75,
-                                              height: 75,
-                                              fit: BoxFit.contain,
-                                            ),
-                                            const Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 8, right: 8),
-                                              child: Text(
-                                                'خطA قطار شهری قم',
-                                                textDirection:
-                                                    TextDirection.rtl,
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    overflow: TextOverflow.fade,
-                                                    fontSize: 12),
-                                              ),
-                                            )
-                                          ]),
-                                      onTap: () => {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Naftvideo()))
-                                          }),
-                                ),
-                              ],
-                            ),
+                          Container(
+                            width: 105,
+                            height: 105,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 75,
+                                        height: 75,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 8, right: 8),
+                                        child: Text(
+                                          'خطA قطار شهری قم',
+                                          textDirection:
+                                              TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              overflow: TextOverflow.fade,
+                                              fontSize: 12),
+                                        ),
+                                      )
+                                    ]),
+                                onTap: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  homeScrean()))
+                                    }),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 105,
-                                  height: 105,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
-                                          blurRadius: 3.0,
-                                        )
-                                      ]),
-                                  child: InkWell(
-                                      child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/farab-logo-header.png",
-                                              width: 75,
-                                              height: 75,
-                                              fit: BoxFit.contain,
-                                            ),
-                                            const Text(
-                                                'خط2 قطار شهری مشهد',
-                                                textDirection:
-                                                    TextDirection.rtl,
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    overflow: TextOverflow.fade,
-                                                    fontSize: 12))
-                                          ]),
-                                      onTap: () => {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Naftvideo()))
-                                          }),
-                                ),
-                                Container(
-                                  width: 105,
-                                  height: 105,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
-                                          blurRadius: 3.0,
-                                        )
-                                      ]),
-                                  child: InkWell(
-                                      child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/farab-logo-header.png",
-                                              width: 65,
-                                              height: 65,
-                                              fit: BoxFit.contain,
-                                            ),
-                                            const Text(
-                                                'زیرگذر‌راه‌آهن تهران‌-تبریز',
-                                                textDirection:
-                                                    TextDirection.rtl,
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    overflow: TextOverflow.fade,
-                                                    fontSize: 12))
-                                          ]),
-                                      onTap: () => {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Naftvideo()))
-                                          }),
-                                ),
-                                Container(
-                                  width: 105,
-                                  height: 105,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color: Colors.black12,
-                                          blurRadius: 3.0,
-                                        )
-                                      ]),
-                                  child: InkWell(
-                                      child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                              "assets/images/farab-logo-header.png",
-                                              width: 75,
-                                              height: 75,
-                                              fit: BoxFit.contain,
-                                            ),
-                                            const Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 8, right: 8),
-                                              child: Text(
-                                                'خط مترو‌تهران-پرند',
-                                                textDirection:
-                                                    TextDirection.rtl,
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                    overflow: TextOverflow.fade,
-                                                    fontSize: 12),
-                                              ),
-                                            )
-                                          ]),
-                                      onTap: () => {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Naftvideo()))
-                                          }),
-                                ),
-                              ],
-                            ),
-                          )
                         ],
                       ),
                     ),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 105,
+                            height: 105,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 75,
+                                        height: 75,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Text(
+                                          'خط2 قطار شهری مشهد',
+                                          textDirection:
+                                              TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              overflow: TextOverflow.fade,
+                                              fontSize: 12))
+                                    ]),
+                                onTap: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  homeScrean()))
+                                    }),
+                          ),
+                          Container(
+                            width: 105,
+                            height: 105,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 65,
+                                        height: 65,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Text(
+                                          'زیرگذر‌راه‌آهن تهران‌-تبریز',
+                                          textDirection:
+                                              TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              overflow: TextOverflow.fade,
+                                              fontSize: 12))
+                                    ]),
+                                onTap: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  homeScrean()))
+                                    }),
+                          ),
+                          Container(
+                            width: 105,
+                            height: 105,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 3.0,
+                                  )
+                                ]),
+                            child: InkWell(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/farab-logo-header.png",
+                                        width: 75,
+                                        height: 75,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 8, right: 8),
+                                        child: Text(
+                                          'خط مترو‌تهران-پرند',
+                                          textDirection:
+                                              TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              overflow: TextOverflow.fade,
+                                              fontSize: 12),
+                                        ),
+                                      )
+                                    ]),
+                                onTap: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  homeScrean()))
+                                    }),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),

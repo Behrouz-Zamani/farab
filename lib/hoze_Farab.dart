@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'Home.dart';
-import 'Project.dart';
 
 void main() {
   runApp(const hozeMain());
@@ -46,17 +45,17 @@ class _hozeFarabState extends State<hoze_Farab> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white),
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () => Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const homeScrean()))),
-          title: Text('حوزههای فراب'),
+          title: const Text('حوزه های فراب'),
           centerTitle: true,
         ),
         body: SafeArea(
           child: Column(
             children: [
               Container(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 width: double.infinity,
                 height: size.height / 1.7,
                 child: Stack(
@@ -155,7 +154,7 @@ class _hozeFarabState extends State<hoze_Farab> {
               ),
               Expanded(
                   child: Container(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),

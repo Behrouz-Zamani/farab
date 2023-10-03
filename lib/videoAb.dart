@@ -4,6 +4,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';
 
 class Abvideo extends StatefulWidget {
+  const Abvideo({super.key});
+
   @override
   State<Abvideo> createState() => _Abvideo();
 }
@@ -20,7 +22,7 @@ class _Abvideo extends State<Abvideo> {
       _controller.pause();
     }
     setState(() {
-      this._currentIndex = index;
+      _currentIndex = index;
     });
 
     _controller = VideoPlayerController.network(videoabmodel[_currentIndex].url)
@@ -79,7 +81,7 @@ class _Abvideo extends State<Abvideo> {
               ),
             ),
        
-            Container(
+            SizedBox(
              // color: const Color.fromARGB(255, 255, 255, 255),
               height: size.height / 1.8,
               child: ListView.builder(
@@ -128,7 +130,7 @@ class _Abvideo extends State<Abvideo> {
             
       ),
        floatingActionButton: FloatingActionButton(
-       backgroundColor: Color.fromARGB(255, 254, 80, 0),
+       backgroundColor: const Color.fromARGB(255, 254, 80, 0),
        onPressed: () {
          setState(() {
            _controller.value.isPlaying

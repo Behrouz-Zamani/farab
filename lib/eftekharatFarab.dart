@@ -1,8 +1,10 @@
+
+// ignore_for_file: camel_case_types
+
 import 'package:farab/about_Farab.dart';
 import 'package:flutter/material.dart';
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 
-import 'Home.dart';
 
 void main() {
   runApp(const eftekharatFarab());
@@ -18,9 +20,9 @@ class eftekharatFarab extends StatefulWidget {
 class _eftekharatFarabState extends State<eftekharatFarab> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -55,10 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
 leading: IconButton(
-    icon: Icon(Icons.arrow_back, color: Colors.white),
+    icon: const Icon(Icons.arrow_back, color: Colors.white),
     onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const AboutFarab()))),
   
-  title: Text('گواهینامه‌ها',style: TextStyle(fontFamily: 'vazir'),),
+  title: const Text('گواهینامه‌ها',style: TextStyle(fontFamily: 'vazir'),),
     centerTitle: true,
 
   ),

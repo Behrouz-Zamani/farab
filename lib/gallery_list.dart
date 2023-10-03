@@ -1,14 +1,8 @@
 // ignore_for_file: file_names
 
-import 'package:farab/videoHoshmand.dart';
-import 'package:farab/videoNaft.dart';
-import 'package:farab/videoNirogah.dart';
-import 'package:farab/videoReili.dart';
-import 'package:farab/videoSakhteman.dart';
-import 'package:farab/videoTajdid.dart';
+import 'package:farab/Gallery.dart';
+import 'package:farab/MultimediaFarab.dart';
 
-import 'Home.dart';
-import 'videoAb.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -23,14 +17,7 @@ class GalleryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // localizationsDelegates: const [
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // supportedLocales: const [
-      //   Locale('fa'), // English
-      // ],
+
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
       home: const MainMoview(),
@@ -50,40 +37,12 @@ class MainMoview extends StatefulWidget {
 class _MainMoview extends State<MainMoview> {
   int selected = 0;
   List<int> loc = [0, 0, 0, 0, 0, 0, 0];
-  late VideoPlayerController _controller;
-  late VideoPlayerController _controller2;
-  late VideoPlayerController _controller3;
 
   bool isPlaying = true;
 
   @override
   void initState() {
     super.initState();
-
-    _controller = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/upload/2023/03/nowruz-message-of-dr-vakili.mp4')
-      ..initialize().then((_) {
-        setState(() {
-          _controller.play();
-        });
-      });
-
-    _controller2 = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4')
-      //..initialize().then((_) {
-      ..initialize().then((_) {
-        setState(() {
-          _controller.play();
-        });
-      });
-
-    _controller3 = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/upload/2023/03/nowruz-daf.mp4')
-      ..initialize().then((_) {
-        setState(() {
-          _controller3.play();
-        });
-      });
   }
 
   @override
@@ -95,7 +54,7 @@ class _MainMoview extends State<MainMoview> {
         leading: IconButton(
             icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const homeScrean()))),
+                MaterialPageRoute(builder: (context) => const multiMedia()))),
         title: const Text('گالری تصاویر فراب'),
         centerTitle: true,
       ),
@@ -115,24 +74,10 @@ class _MainMoview extends State<MainMoview> {
                 child: Container(
                   margin: const EdgeInsets.only(
                       left: 16.0, top: 10.0, right: 16.0, bottom: 40.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 80,
-
-                    // color: Colors.amber,
-                    child: _controller.value.isInitialized
-                        ? AspectRatio(
-                            aspectRatio: _controller.value.aspectRatio,
-                            child: selected == 0
-                                ? VideoPlayer(_controller)
-                                : selected == 1
-                                    ? VideoPlayer(_controller2)
-                                    : selected == 2
-                                        ? VideoPlayer(_controller3)
-                                        : null,
-                          )
-                        : Container(),
-                  ),
+                  child:  SizedBox(
+                  width: double.infinity,
+                  height: size.height / 3,
+                  child: Image.asset("assets/images/lfarab.gif")),
                 ),
               ),
               Container(
@@ -177,7 +122,7 @@ class _MainMoview extends State<MainMoview> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Nirogahvideo()))
+                                                  const GalleryApp()))
                                     }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -209,7 +154,7 @@ class _MainMoview extends State<MainMoview> {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Abvideo()))
+                                              builder: (context) => const GalleryApp()))
                                     }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -242,7 +187,7 @@ class _MainMoview extends State<MainMoview> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              Sakhtemanvideo()));
+                                              const GalleryApp()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -274,7 +219,7 @@ class _MainMoview extends State<MainMoview> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Reilvideo()));
+                                          builder: (context) => const GalleryApp()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -307,7 +252,7 @@ class _MainMoview extends State<MainMoview> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              Hoshmandvideo()));
+                                              const GalleryApp()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -339,7 +284,7 @@ class _MainMoview extends State<MainMoview> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Naftvideo()));
+                                          builder: (context) => const GalleryApp()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -386,7 +331,7 @@ class _MainMoview extends State<MainMoview> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => videoTajdid()));
+                                          builder: (context) => const GalleryApp()));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -406,24 +351,4 @@ class _MainMoview extends State<MainMoview> {
     );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-    _controller2.dispose();
-    _controller3.dispose();
-  }
-
-  changevideo() {
-    setState(() {
-      selected = 1;
-    });
-  }
-
-  stop() {
-    setState(() {
-      _controller.dispose();
-      _controller3.dispose();
-    });
-  }
 }

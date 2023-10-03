@@ -2,17 +2,12 @@
 
 import 'package:farab/videoHoshmand.dart';
 import 'package:farab/videoNaft.dart';
-import 'package:farab/videoNirogah.dart';
 import 'package:farab/videoReili.dart';
-import 'package:farab/videoSakhteman.dart';
-import 'package:farab/videoTajdid.dart';
 import 'package:farab/views/Hoze/petroshimi_hoze.dart';
 import 'package:farab/views/Hoze/reili_hoze.dart';
-import 'views/Hoze/niro_hoze.dart';
+import 'niro_hoze.dart';
 import 'Home.dart';
-import 'videoAb.dart';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 
 void main() {
   runApp(const activity_farab());
@@ -25,14 +20,6 @@ class activity_farab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // localizationsDelegates: const [
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // supportedLocales: const [
-      //   Locale('fa'), // English
-      // ],
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
       home: const MainMoview(),
@@ -57,6 +44,7 @@ class _MainMoview extends State<MainMoview> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
             icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -71,10 +59,16 @@ class _MainMoview extends State<MainMoview> {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                  width: double.infinity,
-                  height: size.height / 3,
-                  child: Image.asset("assets/images/lfarab.gif")),
+              child: Container(
+                width: double.infinity,
+                height: size.height / 3,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/lfarab.gif"),
+                  ),
+                ),
+              ),
             ),
             SizedBox(
                 width: double.infinity,
@@ -126,7 +120,8 @@ class _MainMoview extends State<MainMoview> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => PetroshimiHozeFarab()))
+                                          builder: (context) =>
+                                              const PetroshimiHozeFarab()))
                                 }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -169,7 +164,8 @@ class _MainMoview extends State<MainMoview> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => ReiliHozeFarab()))
+                                          builder: (context) =>
+                                              const ReiliHozeFarab()))
                                 }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -212,7 +208,8 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => NiroHozehFarab()));
+                                      builder: (context) =>
+                                          const NiroHozehFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -248,7 +245,10 @@ class _MainMoview extends State<MainMoview> {
                                   ),
                                   const Padding(
                                     padding: EdgeInsets.all(4.0),
-                                    child: Text('بهره‌برداری و نگهداری'),
+                                    child: Text(
+                                      'بهره‌برداری و نگهداری',
+                                      textAlign: TextAlign.right,
+                                    ),
                                   )
                                 ]),
                             onTap: () {
@@ -348,7 +348,7 @@ class _MainMoview extends State<MainMoview> {
 
                       Container(
                         decoration: const BoxDecoration(),
-                        child: InkWell(),
+                        child: const InkWell(),
                       ),
 
                       Container(
@@ -390,7 +390,8 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => NiroHozehFarab()));
+                                      builder: (context) =>
+                                          const NiroHozehFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers

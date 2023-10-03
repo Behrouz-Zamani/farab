@@ -8,24 +8,9 @@ import 'package:farab/sangab.dart';
 import 'package:farab/sarmaye.dart';
 import 'package:farab/tajdid.dart';
 import 'package:farab/tajhizat.dart';
-import 'package:farab/videoAb.dart';
-import 'package:farab/videoHoshmand.dart';
-import 'package:farab/videoNaft.dart';
-import 'package:farab/videoNirogah.dart';
-import 'package:farab/videoReili.dart';
-import 'package:farab/videoSakhteman.dart';
-import 'package:farab/videoTajdid.dart'; // ignore_for_file: file_names
+// ignore_for_file: file_names
 
-import 'package:farab/Home.dart';
-import 'package:farab/azimivideos.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get/get.dart';
-import 'Company_Detail.dart';
-import 'main.dart';
-import 'models/CopmanyModel.dart';
 // import 'niro_hozeh.dart';
 
 void main() {
@@ -61,10 +46,10 @@ class _MainPageState extends State<MainCompany> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.white),
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const AboutFarab()))),
-        title: Text('شرکت های فراب',style: TextStyle(fontFamily: 'vazir'),),
+        title: const Text('شرکت های فراب',style: TextStyle(fontFamily: 'vazir'),),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -143,7 +128,7 @@ class _MainPageState extends State<MainCompany> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => sakhteman()))
+                                        builder: (context) => const sakhteman()))
                               }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -174,7 +159,7 @@ class _MainPageState extends State<MainCompany> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => nardis()))
+                                        builder: (context) => const nardis()))
                               }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -205,7 +190,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => tajhisat()));
+                                    builder: (context) => const tajhisat()));
                           }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -236,7 +221,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sangab()));
+                                    builder: (context) => const sangab()));
                           }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -267,7 +252,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => naft()));
+                                    builder: (context) => const naft()));
                           }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -298,7 +283,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => bahrebardari()));
+                                    builder: (context) => const bahrebardari()));
                           }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -330,7 +315,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => tajdid()));
+                                    builder: (context) => const tajdid()));
                           }),
                     ),
                     Container(
@@ -360,7 +345,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => saderat()));
+                                    builder: (context) => const saderat()));
                           }),
                     ),
                     // ignore: avoid_unnecessary_containers
@@ -391,7 +376,7 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => sarmaye()));
+                                    builder: (context) => const sarmaye()));
                           }),
                     ),
                     // Container(

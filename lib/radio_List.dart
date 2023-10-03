@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:just_audio/just_audio.dart';
 
 
@@ -39,12 +37,16 @@ void dispose(){
       ),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: size.height / 3.3,
-            color: Colors.amber,
             child:
-            Image.asset("assets/images/radiogif.gif"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius:const BorderRadius.all(Radius.circular(32)),
+                child: Image.asset("assets/images/EIQV.gif")),
+            ),
           ),
           Column(
             children: [

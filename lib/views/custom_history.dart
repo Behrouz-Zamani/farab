@@ -1,6 +1,5 @@
 // ignore_for_file: file_names
 
-import 'package:farab/News_Detail.dart';
 import 'package:farab/views/detail_history.dart';
 import 'package:flutter/material.dart';
 

@@ -1,11 +1,11 @@
 import 'package:farab/models/masoliyat_video.dart';
-import 'package:farab/models/videoReilyModels.dart';
-import 'package:farab/models/videosAbModels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';
 
 class Masoliyatvideo extends StatefulWidget {
+  const Masoliyatvideo({super.key});
+
   @override
   State<Masoliyatvideo> createState() => _Reilvideo();
 }
@@ -22,7 +22,7 @@ class _Reilvideo extends State<Masoliyatvideo> {
       _controller.pause();
     }
     setState(() {
-      this._currentIndex = index;
+      _currentIndex = index;
     });
 
     _controller = VideoPlayerController.network(masoliyatlist[_currentIndex].url)
@@ -71,17 +71,17 @@ class _Reilvideo extends State<Masoliyatvideo> {
                     child: _controller.value.isInitialized
                         ? Column(
                             children: <Widget>[
-                              SizedBox(
-                                height: 200,
-                                child: VideoPlayer(_controller),
-                              ),
+ SizedBox(
+                  width: double.infinity,
+                  height: size.height / 3,
+                  child: Image.asset("assets/images/lfarab.gif")),
                             ],
                           )
                         : Container()),
               ),
             ),
        
-            Container(
+            SizedBox(
              // color: const Color.fromARGB(255, 255, 255, 255),
               height: size.height / 1.8,
               child: ListView.builder(
@@ -111,7 +111,7 @@ class _Reilvideo extends State<Masoliyatvideo> {
                                     style: const TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'vazir',
-                                        fontSize: 4,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -130,7 +130,7 @@ class _Reilvideo extends State<Masoliyatvideo> {
             
       ),
        floatingActionButton: FloatingActionButton(
-       backgroundColor: Color.fromARGB(255, 254, 80, 0),
+       backgroundColor: const Color.fromARGB(255, 254, 80, 0),
        onPressed: () {
          setState(() {
            _controller.value.isPlaying

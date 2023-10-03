@@ -4,7 +4,6 @@
 import 'package:farab/models/project_model.dart';
 import 'package:flutter/material.dart';
 
-import '../models/ozviyat_model.dart';
 
 class HistoryPage extends StatelessWidget {
   final ProjectModel project;
@@ -12,7 +11,6 @@ class HistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(

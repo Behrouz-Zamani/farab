@@ -7,6 +7,7 @@ void main() {
   runApp(const sakhteman());
 }
 
+// ignore: camel_case_types
 class sakhteman extends StatelessWidget {
   const sakhteman({super.key});
 
@@ -28,6 +29,7 @@ class sakhteman extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class multiMediaF extends StatefulWidget {
   const multiMediaF({
     Key? key,
@@ -37,6 +39,7 @@ class multiMediaF extends StatefulWidget {
   State<multiMediaF> createState() => _multiMediaF();
 }
 
+// ignore: camel_case_types
 class _multiMediaF extends State<multiMediaF> {
   int selected = 0;
   @override
@@ -75,7 +78,7 @@ class _multiMediaF extends State<multiMediaF> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       InkWell(
-                        child: Text('شبکه‌های اجتماعی'),
+                        child: const Text('شبکه‌های اجتماعی'),
                         onTap: () {
                           showDialog(
                             context: context,
@@ -98,7 +101,7 @@ class _multiMediaF extends State<multiMediaF> {
                         },
                       ),
                       InkWell(
-                        child: Text('تلفن تماس'),
+                        child: const Text('تلفن تماس'),
                         onTap: () {
                           showDialog(
                             context: context,
@@ -121,7 +124,7 @@ class _multiMediaF extends State<multiMediaF> {
                         },
                       ),
                       InkWell(
-                        child: Text('آدرس شرکت'),
+                        child: const Text('آدرس شرکت'),
                         onTap: () {
                           showDialog(
                             context: context,

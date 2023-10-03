@@ -3,12 +3,15 @@ import 'package:video_player/video_player.dart';
 
 void main() =>runApp(tvFarab());
 
+// ignore: camel_case_types
 class tvFarab extends StatefulWidget{
   const tvFarab ({super.key});
 
   @override
+// ignore: library_private_types_in_public_api
 _tvFarab createState()=> _tvFarab();
 }
+// ignore: camel_case_types
 class _tvFarab  extends State<tvFarab> {
    late VideoPlayerController _controller;
    bool isPlaying = false ;

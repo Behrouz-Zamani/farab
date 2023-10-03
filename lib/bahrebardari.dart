@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, camel_case_types
 
 import 'package:farab/Company_Farab.dart';
 import 'package:flutter/material.dart';
@@ -75,7 +75,7 @@ class _multiMediaF extends State<multiMediaF> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       InkWell(
-                        child: Text('شبکه‌های اجتماعی'),
+                        child: const Text('شبکه‌های اجتماعی'),
                         onTap: () {
                           showDialog(
                             context: context,
@@ -98,7 +98,7 @@ class _multiMediaF extends State<multiMediaF> {
                         },
                       ),
                       InkWell(
-                        child: Text('تلفن تماس'),
+                        child: const Text('تلفن تماس'),
                         onTap: () {
                           showDialog(
                             context: context,
@@ -121,7 +121,7 @@ class _multiMediaF extends State<multiMediaF> {
                         },
                       ),
                       InkWell(
-                        child: Text('آدرس شرکت'),
+                        child: const Text('آدرس شرکت'),
                         onTap: () {
                           showDialog(
                             context: context,

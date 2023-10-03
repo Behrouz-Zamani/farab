@@ -1,7 +1,6 @@
 import 'package:farab/about_Farab.dart';
+import 'package:farab/views/Tarikhche/dahe_aval.dart';
 import 'package:flutter/material.dart';
-import '../Home.dart';
-import '../models/historyok_model.dart';
 
 class HostoryList extends StatefulWidget {
   const HostoryList({super.key});
@@ -11,7 +10,6 @@ class HostoryList extends StatefulWidget {
 }
 
 class _HostoryListState extends State<HostoryList> {
-  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,116 +37,131 @@ class _HostoryListState extends State<HostoryList> {
                         width: double.infinity,
                         height: size.height / 2,
                         child: Image.asset("assets/images/lfarab.gif")),
-                    const Positioned(
-                      right: 0,
-                      top: 0,
-                      left: 0,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(8, 16, 8, 0),
-                      ),
-                    ),
+                    // const Positioned(
+                    //   right: 0,
+                    //   top: 0,
+                    //   left: 0,
+                    //   child: Padding(
+                    //     padding: EdgeInsets.fromLTRB(8, 16, 8, 0),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
-              SizedBox(
-                  width: double.infinity,
-                  height: 65,
-                  child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 213, 203, 159),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(24.0))),
-                          width: double.infinity,
-                          height: 64,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    setState(() {
-                                      _selectedIndex = 3;
-                                    });
-                                  },
-                                  child: const Text('دهه چهارم'),
-                                ),
-                                InkWell(
-                                  child: const Text('دهه سوم'),
-                                  onTap: () {
-                                    setState(() {
-                                      _selectedIndex = 2;
-                                    });
-                                  },
-                                ),
-                                InkWell(
-                                  child: const Text('دهه دوم'),
-                                  onTap: () {
-                                    setState(() {
-                                      _selectedIndex = 1;
-                                    });
-                                  },
-                                ),
-                                InkWell(
-                                  child: const Text('دهه اول'),
-                                  onTap: () {
-                                    setState(() {
-                                      _selectedIndex = 0;
-                                    });
-                                  },
-                                ),
-                              ],
-                            ),
-                          )))),
-              //لیست شرکت ها
               Expanded(
-                child: Container(
-                decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 194, 192, 192),
-
-                  borderRadius: BorderRadius.all(Radius.circular(24)),
-                ),
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: SingleChildScrollView(
-                      child: Text(
-                        historyOkModel[_selectedIndex].matn,
-                        style: const TextStyle(
-                            fontFamily: 'vazir',
-                            fontWeight: FontWeight.w500,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            height: 2.6),
-                        textDirection: TextDirection.rtl,
-                        textAlign: TextAlign.justify,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.amber,
+                              borderRadius: BorderRadius.all(Radius.circular(24)),
+                            ),
+                            width: size.width / 2.3,
+                            height: size.width / 2.3,
+                            
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: const [
+                                  InkWell(
+                                    child: Text('دهه دوم',style: TextStyle(fontSize: 18),),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: 
+                            const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(24)),
+                              color: Colors.red,
+                            ),
+                            width: size.width / 2.3,
+                            height: size.width / 2.3,
+                            
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  InkWell(
+                                    child: Text('دهه اول',style: TextStyle(fontSize: 18)),
+                                  onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Daheaval()));
+                            },                                 
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: size.width / 2.3,
+                            height: size.width / 2.3,
+                            decoration: const BoxDecoration(
+                                color: Colors.green,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(24))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: const [
+                                  InkWell(child: Text('دهه چهارم',style: TextStyle(fontSize: 18),)),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: 
+                            const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(24)),
+                              color: Colors.purple,
+                            ),
+                              width: size.width / 2.3,
+                              height: size.width / 2.3,
+                              
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: const [
+                                    InkWell(
+                                      child: Text('دهه سوم',style: TextStyle(fontSize: 18),),
+                                    ),
+                                  ],
+                                ),
+                              ))
+                        ],
+                      ),
+                    )
+                  ]),
                 ),
-              ),
+              )
             ],
           ),
         ));
-  }
-
-  Widget imageItem(int index) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: () {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            child: Text(historyOkModel[_selectedIndex].groupe),
-          ),
-        ),
-      ],
-    );
   }
 }

@@ -1,9 +1,10 @@
+
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:just_audio/just_audio.dart';
 
+// ignore: camel_case_types
 class radio_Detail extends StatefulWidget {
   const radio_Detail({super.key});
 
@@ -11,6 +12,7 @@ class radio_Detail extends StatefulWidget {
   State<radio_Detail> createState() => _radio_DetailState();
 }
 
+// ignore: camel_case_types
 class _radio_DetailState extends State<radio_Detail> {
   final _player = AudioPlayer();
   bool isPlaying = false;
@@ -32,7 +34,7 @@ class _radio_DetailState extends State<radio_Detail> {
     duration = _player.duration!;
     setState(() {});
     _player.positionStream.listen((event) {
-      Duration temp = event as Duration;
+      Duration temp = event;
       position = temp;
     });
   }
@@ -60,12 +62,12 @@ class _radio_DetailState extends State<radio_Detail> {
         children: [
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(1000),
                   bottomRight: Radius.circular(1000),
                 ),
                 boxShadow: <BoxShadow>[
-                  BoxShadow(
+                  const BoxShadow(
                       blurRadius: 1.0, color: Color.fromARGB(255, 2, 109, 145))
                 ],
                 // color: Color.fromRGBO(144, 164, 174, 1),
@@ -109,16 +111,16 @@ class _radio_DetailState extends State<radio_Detail> {
                             iconSize: 58,
                             onPressed: playeeAction,
                             icon: isPlaying
-                                ? Icon(Icons.pause_circle_outline_outlined)
-                                : Icon(Icons.play_circle_outline)),
+                                ? const Icon(Icons.pause_circle_outline_outlined)
+                                : const Icon(Icons.play_circle_outline)),
                          IconButton(
-                         icon:Icon( Icons.skip_next),
+                         icon:const Icon( Icons.skip_next),
                           onPressed:() {
                                 _player.setAsset('assets/audio/mahboob.mp3');
                                 _player.play();
                           } ,
                           iconSize: 24,
-                          color: Color.fromARGB(255, 243, 7, 39),
+                          color: const Color.fromARGB(255, 243, 7, 39),
                           
                         ),
                       ],

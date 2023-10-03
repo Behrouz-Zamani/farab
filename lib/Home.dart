@@ -144,7 +144,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const hoze_Farab()));
+                                                const activity_farab()));
                                   }),
                             ),
                           ],

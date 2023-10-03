@@ -1,28 +1,21 @@
 import 'package:farab/activity_farab.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
-import '../../videoNaft.dart';
+import 'videoNaft.dart';
 
-class PetroshimiHozeFarab extends StatefulWidget {
-  const PetroshimiHozeFarab({super.key});
+
+class NiroHozehFarab extends StatefulWidget {
+  const NiroHozehFarab({super.key});
 
   @override
-  State<PetroshimiHozeFarab> createState() => _PetroshimiHozeFarabState();
+  State<NiroHozehFarab> createState() => _NiroHozehFarabState();
 }
 
-class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
+class _NiroHozehFarabState extends State<NiroHozehFarab> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    const [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-      GlobalCupertinoLocalizations.delegate,
-    ];
-    const [
-      Locale('fa'), // English
-    ];
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -31,23 +24,23 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const activity_farab()))),
-        title: const Text('نفت، گاز و پتروشیمی'),
+        title: const Text('حوزه نیرو فراب'),
         centerTitle: true,
       ),
       body: SafeArea(
           child: Column(
-        children: [
+                children: [
           SizedBox(
             width: double.infinity,
-            height: size.height / 2.8,
+            height: size.height / 3.5,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: double.infinity,
-                height: size.height / 2.8,
+                height: size.height / 3,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: Image.asset('assets/images/gaz.jpg').image,
+                      image: Image.asset('assets/images/niro.jpg').image,
                       fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(24.0),
                 ),
@@ -73,10 +66,9 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-
                         InkWell(
                           child: const Text(
-                            'پروژه خارج از کشور',
+                            'واحد های تکمیل شده',
                             style: TextStyle(fontFamily: 'vazir', fontSize: 12),
                           ),
                           onTap: () {
@@ -84,11 +76,35 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                                 context: context,
                                 builder: (context) => const AlertDialog(
                                       title: Text(
-                                     'پروژه خارج از کشور',
+                                        'واحد های نیروگاهی تکمیل شده',
                                         textAlign: TextAlign.center,
                                       ),
                                       content: Text(
-                                        '1',
+                                        '86',
+                                        textDirection: TextDirection.rtl,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 32, color: Colors.red),
+                                      ),
+                                    ));
+                          },
+                        ),
+                        // Text('تاریخچه فراب'),
+                        InkWell(
+                          child: const Text(
+                            'ظرفیت نصب شده',
+                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                          ),
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => const AlertDialog(
+                                      title: Text(
+                                        'مگاوات ظرفیت نصب شده',
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      content: Text(
+                                        '11,190',
                                         textDirection: TextDirection.rtl,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
@@ -99,31 +115,9 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                         ),
                         InkWell(
                           child: const Text(
-                            'پروژه در حال اجرا',
+                            'خاتمه یافته',
                             style: TextStyle(fontFamily: 'vazir', fontSize: 12),
                           ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                        'پروژه در حال اجرا',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '9',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
-                        InkWell(
-                          child: const Text('پروژه خاتمه یافته',
-                              style:
-                                  TextStyle(fontFamily: 'vazir', fontSize: 12)),
                           onTap: () {
                             showDialog(
                                 context: context,
@@ -133,7 +127,29 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                                         textAlign: TextAlign.center,
                                       ),
                                       content: Text(
-                                        '5',
+                                        '26',
+                                        textDirection: TextDirection.rtl,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 32, color: Colors.red),
+                                      ),
+                                    ));
+                          },
+                        ),
+                        InkWell(
+                          child: const Text('خارج کشور',
+                              style:
+                                  TextStyle(fontFamily: 'vazir', fontSize: 12)),
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => const AlertDialog(
+                                      title: Text(
+                                        'پروژه خارج از کشور',
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      content: Text(
+                                        '7',
                                         textDirection: TextDirection.rtl,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
@@ -316,9 +332,10 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                 ),
               ),
             ),
-          )
-        ],
-      )),
+                      ),
+          
+                ],
+              ),)
     );
   }
 }

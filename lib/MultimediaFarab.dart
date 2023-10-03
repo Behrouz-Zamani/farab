@@ -1,16 +1,12 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, camel_case_types
 
-import 'package:farab/Gallery.dart';
 import 'package:farab/gallery_list.dart';
 import 'package:farab/movieList.dart';
 import 'package:farab/radio_List.dart';
 import 'package:farab/views/videomasoliyat.dart';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 
-import 'Company_Detail.dart';
 import 'Home.dart';
-import 'models/CopmanyModel.dart';
 
 void main() {
   runApp(const multiMedia());
@@ -39,18 +35,10 @@ class multiMediaF extends StatefulWidget {
 }
 
 class _multiMediaF extends State<multiMediaF> {
-  late VideoPlayerController _controller;
   bool isPlaying = false;
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://www.farab.com/fa/wp-content/uploads/2023/03/nowruz-message-of-dr-vakili.mp4')
-      ..initialize().then((_) {
-        setState(() {
-          //_controller.play();
-        });
-      });
   }
 
   int selected = 0;
@@ -71,22 +59,20 @@ class _multiMediaF extends State<multiMediaF> {
         child: Column(
           children: [
             SizedBox(
-              width: double.infinity,
-              height: size.height / 3.5,
-              // color: Colors.amber,
-              child:
-          Image.asset("assets/images/lfarab.gif")
-            ),
+                width: double.infinity,
+                height: size.height / 3.5,
+                // color: Colors.amber,
+                child: Image.asset("assets/images/lfarab.gif")),
             Padding(
               padding: const EdgeInsets.only(top: 32.0),
               child: Container(
                 decoration: const BoxDecoration(
-color: Color.fromARGB(122, 0  , 81, 165),
-borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.circular(40))
-                ),
-                
+                    color: Color.fromARGB(122, 0, 81, 165),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40))),
                 width: double.infinity,
-               height: 424,
+                height: 424,
                 child: SizedBox(
                     width: double.infinity,
                     height: double.infinity,
@@ -164,7 +150,7 @@ borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.cir
                                               const radioList()));
                                 }),
                           ),
-              
+
                           // ignore: avoid_unnecessary_containers
                           Container(
                             decoration: BoxDecoration(
@@ -199,39 +185,7 @@ borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.cir
                                               const mainvideo()));
                                 }),
                           ),
-                          // ignore: avoid_unnecessary_containers
-              
-                          // ignore: avoid_unnecessary_containers
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(16),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Colors.black12,
-                                    blurRadius: 3.0,
-                                  )
-                                ]),
-                            child: InkWell(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/communicationok.png",
-                                      fit: BoxFit.none,
-                                    ),
-                                    const Text('نشریه فراب')
-                                  ],
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              CompanyPage(companyModel[4])));
-                                }),
-                          ),
+
                           Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -265,7 +219,8 @@ borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.cir
                                               (Masoliyatvideo())));
                                 }),
                           ),
-                                                    Container(
+                          Container(),
+                          Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(16),
@@ -295,7 +250,7 @@ borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.cir
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              (Masoliyatvideo())));
+                                              (const Masoliyatvideo())));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers
@@ -307,9 +262,6 @@ borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.cir
           ],
         ),
       ),
-      
     );
   }
-
-
 }
