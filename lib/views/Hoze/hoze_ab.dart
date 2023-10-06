@@ -4,14 +4,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../../videoNaft.dart';
 
-class PetroshimiHozeFarab extends StatefulWidget {
-  const PetroshimiHozeFarab({super.key});
+class HozeAbFarab extends StatefulWidget {
+  const HozeAbFarab({super.key});
 
   @override
-  State<PetroshimiHozeFarab> createState() => _PetroshimiHozeFarabState();
+  State<HozeAbFarab> createState() => _HozeAbFarabState();
 }
 
-class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
+class _HozeAbFarabState extends State<HozeAbFarab> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -31,7 +31,7 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const activity_farab()))),
-        title: const Text('نفت، گاز و پتروشیمی'),
+        title: const Text('حوزه آب فراب'),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -47,7 +47,7 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                 height: size.height / 2.8,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: Image.asset('assets/images/gaz.jpg').image,
+                      image: Image.asset('assets/images/ab.jpg').image,
                       fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(24.0),
                 ),

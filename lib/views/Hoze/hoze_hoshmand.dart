@@ -4,14 +4,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../../videoNaft.dart';
 
-class PetroshimiHozeFarab extends StatefulWidget {
-  const PetroshimiHozeFarab({super.key});
+class HozeHoshmand extends StatefulWidget {
+  const HozeHoshmand({super.key});
 
   @override
-  State<PetroshimiHozeFarab> createState() => _PetroshimiHozeFarabState();
+  State<HozeHoshmand> createState() => _HozeHoshmandState();
 }
 
-class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
+class _HozeHoshmandState extends State<HozeHoshmand> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -31,7 +31,7 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const activity_farab()))),
-        title: const Text('نفت، گاز و پتروشیمی'),
+        title: const Text('شبکه‌های هوشمند'),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -47,7 +47,7 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                 height: size.height / 2.8,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: Image.asset('assets/images/gaz.jpg').image,
+                      image: Image.asset('assets/images/hoshmand.jpg').image,
                       fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(24.0),
                 ),
@@ -74,74 +74,74 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
 
-                        InkWell(
-                          child: const Text(
-                            'پروژه خارج از کشور',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                     'پروژه خارج از کشور',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '1',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
-                        InkWell(
-                          child: const Text(
-                            'پروژه در حال اجرا',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                        'پروژه در حال اجرا',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '9',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
-                        InkWell(
-                          child: const Text('پروژه خاتمه یافته',
-                              style:
-                                  TextStyle(fontFamily: 'vazir', fontSize: 12)),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                        'پروژه خاتمه یافته',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '5',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
+                        // InkWell(
+                        //   child: const Text(
+                        //     'مترمکعب در روز ظرفیت تولید',
+                        //     style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                        //   ),
+                        //   onTap: () {
+                        //     showDialog(
+                        //         context: context,
+                        //         builder: (context) => const AlertDialog(
+                        //               title: Text(
+                        //              'مترمکعب در روز ظرفیت تولید',
+                        //                 textAlign: TextAlign.center,
+                        //               ),
+                        //               content: Text(
+                        //                 '1',
+                        //                 textDirection: TextDirection.rtl,
+                        //                 textAlign: TextAlign.center,
+                        //                 style: TextStyle(
+                        //                     fontSize: 120/000, color: Colors.red),
+                        //               ),
+                        //             ));
+                        //   },
+                        // ),
+                        // InkWell(
+                        //   child: const Text(
+                        //     'پروژه در حال اجرا',
+                        //     style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                        //   ),
+                        //   onTap: () {
+                        //     showDialog(
+                        //         context: context,
+                        //         builder: (context) => const AlertDialog(
+                        //               title: Text(
+                        //                 'پروژه در حال اجرا',
+                        //                 textAlign: TextAlign.center,
+                        //               ),
+                        //               content: Text(
+                        //                 '9',
+                        //                 textDirection: TextDirection.rtl,
+                        //                 textAlign: TextAlign.center,
+                        //                 style: TextStyle(
+                        //                     fontSize: 32, color: Colors.red),
+                        //               ),
+                        //             ));
+                        //   },
+                        // ),
+                        // InkWell(
+                        //   child: const Text('پروژه خاتمه یافته',
+                        //       style:
+                        //           TextStyle(fontFamily: 'vazir', fontSize: 12)),
+                        //   onTap: () {
+                        //     showDialog(
+                        //         context: context,
+                        //         builder: (context) => const AlertDialog(
+                        //               title: Text(
+                        //                 'پروژه خاتمه یافته',
+                        //                 textAlign: TextAlign.center,
+                        //               ),
+                        //               content: Text(
+                        //                 '5',
+                        //                 textDirection: TextDirection.rtl,
+                        //                 textAlign: TextAlign.center,
+                        //                 style: TextStyle(
+                        //                     fontSize: 32, color: Colors.red),
+                        //               ),
+                        //             ));
+                        //   },
+                        // ),
                       ],
                     ),
                   ),
@@ -164,7 +164,12 @@ class _PetroshimiHozeFarabState extends State<PetroshimiHozeFarab> {
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          'فراب در سال 1384 به حوزه نفت، گاز و پتروشیمی وارد شد و تاکنون 15 پروژه بالادستی و پایین دستی را به روش EPC اخذ نموده است. گروه فراب در توسعه میادین نفت و گاز، مجتمع‌های فراساحلی، پالایشگاه‌های نفت و گاز، واحدهای یوتیلیتی و آفسایت، مجتمع‌های پتروشیمی و صنایع وابسته، خطوط لوله، ایستگاه‌‌های تقویت فشار و تلمبه‌خانه و نیز مخازن نفت فعالیت می‎کند.',
+                         '''پس از اجرا و بهره‌برداری موفق از پروژه‌های آزمایشی 2000*2 نقطه اندازه‌گیری هوشمند برق (پروژه فهام) در استان‌های زنجان و بوشهر توسط شرکت فراب، پروژه فهام وارد فاز اجرایی شد و در حال حاضر بیش از 50,000 نقطه اندازه‌گیری هوشمند برق، توسط شرکت فراب در 13 شرکت توزیع برق در 11 استان راه‌اندازی شده و در حال بهره‌برداری است. پروژه‌های در حال اجرای شرکت فراب در حوزه کنتورهای هوشمند برق تا نصب و راه‌اندازی 350,000 کنتور هوشمند ادامه خواهد یافت.
+
+راهکار جامع زیرساخت هوشمند اندازه‌گیری (AMI Total Solution) فراب، شامل کنتورهای هوشمند برق (انواع متفاوت کنتورهای هوشمند تک فاز و سه فاز)، GPRS، مودم‌های ارتباطی RF و سخت‌افزار و نرم‌افزار سیستم مرکزی (Head-End, MDM) می‌باشد. نرم‌افزار سیستم مرکزی فراب به عنوان بخشی از این راه‌حل جامع کاملا توسط تیم نرم‌افزاری شرکت فراب و در داخل ایران تهیه شده است. این نرم‌افزار قادر است با هفت میلیون نقطه اندازه‌گیری کار کند و حجم داده زیاد (big data) را مدیریت نماید. سخت‌افزار و نرم‌افزار سیستم مرکزی تامین شده توسط فراب از نظر امنیت توسط یک شرکت ثالث تست نفوذ شده و گواهی امنیت دریافت نموده است. به علاوه، مودم‌های ارتباطی RF خاصی با نرم‌افزار سرور شبکه فراب برای اولین بار در ایران توسط شرکت فراب طراحی و توسعه داده شده است. مودم‌های مذکور بر روی تعدادی از کنتورهای هوشمند برق نصب شده و در حال بهره‌برداری آزمایشی و انجام تست‌های تکمیلی هستند. درصورت موفقیت در دوره آزمایشی و انجام تست‌های مرتبط، مودم‌های ذکر شده جایگزین مناسبی برای مودم‌های GPRS موجود در مناطقی که تحت پوشش مناسب مخابرات نیستند، خواهند بود. علاوه بر آن، هزینه مربوط به انتقال داده از طریق مودم‌های RF به میزان قابل توجهی کمتر از مودم‌های GPRS خواهد بود.
+
+با توجه به تجربه ارزشمند و گرانبهای به دست آمده در طراحی و اجرای پروژه‌های کنتورهای هوشمند برق در ایران، اکنون، فراب در نظر دارد تا کنتورهای آب و گاز را در راه‌حل جامع خود تحت پوشش قرار دهد و در بازارهای جهانی به عنوان یک شرکت ارائه‌دهنده راه‌حل‌های جامع اندازه‌گیری هوشمند حضور یابد.'''
+                          ,
                           textAlign: TextAlign.end,
                           style: TextStyle(fontSize: 14, height: 2.2),
                         ),

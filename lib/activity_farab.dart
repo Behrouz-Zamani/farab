@@ -3,6 +3,10 @@
 import 'package:farab/videoHoshmand.dart';
 import 'package:farab/videoNaft.dart';
 import 'package:farab/videoReili.dart';
+import 'package:farab/views/Hoze/hoze_ab.dart';
+import 'package:farab/views/Hoze/hoze_bahrebardari.dart';
+import 'package:farab/views/Hoze/hoze_hoshmand.dart';
+import 'package:farab/views/Hoze/hoze_sakhteman.dart';
 import 'package:farab/views/Hoze/petroshimi_hoze.dart';
 import 'package:farab/views/Hoze/reili_hoze.dart';
 import 'niro_hoze.dart';
@@ -255,7 +259,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Reilvideo()));
+                                      builder: (context) => const HozeBahreBardariFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -298,7 +302,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Hoshmandvideo()));
+                                      builder: (context) => const HozeSakhtemanFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -341,7 +345,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Naftvideo()));
+                                      builder: (context) => const HozeAbFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -391,7 +395,7 @@ class _MainMoview extends State<MainMoview> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const NiroHozehFarab()));
+                                          const HozeHoshmand()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers

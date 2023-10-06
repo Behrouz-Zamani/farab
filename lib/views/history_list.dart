@@ -1,5 +1,8 @@
 import 'package:farab/about_Farab.dart';
 import 'package:farab/views/Tarikhche/dahe_aval.dart';
+import 'package:farab/views/Tarikhche/dahe_chaharom.dart';
+import 'package:farab/views/Tarikhche/dahe_dovom.dart';
+import 'package:farab/views/Tarikhche/dahe_sevom.dart';
 import 'package:flutter/material.dart';
 
 class HostoryList extends StatefulWidget {
@@ -59,8 +62,16 @@ class _HostoryListState extends State<HostoryList> {
                         children: [
                           Container(
                             decoration: const BoxDecoration(
-                              color: Colors.amber,
+                              color: Colors.grey,
                               borderRadius: BorderRadius.all(Radius.circular(24)),
+boxShadow: [
+  BoxShadow(
+    color: Color.fromARGB(255, 100, 102, 105),
+    blurRadius: 7,
+    offset: Offset(0, 7),
+  ),
+],
+
                             ),
                             width: size.width / 2.3,
                             height: size.width / 2.3,
@@ -70,9 +81,16 @@ class _HostoryListState extends State<HostoryList> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
+                                children:  [
                                   InkWell(
-                                    child: Text('دهه دوم',style: TextStyle(fontSize: 18),),
+                                    child: const Text('دهه دوم',style: TextStyle(fontSize: 18)),
+                                          onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const DaheDovom()));
+                            },   
                                   ),
                                 ],
                               ),
@@ -82,7 +100,16 @@ class _HostoryListState extends State<HostoryList> {
                             decoration: 
                             const BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(24)),
-                              color: Colors.red,
+
+boxShadow: [
+  BoxShadow(
+color: Color.fromARGB(255, 100, 102, 105),
+blurRadius: 7,
+offset: Offset(0, 7),
+  ),
+],
+
+                              color: Colors.grey,
                             ),
                             width: size.width / 2.3,
                             height: size.width / 2.3,
@@ -94,7 +121,7 @@ class _HostoryListState extends State<HostoryList> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   InkWell(
-                                    child: Text('دهه اول',style: TextStyle(fontSize: 18)),
+                                    child: const Text('دهه اول',style: TextStyle(fontSize: 18)),
                                   onTap: () {
                               Navigator.push(
                                   context,
@@ -119,16 +146,32 @@ class _HostoryListState extends State<HostoryList> {
                             width: size.width / 2.3,
                             height: size.width / 2.3,
                             decoration: const BoxDecoration(
-                                color: Colors.green,
+                                color: Colors.grey,
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(24))),
+                                    BorderRadius.all(Radius.circular(24)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Color.fromARGB(255, 100, 102, 105),
+                                        blurRadius: 7,
+                                        offset: Offset(0, 7)
+                                      )
+                                    ],
+                                    ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
-                                  InkWell(child: Text('دهه چهارم',style: TextStyle(fontSize: 18),)),
+                                children:  [
+                                  InkWell(child: const Text('دهه چهارم',style: TextStyle(fontSize: 18),),
+                                                onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const DaheChaharom()));
+                            },  
+                                  ),
                                 ],
                               ),
                             ),
@@ -137,7 +180,16 @@ class _HostoryListState extends State<HostoryList> {
                             decoration: 
                             const BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(24)),
-                              color: Colors.purple,
+                             
+                           
+                              color: Colors.grey,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 100, 102, 105),
+                                  blurRadius: 7,
+                                  offset: Offset(0, 7),
+                                )
+                              ],
                             ),
                               width: size.width / 2.3,
                               height: size.width / 2.3,
@@ -147,9 +199,17 @@ class _HostoryListState extends State<HostoryList> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: const [
+                                  children: [
                                     InkWell(
                                       child: Text('دهه سوم',style: TextStyle(fontSize: 18),),
+                                                    onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const DaheSevom()));
+                            },  
+                                      
                                     ),
                                   ],
                                 ),
