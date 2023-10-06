@@ -24,7 +24,7 @@ class _videoTajdidState extends State<videoTajdid> {
 
 getData() async
 {
-  movielsit =await RemoteService().gettajdidmovie();
+ // movielsit =await RemoteService().gettajdidmovie();
   if(movielsit != null)
   {
     setState(() {

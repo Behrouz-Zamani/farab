@@ -2,6 +2,7 @@ import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/hoze_Farab.dart';
 import 'package:farab/news_Farab.dart';
 import 'package:farab/splash.dart';
+import 'package:farab/views/test_api.dart';
 import 'package:flutter/material.dart';
 
 import 'Company_Farab.dart';
@@ -242,7 +243,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const news_Farab()));
+                                                const TestApiFarab()));
                                   }),
                             ),
                           ],
