@@ -2,7 +2,6 @@ import 'package:farab/activity_farab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
 class HozeBahreBardariFarab extends StatefulWidget {
   const HozeBahreBardariFarab({super.key});
 
@@ -55,25 +54,51 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
           ),
           SizedBox(
               width: double.infinity,
-              height: 120,
+              height: 128,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 213, 203, 159),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(24),
-                      )),
-                  width: double.infinity,
-                  height: 56,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-
-                        InkWell(
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 213, 203, 159),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(24),
+                          )),
+                      width: double.infinity,
+                      height: 56,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            InkWell(
+                              child: const Text(
+                                'پروژه',
+                                style: TextStyle(
+                                    fontFamily: 'vazir', fontSize: 12),
+                              ),
+                              onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) => const AlertDialog(
+                                          title: Text(
+                                            'پروژه',
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          content: Text(
+                                            '9',
+                                            textDirection: TextDirection.rtl,
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 32,
+                                                color: Colors.red),
+                                          ),
+                                        ));
+                              },
+                            ),
+                             InkWell(
                           child: const Text(
                             'پروژه خارج از کشور',
                             style: TextStyle(fontFamily: 'vazir', fontSize: 12),
@@ -83,7 +108,7 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                                 context: context,
                                 builder: (context) => const AlertDialog(
                                       title: Text(
-                                     'پروژه خارج از کشور',
+                                        'پروژه خارج از کشور',
                                         textAlign: TextAlign.center,
                                       ),
                                       content: Text(
@@ -96,104 +121,90 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                                     ));
                           },
                         ),
-                                                InkWell(
-                          child: const Text(
-                            'پروژه خارج از کشور',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                     'پروژه خارج از کشور',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '2',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
+                          ],
                         ),
-                                                InkWell(
-                          child: const Text(
-                            'پروژه خارج از کشور',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                     'پروژه خارج از کشور',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '2',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
-                                                InkWell(
-                          child: const Text(
-                            'پروژه خارج از کشور',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                     'گیگاوات ساعت آمادگی نیروگاه شیرکوه در سال 1397',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '2',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
-                        InkWell(
-                          child: const Text(
-                            'پروژه',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                        'پروژه',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '9',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
-
-                       
-                      ],
+                      ),
                     ),
-                    
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                         
+                          InkWell(
+                            child: const Text(
+                              'آمادگی نیروگاه شیرکوه',
+                              style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                            ),
+                            onTap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) => const AlertDialog(
+                                        title: Text(
+                                          'گیگاوات ساعت آمادگی نیروگاه شیرکوه در سال 1397',
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        content: Text(
+                                          '575',
+                                          textDirection: TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 32, color: Colors.red),
+                                        ),
+                                      ));
+                            },
+                          ),
+                          InkWell(
+                            child: const Text(
+                              'انرژی تولید شده',
+                              style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                            ),
+                            onTap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) => const AlertDialog(
+                                        title: Text(
+                                          'گیگاوات ساعت انرژی تولید شده تا پایان سال 1397',
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        content: Text(
+                                          '39,079',
+                                          textDirection: TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 32, color: Colors.red),
+                                        ),
+                                      ));
+                            },
+                          ),
+                          InkWell(
+                            child: const Text(
+                              'انرژی پاک تولید شده',
+                              style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                            ),
+                            onTap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) => const AlertDialog(
+                                        title: Text(
+                                          'گیگاوات ساعت انرژی پاک تولید شده تا پایان سال 1397',
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        content: Text(
+                                          '24,275',
+                                          textDirection: TextDirection.rtl,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 32, color: Colors.red),
+                                        ),
+                                      ));
+                            },
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               )),
           //باکس پایین
@@ -207,10 +218,10 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                     borderRadius: BorderRadius.all(Radius.circular(24)),
                   ),
                   width: double.infinity,
-                 // height: size.height / 2.4,
+                  // height: size.height / 2.4,
                   child: SingleChildScrollView(
                     child: Column(
-                      children:  [
+                      children: [
                         Image.asset('assets/images/OM.png'),
                       ],
                     ),
