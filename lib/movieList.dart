@@ -462,7 +462,7 @@ class _MainMoview extends State<MainMoview> {
                           ),
                     ],
                   ),
-                ))
+                )),
           ],
         ),
       )),

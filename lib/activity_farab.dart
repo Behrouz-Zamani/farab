@@ -1,8 +1,5 @@
 // ignore_for_file: file_names
 
-import 'package:farab/videoHoshmand.dart';
-import 'package:farab/videoNaft.dart';
-import 'package:farab/videoReili.dart';
 import 'package:farab/views/Hoze/hoze_ab.dart';
 import 'package:farab/views/Hoze/hoze_bahrebardari.dart';
 import 'package:farab/views/Hoze/hoze_hoshmand.dart';
@@ -259,7 +256,8 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HozeBahreBardariFarab()));
+                                      builder: (context) =>
+                                          const HozeBahreBardariFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -302,7 +300,8 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HozeSakhtemanFarab()));
+                                      builder: (context) =>
+                                          const HozeSakhtemanFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -345,7 +344,8 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HozeAbFarab()));
+                                      builder: (context) =>
+                                          const HozeAbFarab()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers

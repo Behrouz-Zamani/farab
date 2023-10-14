@@ -6,7 +6,6 @@ import 'package:farab/proje.dart';
 import 'package:farab/rahvareil.dart';
 import 'package:farab/saderat.dart';
 import 'package:farab/sakhteman.dart';
-import 'package:farab/sangab.dart';
 import 'package:farab/sarmaye.dart';
 import 'package:farab/tajdid.dart';
 import 'package:farab/tajhizat.dart';
@@ -88,255 +87,255 @@ class _MainPageState extends State<MainCompany> {
           ),
 
           //لیست شرکت ها
-          SingleChildScrollView(
-            child: Expanded(
-              child: Container(
-                width: double.infinity,
-                height: size.height / 2,
-                decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 200, 201, 203),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(32),
-                    topLeft: Radius.circular(32),
-                  ),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              height: size.height / 2,
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 200, 201, 203),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(32),
+                  topLeft: Radius.circular(32),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/tajhizat.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/tajhizat.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const tajhisat()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const tajhisat()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/tejarat.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/tejarat.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const sarmaye()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const sarmaye()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/nardis.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/nardis.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const nardis()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const nardis()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/sakhteman.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/sakhteman.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const sakhteman()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const sakhteman()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/bahre.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/bahre.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const bahrebardari()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const bahrebardari()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/naft.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/naft.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const naft()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const naft()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/modiriyatenerji.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/modiriyatenerji.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const tajdid()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const tajdid()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width /5.5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/reil.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5.5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/reil.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const RahVaReil()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const RahVaReil()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/saderat.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/saderat.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const saderat()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const saderat()));
+                          },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: InkWell(
-                            child: Container(
-                              width: size.width,
-                              height: size.width / 5,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: Image.asset(
-                                            'assets/images/company/proje.jpg')
-                                        .image,
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/proje.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ProjectPro()));
-                            },
                           ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ProjectPro()));
+                          },
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
