@@ -1,5 +1,5 @@
+// ignore: file_names
 import 'package:farab/models/videoReilyModels.dart';
-import 'package:farab/models/videosAbModels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';
@@ -21,7 +21,7 @@ class _Reilvideo extends State<Reilvideo> {
       _controller.pause();
     }
     setState(() {
-      this._currentIndex = index;
+      _currentIndex = index;
     });
 
     _controller = VideoPlayerController.network(videoreilymodel[_currentIndex].url)
@@ -80,7 +80,7 @@ class _Reilvideo extends State<Reilvideo> {
               ),
             ),
        
-            Container(
+            SizedBox(
              // color: const Color.fromARGB(255, 255, 255, 255),
               height: size.height / 1.8,
               child: ListView.builder(
@@ -129,7 +129,7 @@ class _Reilvideo extends State<Reilvideo> {
             
       ),
        floatingActionButton: FloatingActionButton(
-       backgroundColor: Color.fromARGB(255, 254, 80, 0),
+       backgroundColor: const Color.fromARGB(255, 254, 80, 0),
        onPressed: () {
          setState(() {
            _controller.value.isPlaying

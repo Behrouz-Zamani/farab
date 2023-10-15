@@ -1,8 +1,11 @@
 // ignore_for_file: file_names
 
 import 'package:farab/MultimediaFarab.dart';
+import 'package:farab/bahrebardari.dart';
+import 'package:farab/videoAb.dart';
 import 'package:farab/videoHoshmand.dart';
 import 'package:farab/videoNaft.dart';
+import 'package:farab/videoNirogah.dart';
 import 'package:farab/videoReili.dart';
 
 import 'package:flutter/material.dart';
@@ -138,6 +141,13 @@ class _MainMoview extends State<MainMoview> {
                                   child: Text('نفت، گاز، پتروشیمی'),
                                 )
                               ]),
+                              onTap: (){
+                                Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Naftvideo()));
+                              },
                         ),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -176,6 +186,13 @@ class _MainMoview extends State<MainMoview> {
                                   child: Text('صنایع ریلی'),
                                 )
                               ]),
+                                                            onTap: (){
+                                Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Reilvideo()));
+                              },
                         ),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -214,6 +231,13 @@ class _MainMoview extends State<MainMoview> {
                                   child: Text('نیـــرو'),
                                 )
                               ]),
+                                                            onTap: (){
+                                Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Nirogahvideo()));
+                              },
                         ),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -259,7 +283,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Reilvideo()));
+                                      builder: (context) => bahrebardari()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -345,7 +369,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Naftvideo()));
+                                      builder: (context) => const Abvideo()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -390,6 +414,12 @@ class _MainMoview extends State<MainMoview> {
                                   child: Text('شبکه‌های هوشمند'),
                                 )
                               ]),
+                               onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Hoshmandvideo()));
+                            }
                         ),
                       ),
 
@@ -426,8 +456,27 @@ class _MainMoview extends State<MainMoview> {
                                 const Padding(
                                   padding: EdgeInsets.all(4.0),
                                   child: Text('مصاحبه ها'),
-                                )
+                                ),
+                                
                               ]),
+                                                            onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) => const AlertDialog(
+                                          title: Text(
+                                            'تلویزیون فراب',
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          content: Text(
+                                            'در دست طراحی',
+                                            textDirection: TextDirection.rtl,
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 32,
+                                                color: Colors.red),
+                                          ),
+                                        ));
+                              },
                         ),
                       ),
                       // ignore: avoid_unnecessary_containers
