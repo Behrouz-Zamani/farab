@@ -47,7 +47,8 @@ void initState(){
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(          backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+),
       body: Column(
         
         children: [

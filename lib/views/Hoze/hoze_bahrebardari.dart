@@ -54,7 +54,7 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
           ),
           SizedBox(
               width: double.infinity,
-              height: 128,
+              height: size.height / 4,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -98,29 +98,31 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                                         ));
                               },
                             ),
-                             InkWell(
-                          child: const Text(
-                            'پروژه خارج از کشور',
-                            style: TextStyle(fontFamily: 'vazir', fontSize: 12),
-                          ),
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) => const AlertDialog(
-                                      title: Text(
-                                        'پروژه خارج از کشور',
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      content: Text(
-                                        '2',
-                                        textDirection: TextDirection.rtl,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 32, color: Colors.red),
-                                      ),
-                                    ));
-                          },
-                        ),
+                            InkWell(
+                              child: const Text(
+                                'پروژه خارج از کشور',
+                                style: TextStyle(
+                                    fontFamily: 'vazir', fontSize: 12),
+                              ),
+                              onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) => const AlertDialog(
+                                          title: Text(
+                                            'پروژه خارج از کشور',
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          content: Text(
+                                            '2',
+                                            textDirection: TextDirection.rtl,
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 32,
+                                                color: Colors.red),
+                                          ),
+                                        ));
+                              },
+                            ),
                           ],
                         ),
                       ),
@@ -128,14 +130,13 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
-                        
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                         
                           InkWell(
                             child: const Text(
                               'آمادگی نیروگاه شیرکوه',
-                              style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                              style:
+                                  TextStyle(fontFamily: 'vazir', fontSize: 12),
                             ),
                             onTap: () {
                               showDialog(
@@ -158,7 +159,8 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                           InkWell(
                             child: const Text(
                               'انرژی تولید شده',
-                              style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                              style:
+                                  TextStyle(fontFamily: 'vazir', fontSize: 12),
                             ),
                             onTap: () {
                               showDialog(
@@ -181,7 +183,8 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                           InkWell(
                             child: const Text(
                               'انرژی پاک تولید شده',
-                              style: TextStyle(fontFamily: 'vazir', fontSize: 12),
+                              style:
+                                  TextStyle(fontFamily: 'vazir', fontSize: 12),
                             ),
                             onTap: () {
                               showDialog(
@@ -208,24 +211,19 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                 ),
               )),
           //باکس پایین
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Expanded(
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(125, 213, 203, 159),
+                borderRadius: BorderRadius.all(Radius.circular(24)),
+              ),
+              width: double.infinity,
+              height: size.height / 2.4,
               child: SingleChildScrollView(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Color.fromARGB(125, 213, 203, 159),
-                    borderRadius: BorderRadius.all(Radius.circular(24)),
-                  ),
-                  width: double.infinity,
-                  // height: size.height / 2.4,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/OM.png'),
-                      ],
-                    ),
-                  ),
+                child: Column(
+                  children: [
+                    Image.asset('assets/images/OM.png'),
+                  ],
                 ),
               ),
             ),

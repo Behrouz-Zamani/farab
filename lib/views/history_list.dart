@@ -13,7 +13,6 @@ class HostoryList extends StatefulWidget {
 }
 
 class _HostoryListState extends State<HostoryList> {
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -26,6 +25,7 @@ class _HostoryListState extends State<HostoryList> {
                   MaterialPageRoute(builder: (context) => const AboutFarab()))),
           title: const Text('تاریخچه فراب'),
           centerTitle: true,
+          backgroundColor: const Color.fromARGB(255, 0, 61, 165),
         ),
         body: SafeArea(
           child: Column(
@@ -62,58 +62,19 @@ class _HostoryListState extends State<HostoryList> {
                         children: [
                           Container(
                             decoration: const BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.all(Radius.circular(24)),
-boxShadow: [
-  BoxShadow(
-    color: Color.fromARGB(255, 100, 102, 105),
-    blurRadius: 7,
-    offset: Offset(0, 7),
-  ),
-],
-
+                              color: Color.fromARGB(255,213,203,159),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(24)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 100, 102, 105),
+                                  blurRadius: 7,
+                                  offset: Offset(0, 7),
+                                ),
+                              ],
                             ),
                             width: size.width / 2.3,
                             height: size.width / 2.3,
-                            
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children:  [
-                                  InkWell(
-                                    child: const Text('دهه دوم',style: TextStyle(fontSize: 18)),
-                                          onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const DaheDovom()));
-                            },   
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            decoration: 
-                            const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(24)),
-
-boxShadow: [
-  BoxShadow(
-color: Color.fromARGB(255, 100, 102, 105),
-blurRadius: 7,
-offset: Offset(0, 7),
-  ),
-],
-
-                              color: Colors.grey,
-                            ),
-                            width: size.width / 2.3,
-                            height: size.width / 2.3,
-                            
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
@@ -121,14 +82,51 @@ offset: Offset(0, 7),
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   InkWell(
-                                    child: const Text('دهه اول',style: TextStyle(fontSize: 18)),
-                                  onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const Daheaval()));
-                            },                                 
+                                    child: const Text('دهه دوم',
+                                        style: TextStyle(fontSize: 18)),
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const DaheDovom()));
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(24)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 100, 102, 105),
+                                  blurRadius: 7,
+                                  offset: Offset(0, 7),
+                                ),
+                              ],
+                            color: Color.fromARGB(255,213,203,159),
+                            ),
+                            width: size.width / 2.3,
+                            height: size.width / 2.3,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  InkWell(
+                                    child: const Text('دهه اول',
+                                        style: TextStyle(fontSize: 18)),
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Daheaval()));
+                                    },
                                   ),
                                 ],
                               ),
@@ -146,54 +144,54 @@ offset: Offset(0, 7),
                             width: size.width / 2.3,
                             height: size.width / 2.3,
                             decoration: const BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(24)),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Color.fromARGB(255, 100, 102, 105),
-                                        blurRadius: 7,
-                                        offset: Offset(0, 7)
-                                      )
-                                    ],
-                                    ),
+                            color: Color.fromARGB(255,213,203,159),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(24)),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color.fromARGB(255, 100, 102, 105),
+                                    blurRadius: 7,
+                                    offset: Offset(0, 7))
+                              ],
+                            ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                children:  [
-                                  InkWell(child: const Text('دهه چهارم',style: TextStyle(fontSize: 18),),
-                                                onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const DaheChaharom()));
-                            },  
+                                children: [
+                                  InkWell(
+                                    child: const Text(
+                                      'دهه چهارم',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const DaheChaharom()));
+                                    },
                                   ),
                                 ],
                               ),
                             ),
                           ),
                           Container(
-                            decoration: 
-                            const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(24)),
-                             
-                           
-                              color: Colors.grey,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromARGB(255, 100, 102, 105),
-                                  blurRadius: 7,
-                                  offset: Offset(0, 7),
-                                )
-                              ],
-                            ),
+                              decoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(24)),
+                              color: Color.fromARGB(255,213,203,159),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color.fromARGB(255, 100, 102, 105),
+                                    blurRadius: 7,
+                                    offset: Offset(0, 7),
+                                  )
+                                ],
+                              ),
                               width: size.width / 2.3,
                               height: size.width / 2.3,
-                              
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -201,15 +199,17 @@ offset: Offset(0, 7),
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     InkWell(
-                                      child: Text('دهه سوم',style: TextStyle(fontSize: 18),),
-                                                    onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const DaheSevom()));
-                            },  
-                                      
+                                      child: const Text(
+                                        'دهه سوم',
+                                        style: TextStyle(fontSize: 18),
+                                      ),
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const DaheSevom()));
+                                      },
                                     ),
                                   ],
                                 ),

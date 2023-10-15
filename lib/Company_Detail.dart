@@ -14,6 +14,8 @@ class CompanyPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(company.name),
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

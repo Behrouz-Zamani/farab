@@ -59,6 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(builder: (context) => const GalleryList()))),
         title: const Text('گالری تصاویر فراب'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SingleChildScrollView(
         child: Column(

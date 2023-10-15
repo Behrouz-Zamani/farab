@@ -22,7 +22,7 @@ class _Hoshmandvideo extends State<Hoshmandvideo> {
       _controller.pause();
     }
     setState(() {
-      this._currentIndex = index;
+      _currentIndex = index;
     });
 
     _controller = VideoPlayerController.network(videohoshmandmodel[_currentIndex].url)

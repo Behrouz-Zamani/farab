@@ -30,12 +30,12 @@ class _ReiliHozeFarabState extends State<ReiliHozeFarab> {
         children: [
           SizedBox(
             width: double.infinity,
-            height: size.height / 3.5,
+            height: size.height / 3.9,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: double.infinity,
-                height: size.height / 3,
+                height: size.height / 3.9,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: Image.asset('assets/images/reil.jpg').image,
@@ -170,7 +170,7 @@ class _ReiliHozeFarabState extends State<ReiliHozeFarab> {
                 borderRadius: BorderRadius.all(Radius.circular(24)),
               ),
               width: double.infinity,
-              height: size.height / 2.4,
+              //height: size.height / 2.5,
               child: SingleChildScrollView(
                 child: Column(
                   children: [

@@ -50,6 +50,8 @@ class _hozeFarabState extends State<hoze_Farab> {
                   MaterialPageRoute(builder: (context) => const homeScrean()))),
           title: const Text('حوزه های فراب'),
           centerTitle: true,
+                    backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
         ),
         body: SafeArea(
           child: Column(

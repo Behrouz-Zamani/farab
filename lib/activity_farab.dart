@@ -53,6 +53,8 @@ class _MainMoview extends State<MainMoview> {
                 MaterialPageRoute(builder: (context) => const homeScrean()))),
         title: const Text('حوزههای فعالیت'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: SingleChildScrollView(

@@ -51,7 +51,8 @@ class _Abvideo extends State<Abvideo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('تلویزیون فراب - حوزه آب',style: TextStyle(fontSize: 14),),
-        backgroundColor: const Color.fromARGB(255, 0, 199, 177),
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
         child: Column(

@@ -54,6 +54,8 @@ class _multiMediaF extends State<multiMediaF> {
                 MaterialPageRoute(builder: (context) => const Company_Frab()))),
         title: const Text('شرکت نفت و گاز فراب'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
         child: Column(

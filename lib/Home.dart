@@ -24,7 +24,7 @@ class homeScrean extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
-      home: homeScreanPage(),
+      home: const homeScreanPage(),
     );
   }
 }

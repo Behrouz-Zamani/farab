@@ -83,6 +83,7 @@ leading: IconButton(
   
   title: const Text('گواهینامه‌ها',style: TextStyle(fontFamily: 'vazir'),),
     centerTitle: true,
+          backgroundColor: const Color.fromARGB(255, 0, 61, 165),
 
   ),
       body:

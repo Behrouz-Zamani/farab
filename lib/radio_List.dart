@@ -34,6 +34,8 @@ void dispose(){
     return Scaffold(
       appBar: AppBar(
         title: const Text('رادیو فراب، خدمتی نوین از گروه فراب'),
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: Column(
         children: [

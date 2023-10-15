@@ -6,7 +6,6 @@ import 'package:farab/videoNaft.dart';
 import 'package:farab/videoReili.dart';
 
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 
 void main() {
   runApp(const mainvideo());
@@ -57,6 +56,8 @@ class _MainMoview extends State<MainMoview> {
                 MaterialPageRoute(builder: (context) => const multiMedia()))),
         title: const Text('تلویزیون فراب'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: SingleChildScrollView(

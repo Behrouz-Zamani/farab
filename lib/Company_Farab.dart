@@ -55,6 +55,8 @@ class _MainPageState extends State<MainCompany> {
           style: TextStyle(fontFamily: 'vazir'),
         ),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: Column(

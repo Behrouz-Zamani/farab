@@ -1,10 +1,6 @@
-import 'dart:io';
 
 import 'package:farab/radio_Detail.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 class radioFarab extends StatefulWidget {
@@ -17,21 +13,21 @@ class radioFarab extends StatefulWidget {
 class _radioFarabState extends State<radioFarab> {
   @override
   Widget build(BuildContext context) {
-    localizationsDelegates:
     [
       GlobalMaterialLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,
       GlobalCupertinoLocalizations.delegate,
     ];
-    supportedLocales:
     [
-      Locale('fa'), // English
+      const Locale('fa'), // English
     ];
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('رادیو فراب'),
+        title: const Text('رادیو فراب'),
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: Column(
@@ -41,7 +37,7 @@ class _radioFarabState extends State<radioFarab> {
             width: double.infinity,
             height: size.height / 2.9,
             color: Colors.green[100],
-            child: Image(image: AssetImage('assets/images/radiofarab.jpg')),
+            child: const Image(image: AssetImage('assets/images/radiofarab.jpg')),
           ),
           Expanded(
             child: Column(
@@ -58,7 +54,7 @@ class _radioFarabState extends State<radioFarab> {
                         child: Container(
                           width: double.infinity,
                           height: 72,
-                          decoration: BoxDecoration(boxShadow: <BoxShadow>[
+                          decoration: BoxDecoration(boxShadow: const <BoxShadow>[
                             BoxShadow(blurRadius: 1.0, color: Colors.blueGrey)
                           ],
                       
@@ -85,7 +81,7 @@ class _radioFarabState extends State<radioFarab> {
                                                 const radio_Detail()));
                                   },
                                 ),
-                                Text(
+                                const Text(
                                 'دف نوازی همکاران در فراب',
                                 style: TextStyle(
                                     color:Color.fromARGB(255, 28, 7, 104),

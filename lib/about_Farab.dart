@@ -25,6 +25,8 @@ class _AboutFarabState extends State<AboutFarab> {
                 MaterialPageRoute(builder: (context) => const homeScrean()))),
         title: const Text('درباره فراب'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
         child: Column(

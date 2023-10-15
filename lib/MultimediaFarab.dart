@@ -54,6 +54,8 @@ class _multiMediaF extends State<multiMediaF> {
                 MaterialPageRoute(builder: (context) => const homeScrean()))),
         title: const Text('چند رسانه ایی'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
         child: Column(

@@ -15,6 +15,8 @@ class Newspage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(newse.onvan),
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
