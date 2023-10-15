@@ -33,6 +33,8 @@ class _HozeHoshmandState extends State<HozeHoshmand> {
                     builder: (context) => const activity_farab()))),
         title: const Text('شبکه‌های هوشمند'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: Column(
@@ -72,7 +74,7 @@ class _HozeHoshmandState extends State<HozeHoshmand> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+                      children: const [
 
                         // InkWell(
                         //   child: const Text(

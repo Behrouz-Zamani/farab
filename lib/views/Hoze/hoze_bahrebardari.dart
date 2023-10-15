@@ -31,6 +31,8 @@ class _HozeBahreBardariFarabState extends State<HozeBahreBardariFarab> {
                     builder: (context) => const activity_farab()))),
         title: const Text('بهره برداری و نگه داری'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: Column(

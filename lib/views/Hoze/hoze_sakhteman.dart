@@ -33,6 +33,8 @@ class _HozeSakhtemanFarabState extends State<HozeSakhtemanFarab> {
                     builder: (context) => const activity_farab()))),
         title: const Text('ساختمان'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: Column(

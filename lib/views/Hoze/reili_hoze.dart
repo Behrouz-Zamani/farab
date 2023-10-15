@@ -24,6 +24,8 @@ class _ReiliHozeFarabState extends State<ReiliHozeFarab> {
                     builder: (context) => const activity_farab()))),
         title: const Text('حوزه صنایع ریلی فراب'),
         centerTitle: true,
+                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
       ),
       body: SafeArea(
           child: Column(

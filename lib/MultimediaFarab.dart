@@ -74,7 +74,7 @@ class _multiMediaF extends State<multiMediaF> {
                         topLeft: Radius.circular(40),
                         topRight: Radius.circular(40))),
                 width: double.infinity,
-                height: 424,
+               height: 424,
                 child: SizedBox(
                     width: double.infinity,
                     height: double.infinity,
