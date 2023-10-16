@@ -1,10 +1,10 @@
 // ignore_for_file: file_names
 
-import 'package:farab/Gallery.dart';
+//import 'package:farab/Gallery.dart';
 import 'package:farab/MultimediaFarab.dart';
 
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
+//import 'package:video_player/video_player.dart';
 
 void main() {
   runApp(const GalleryList());

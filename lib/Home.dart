@@ -1,15 +1,10 @@
 import 'package:farab/MultimediaFarab.dart';
-import 'package:farab/hoze_Farab.dart';
-import 'package:farab/news_Farab.dart';
-import 'package:farab/splash.dart';
 import 'package:farab/views/Magazine/magazine_list.dart';
 import 'package:farab/views/test_api.dart';
 import 'package:flutter/material.dart';
 
-import 'Company_Farab.dart';
 import 'about_Farab.dart';
 import 'activity_farab.dart';
-import 'movieList.dart';
 
 void main() {
   runApp(const homeScrean());

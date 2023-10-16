@@ -1,4 +1,3 @@
-import 'package:farab/models/videosAbModels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';

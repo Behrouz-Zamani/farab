@@ -2,7 +2,6 @@ import 'package:farab/activity_farab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import '../../videoNaft.dart';
 
 class HozeAbFarab extends StatefulWidget {
   const HozeAbFarab({super.key});

@@ -1,4 +1,3 @@
-import 'package:farab/services/remote_service.dart';
 import 'package:flutter/material.dart';
 
 import 'models/video_model.dart';

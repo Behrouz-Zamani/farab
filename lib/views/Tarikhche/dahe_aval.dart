@@ -2,7 +2,6 @@ import 'package:farab/views/history_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get/get_navigation/src/routes/default_transitions.dart';
 
 class Daheaval extends StatefulWidget {
   const Daheaval({super.key});

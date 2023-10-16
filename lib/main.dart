@@ -8,7 +8,6 @@ import 'package:farab/splash.dart';
 import 'package:flutter/material.dart';
 
 import 'Company_Farab.dart';
-import 'about_Farab.dart';
 
 void main() {
   runApp(
@@ -25,7 +24,7 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
-      home: splashScreen(),
+      home: const splashScreen(),
     );
   }
 }

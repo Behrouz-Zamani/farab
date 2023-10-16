@@ -1,4 +1,4 @@
-import 'package:farab/models/videosAbModels.dart';
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_player/video_player.dart';
@@ -6,6 +6,8 @@ import 'package:video_player/video_player.dart';
 import 'models/videoHoshmandModels.dart';
 
 class Hoshmandvideo extends StatefulWidget {
+  const Hoshmandvideo({super.key});
+
   @override
   State<Hoshmandvideo> createState() => _Hoshmandvideo();
 }
@@ -25,6 +27,7 @@ class _Hoshmandvideo extends State<Hoshmandvideo> {
       _currentIndex = index;
     });
 
+    // ignore: deprecated_member_use
     _controller = VideoPlayerController.network(videohoshmandmodel[_currentIndex].url)
       ..addListener(() => setState(() {}))
       ..initialize().then((value) => _controller.play());
@@ -51,7 +54,7 @@ class _Hoshmandvideo extends State<Hoshmandvideo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('تلویزیون فراب - حوزه پروژه های هوشمند',style: TextStyle(fontSize: 14),),
-        backgroundColor: Color.fromARGB(255, 38, 51, 233),
+        backgroundColor: const Color.fromARGB(255, 38, 51, 233),
       ),
       body: SafeArea(
         child: Column(

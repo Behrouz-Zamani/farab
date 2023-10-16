@@ -33,6 +33,7 @@ class _mainMovie extends State<mainMovie>
 @override
 void initState(){
   super.initState();
+  // ignore: deprecated_member_use
   _controller =VideoPlayerController.network("https://www.farab.com/fa/wp-content/uploads/2023/03/interview-with-dr-azimi.mp4")
   ..initialize().then((_) {setState(() {
     
