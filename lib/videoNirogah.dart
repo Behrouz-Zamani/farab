@@ -80,7 +80,7 @@ class _Nirogahvideo extends State<Nirogahvideo> {
               ),
             ),
        
-            Container(
+            SizedBox(
              // color: const Color.fromARGB(255, 255, 255, 255),
               height: size.height / 1.8,
               child: ListView.builder(
@@ -128,20 +128,20 @@ class _Nirogahvideo extends State<Nirogahvideo> {
         ),
             
       ),
-       floatingActionButton: FloatingActionButton(
-       backgroundColor: Color.fromARGB(255, 254, 80, 0),
-       onPressed: () {
-         setState(() {
-           _controller.value.isPlaying
-               ? _controller.pause()
-               : _controller.play();
+    //    floatingActionButton: FloatingActionButton(
+    //    backgroundColor: Color.fromARGB(255, 254, 80, 0),
+    //    onPressed: () {
+    //      setState(() {
+    //        _controller.value.isPlaying
+    //            ? _controller.pause()
+    //            : _controller.play();
 
-         });
-       },
-       child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-       ),
-     ),
+    //      });
+    //    },
+    //    child: Icon(
+    //       _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+    //    ),
+    //  ),
     );
   }
 

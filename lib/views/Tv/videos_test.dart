@@ -9,6 +9,7 @@ class VideoTestesOk extends StatefulWidget {
 }
 
 class _VideoTestesOkState extends State<VideoTestesOk> {
+  
   late CustomVideoPlayerController _customVideoPalayerController;
   Uri uri = Uri.parse(
       'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4');

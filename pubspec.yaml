@@ -39,6 +39,7 @@ dependencies:
   flutter_image_slideshow: ^0.1.5
   coverflow: ^2.0.3
   fan_carousel_image_slider: ^0.1.2
+  syncfusion_flutter_pdfviewer: ^21.1.35
   percent_indicator: ^4.2.3
   flutter_localizations:
     sdk: flutter

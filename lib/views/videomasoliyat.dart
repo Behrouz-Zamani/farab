@@ -1,7 +1,7 @@
+import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:farab/models/masoliyat_video.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:video_player/video_player.dart';
 
 class Masoliyatvideo extends StatefulWidget {
   const Masoliyatvideo({super.key});
@@ -12,28 +12,19 @@ class Masoliyatvideo extends StatefulWidget {
 
 class _Reilvideo extends State<Masoliyatvideo> {
   int selected = 0;
-  bool isPlaying = true;
-  late VideoPlayerController _controller;
-  int _currentIndex = 0;
-
-  void _playVideo({int index = 0, bool init = false}) {
-    if (index < 0 || index >= masoliyatlist.length) return;
-    if (!init) {
-      _controller.pause();
-    }
-    setState(() {
-      _currentIndex = index;
-    });
-
-    _controller = VideoPlayerController.network(masoliyatlist[_currentIndex].url)
-      ..addListener(() => setState(() {}))
-      ..initialize().then((value) => _controller.play());
-  }
-
+  
+  late CustomVideoPlayerController _customVideoPalayerController;
+  Uri uri = Uri.parse(
+      'https://farab-co.ir/videos/exipition.mp4');
   @override
   void initState() {
     super.initState();
-    _playVideo(init: true);
+    initializeVideoPlayer();
+  }
+  @override
+  void dispose() {
+    _customVideoPalayerController.dispose();
+    super.dispose();
   }
 
   @override
@@ -56,34 +47,12 @@ class _Reilvideo extends State<Masoliyatvideo> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                // color: Color.fromARGB(255, 100, 102, 105),
-                width: double.infinity,
-                height: size.height / 3.2,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage("assets/images/mockup.png"),
-                  fit: BoxFit.cover,
-                )),
-                child: Container(
-                    child: _controller.value.isInitialized
-                        ? Column(
-                            children: <Widget>[
- SizedBox(
-                  width: double.infinity,
-                  height: size.height / 3,
-                  child: Image.asset("assets/images/lfarab.gif")),
-                            ],
-                          )
-                        : Container()),
-              ),
-            ),
-       
+            CustomVideoPlayer(
+              customVideoPlayerController: _customVideoPalayerController,),
+
             SizedBox(
              // color: const Color.fromARGB(255, 255, 255, 255),
-              height: size.height / 1.8,
+              height: size.height / 2.4,
               child: ListView.builder(
                 itemCount: masoliyatlist.length,
                 itemBuilder: (context, indext) {
@@ -105,7 +74,7 @@ class _Reilvideo extends State<Masoliyatvideo> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () => _playVideo(index: indext),
+                                  
                                   child: Text(
                                     masoliyatlist[indext].name,
                                     style: const TextStyle(
@@ -127,38 +96,39 @@ class _Reilvideo extends State<Masoliyatvideo> {
             ),
           ],
         ),
-            
-      ),
-       floatingActionButton: FloatingActionButton(
-       backgroundColor: const Color.fromARGB(255, 254, 80, 0),
-       onPressed: () {
-         setState(() {
-           _controller.value.isPlaying
-               ? _controller.pause()
-               : _controller.play();
 
-         });
-       },
-       child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-       ),
-     ),
+       
+
+         
+        ),
+            
+      
+    //    floatingActionButton: FloatingActionButton(
+    //    backgroundColor: const Color.fromARGB(255, 254, 80, 0),
+    //    onPressed: () {
+    //      setState(() {
+    //        _controller.value.isPlaying
+    //            ? _controller.pause()
+    //            : _controller.play();
+
+    //      });
+    //    },
+    //    child: Icon(
+    //       _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+    //    ),
+    //  ),
+    );
+  }
+ void initializeVideoPlayer() {
+    VideoPlayerController videoPlayerController;
+    videoPlayerController = VideoPlayerController.networkUrl(uri)
+      ..initialize().then((value) {
+        setState(() {});
+      });
+    _customVideoPalayerController = CustomVideoPlayerController(
+      context: context,
+      videoPlayerController: videoPlayerController,
     );
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  changevideo() {
-    setState(() {
-      selected = 1;
-    });
-  }
-
-  stop() {
-    setState(() {});
-  }
 }

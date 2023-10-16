@@ -1,5 +1,7 @@
+// ignore: file_names
 import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/views/Magazine/magazine_list.dart';
+import 'package:farab/views/Magazine/pdf_reader.dart';
 import 'package:farab/views/test_api.dart';
 import 'package:flutter/material.dart';
 
@@ -240,7 +242,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const TestApiFarab()));
+                                                const PdfReaderFarab()));
                                   }),
                             ),
                           ],

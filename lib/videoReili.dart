@@ -1,8 +1,8 @@
 // ignore: file_names
+import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:farab/models/videoReilyModels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:video_player/video_player.dart';
 
 class Reilvideo extends StatefulWidget {
   @override
@@ -12,29 +12,21 @@ class Reilvideo extends StatefulWidget {
 class _Reilvideo extends State<Reilvideo> {
   int selected = 0;
   bool isPlaying = true;
-  late VideoPlayerController _controller;
-  int _currentIndex = 0;
 
-  void _playVideo({int index = 0, bool init = false}) {
-    if (index < 0 || index >= videoreilymodel.length) return;
-    if (!init) {
-      _controller.pause();
-    }
-    setState(() {
-      _currentIndex = index;
-    });
-
-    _controller = VideoPlayerController.network(videoreilymodel[_currentIndex].url)
-      ..addListener(() => setState(() {}))
-      ..initialize().then((value) => _controller.play());
-  }
-
+    late CustomVideoPlayerController _customVideoPalayerController;
+  Uri uri = Uri.parse(
+      'https://farab-co.ir/videos/reili1.mp4');
   @override
   void initState() {
     super.initState();
-    _playVideo(init: true);
+    initializeVideoPlayer();
   }
-
+  @override
+  void dispose() {
+    _customVideoPalayerController.dispose();
+    super.dispose();
+  } 
+  
   @override
   Widget build(BuildContext context) {
     [
@@ -57,27 +49,10 @@ class _Reilvideo extends State<Reilvideo> {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                // color: Color.fromARGB(255, 100, 102, 105),
-                width: double.infinity,
-                height: size.height / 3.2,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage("assets/images/mockup.png"),
-                  fit: BoxFit.cover,
-                )),
-                child: Container(
-                    child: _controller.value.isInitialized
-                        ? Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 200,
-                                child: VideoPlayer(_controller),
-                              ),
-                            ],
-                          )
-                        : Container()),
-              ),
+              child: 
+               CustomVideoPlayer(
+              customVideoPlayerController: _customVideoPalayerController,),
+
             ),
        
             SizedBox(
@@ -104,7 +79,7 @@ class _Reilvideo extends State<Reilvideo> {
                             Row(
                               children: [
                                 InkWell(
-                                  onTap: () => _playVideo(index: indext),
+                                 
                                   child: Text(
                                     videoreilymodel[indext].name,
                                     style: const TextStyle(
@@ -128,36 +103,19 @@ class _Reilvideo extends State<Reilvideo> {
         ),
             
       ),
-       floatingActionButton: FloatingActionButton(
-       backgroundColor: const Color.fromARGB(255, 254, 80, 0),
-       onPressed: () {
-         setState(() {
-           _controller.value.isPlaying
-               ? _controller.pause()
-               : _controller.play();
 
-         });
-       },
-       child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-       ),
-     ),
     );
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  changevideo() {
-    setState(() {
-      selected = 1;
-    });
-  }
-
-  stop() {
-    setState(() {});
+  void initializeVideoPlayer() {
+    VideoPlayerController videoPlayerController;
+    videoPlayerController = VideoPlayerController.networkUrl(uri)
+      ..initialize().then((value) {
+        setState(() {});
+      });
+    _customVideoPalayerController = CustomVideoPlayerController(
+      context: context,
+      videoPlayerController: videoPlayerController,
+    );
   }
 }

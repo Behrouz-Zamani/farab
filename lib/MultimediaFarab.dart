@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:farab/gallery_list.dart';
+import 'package:farab/movieList.dart';
 import 'package:farab/vakilimoview.dart';
 import 'package:farab/views/Tv/videos_test.dart';
 import 'package:farab/radio_List.dart';
@@ -186,7 +187,7 @@ class _multiMediaF extends State<multiMediaF> {
                                       MaterialPageRoute(
                                           builder: (context) =>
                                              // const mainvideo()));
-                                               const VideoTestesOk()));
+                                               const mainvideo()));
                                 }),
                           ),
 
