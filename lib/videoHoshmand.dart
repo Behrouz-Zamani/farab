@@ -132,20 +132,20 @@ class _Hoshmandvideo extends State<Hoshmandvideo> {
         ),
             
       ),
-       floatingActionButton: FloatingActionButton(
-       backgroundColor: Color.fromARGB(255, 254, 80, 0),
-       onPressed: () {
-         setState(() {
-           _controller.value.isPlaying
-               ? _controller.pause()
-               : _controller.play();
+    //    floatingActionButton: FloatingActionButton(
+    //    backgroundColor: Color.fromARGB(255, 254, 80, 0),
+    //    onPressed: () {
+    //      setState(() {
+    //        _controller.value.isPlaying
+    //            ? _controller.pause()
+    //            : _controller.play();
 
-         });
-       },
-       child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-       ),
-     ),
+    //      });
+    //    },
+    //    child: Icon(
+    //       _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+    //    ),
+    //  ),
     );
   }
 

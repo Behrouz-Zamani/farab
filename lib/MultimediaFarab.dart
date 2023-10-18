@@ -3,6 +3,7 @@
 import 'package:farab/gallery_list.dart';
 import 'package:farab/movieList.dart';
 import 'package:farab/vakilimoview.dart';
+import 'package:farab/views/Tv/event_tv.dart';
 import 'package:farab/views/Tv/videos_test.dart';
 import 'package:farab/radio_List.dart';
 import 'package:farab/views/videomasoliyat.dart';
@@ -255,7 +256,7 @@ class _multiMediaF extends State<multiMediaF> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              (const Masoliyatvideo())));
+                                              (EventTvFarab())));
                                 }),
                           ),
                           // ignore: avoid_unnecessary_containers

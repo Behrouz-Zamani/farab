@@ -375,55 +375,6 @@ class _MainMoview extends State<MainMoview> {
                       // ignore: avoid_unnecessary_containers
 
                       Container(
-                        decoration: const BoxDecoration(),
-                        child: const InkWell(),
-                      ),
-
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 3.0,
-                              )
-                            ]),
-                        child: InkWell(
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  width: 85,
-                                  height: 85,
-                                  margin: const EdgeInsets.symmetric(
-                                      horizontal: 1.0),
-                                  padding: const EdgeInsets.all(2.0),
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        'assets/images/hoshmand.jpg',
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const Padding(
-                                  padding: EdgeInsets.all(4.0),
-                                  child: Text('شبکه‌های هوشمند'),
-                                )
-                              ]),
-                               onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Hoshmandvideo()));
-                            }
-                        ),
-                      ),
-
-                      Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
@@ -479,6 +430,55 @@ class _MainMoview extends State<MainMoview> {
                               },
                         ),
                       ),
+                      Container(
+                        decoration: const BoxDecoration(),
+                        child: const InkWell(),
+                      ),
+
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 3.0,
+                              )
+                            ]),
+                        child: InkWell(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 85,
+                                  height: 85,
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 1.0),
+                                  padding: const EdgeInsets.all(2.0),
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        'assets/images/hoshmand.jpg',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4.0),
+                                  child: Text('شبکه‌های هوشمند'),
+                                )
+                              ]),
+                               onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Hoshmandvideo()));
+                            }
+                        ),
+                      ),
+
                       // ignore: avoid_unnecessary_containers
                       Container(
                           // decoration: BoxDecoration(

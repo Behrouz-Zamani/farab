@@ -2,26 +2,32 @@
 
 import 'package:farab/Company_Farab.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const tajdid());
 }
 
 // ignore: camel_case_types
-class tajdid extends StatelessWidget {
+class tajdid extends StatefulWidget {
   const tajdid({super.key});
 
   @override
+  State<tajdid> createState() => _tajdidState();
+}
+
+class _tajdidState extends State<tajdid> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //       localizationsDelegates: const [
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // supportedLocales: const [
-      //   Locale('fa'), // English
-      // ],
+            localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('fa'), // English
+      ],
       theme: ThemeData(fontFamily: 'vazir'),
       debugShowCheckedModeBanner: false,
       home: const multiMediaF(),
@@ -57,6 +63,11 @@ class _multiMediaF extends State<multiMediaF> {
                   backgroundColor: const Color.fromARGB(255, 0, 61, 165),
 
       ),
+      //       appBar: AppBar(
+      //   title: const Text('طرح‌های تجدیدپذیر',style: TextStyle(fontSize: 14),),
+      //             backgroundColor: const Color.fromARGB(255, 0, 61, 165),
+
+      // ),
       body: SafeArea(
         child: Column(
           children: [

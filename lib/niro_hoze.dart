@@ -1,4 +1,8 @@
 import 'package:farab/activity_farab.dart';
+import 'package:farab/tajdid.dart';
+import 'package:farab/videoAb.dart';
+import 'package:farab/videoNirogah.dart';
+import 'package:farab/videoTajdid.dart';
 import 'package:flutter/material.dart';
 
 import 'videoNaft.dart';
@@ -231,7 +235,7 @@ class _NiroHozehFarabState extends State<NiroHozehFarab> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Naftvideo()))
+                                                  tajdid()))
                                     }),
                           ),
                           Container(
@@ -273,7 +277,7 @@ class _NiroHozehFarabState extends State<NiroHozehFarab> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Naftvideo()))
+                                                  Nirogahvideo()))
                                     }),
                           ),
                           Container(
@@ -320,7 +324,7 @@ class _NiroHozehFarabState extends State<NiroHozehFarab> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Naftvideo()))
+                                                  Abvideo()))
                                     }),
                           ),
                         ],
