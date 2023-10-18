@@ -1,18 +1,16 @@
 // ignore_for_file: file_names
 
 import 'package:farab/Company_Farab.dart';
-import 'package:farab/views/Company/eslamabad_company.dart';
-import 'package:farab/views/Company/sangab_company.dart';
-import 'package:farab/views/Company/yazd_company.dart';
+import 'package:farab/proje.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ProjectPro());
+  runApp(const AbParsCompany());
 }
 
 // ignore: camel_case_types
-class ProjectPro extends StatelessWidget {
-  const ProjectPro({super.key});
+class AbParsCompany extends StatelessWidget {
+  const AbParsCompany({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +53,7 @@ class _multiMediaF extends State<multiMediaF> {
             icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const Company_Frab()))),
-        title: const Text('شرکت های پروژه'),
+        title: const Text('شرکت توسعه آب و نیروی پارس فراب'),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 0, 61, 165),
       ),
@@ -82,30 +80,72 @@ class _multiMediaF extends State<multiMediaF> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       InkWell(
-                        child: const Text('برق اسلام آباد'),
+                        child: const Text('شبکه های اجتماعی'),
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => EslamAbadCompany()));
+                          showDialog(
+                            context: context,
+                            builder: (context) => const AlertDialog(
+                              title: Text(
+                                'شبکه های اجتماعی',
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.blueAccent,
+                                ),
+                              ),
+                              content: Text(
+                                'شبکه های اجتماعی شرکت ',
+                                style:
+                                    TextStyle(color: Colors.red, fontSize: 18),
+                              ),
+                            ),
+                          );
                         },
                       ),
                       InkWell(
-                        child: const Text('برق یزد'),
+                        child: const Text('شماره تماس'),
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (builder) => YazdCompany()));
+                          showDialog(
+                            context: context,
+                            builder: (context) => const AlertDialog(
+                              title: Text(
+                                'شماره تماس',
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.blueAccent,
+                                ),
+                              ),
+                              content: Text(
+                                'تلفن تماس شرکت ',
+                                style:
+                                    TextStyle(color: Colors.red, fontSize: 18),
+                              ),
+                            ),
+                          );
                         },
                       ),
                       InkWell(
-                        child: const Text('سنگاب'),
+                        child: const Text('آدرس'),
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SangabCompany()));
+                          showDialog(
+                            context: context,
+                            builder: (context) => const AlertDialog(
+                              title: Text(
+                                'آدرس',
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.blueAccent,
+                                ),
+                              ),
+                              content: Text(
+                                'آدرس شرکت ',
+                                style:
+                                    TextStyle(color: Colors.red, fontSize: 18),
+                              ),
+                            ),
+                          );
                         },
                       ),
                     ],
@@ -129,7 +169,10 @@ class _multiMediaF extends State<multiMediaF> {
                       children: const [
                         Text(
                           """
-شركت بين المللي مديريت صادرات فراب به عنوان یک شركت تخصصی در حوزه کسب و کار تجاری و ارائه خدمات فني و مهندسي در تلاش است، تا در سایه بازتعریفی جدید از استانداردهای ارائه خدمت در صنعت بازرگاني، کلیه خدمات مورد نیاز افراد، گروه‌ها و بنگاه‌ها را در صنایع گوناگون تأمین نمايد و به طریقی عمل كند که نوید تجربه‌ای متمایز از ارائه خدمات را به مشتریان خود می‌دهیم. تمرکز استراتژیک ما پوشش دادن خلاءهای موجود در حوزه ابزارسازی با رویکرد خدمات بازرگاني، نهادسازی با هدف توسعه زنجیره خدمات، مدیریت ریسک و معاملات ادغام و تملیک به منظور ایجاد هم‌افزایی و ارزش افزوده در کسب و کارها خواهد بود.
+
+شرکت مولد برق اسلام آباد در سال 1386 در ایران به منظور احداث نیروگاه سیکل‌ترکیبی دالاهو و بهره‌برداری و نگه‌داری از آن تاسیس شد. این شرکت، مالک این نیروگاه می‌باشد.
+
+
 """,
                           textAlign: TextAlign.right,
                           style: TextStyle(height: 2.3),

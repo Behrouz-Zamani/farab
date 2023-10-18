@@ -54,11 +54,17 @@ class _HostoryListState extends State<HostoryList> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Column(children: [
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                    
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+
                         children: [
                           Container(
                             decoration: const BoxDecoration(
@@ -73,8 +79,8 @@ class _HostoryListState extends State<HostoryList> {
                                 ),
                               ],
                             ),
-                            width: size.width / 2.3,
-                            height: size.width / 2.3,
+                            width: size.width / 4,
+                            height: size.width / 4,
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
@@ -109,8 +115,8 @@ class _HostoryListState extends State<HostoryList> {
                               ],
                             color: Color.fromARGB(255,213,203,159),
                             ),
-                            width: size.width / 2.3,
-                            height: size.width / 2.3,
+                            width: size.width / 4,
+                            height: size.width /4,
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
@@ -135,14 +141,16 @@ class _HostoryListState extends State<HostoryList> {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 24,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            width: size.width / 2.3,
-                            height: size.width / 2.3,
+                            width: size.width / 4,
+                            height: size.width /4,
                             decoration: const BoxDecoration(
                             color: Color.fromARGB(255,213,203,159),
                               borderRadius:
@@ -190,8 +198,8 @@ class _HostoryListState extends State<HostoryList> {
                                   )
                                 ],
                               ),
-                              width: size.width / 2.3,
-                              height: size.width / 2.3,
+                              width: size.width / 4,
+                              height: size.width / 4,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(

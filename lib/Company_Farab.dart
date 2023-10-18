@@ -9,6 +9,7 @@ import 'package:farab/sakhteman.dart';
 import 'package:farab/sarmaye.dart';
 import 'package:farab/tajdid.dart';
 import 'package:farab/tajhizat.dart';
+import 'package:farab/views/Company/abpars_company.dart';
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
@@ -334,6 +335,30 @@ class _MainPageState extends State<MainCompany> {
                                 MaterialPageRoute(
                                     builder: (context) =>
                                         const ProjectPro()));
+                          },
+                        ),
+                      ),
+                                            Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/abvapars.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const AbParsCompany()));
                           },
                         ),
                       ),
