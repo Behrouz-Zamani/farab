@@ -1,5 +1,9 @@
 import 'package:farab/MultimediaFarab.dart';
+import 'package:farab/gallery_list.dart';
+import 'package:farab/models/magazin_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../Home.dart';
 
 class MagazinList extends StatefulWidget {
   const MagazinList({super.key});
@@ -9,6 +13,10 @@ class MagazinList extends StatefulWidget {
 }
 
 class _MagazinListState extends State<MagazinList> {
+   late final Magazine magagins;
+
+
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -17,8 +25,8 @@ class _MagazinListState extends State<MagazinList> {
           leading: IconButton(
               icon: const Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const multiMedia()))),
-          title: const Text('تاریخچه فراب'),
+                  MaterialPageRoute(builder: (context) => const homeScrean()))),
+          title: const Text('نشریه فراب'),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 0, 61, 165),
         ),
@@ -52,14 +60,14 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1402',
                                     style: TextStyle(
-                                        fontFamily: 'vazir', fontSize: 36))),
+                                        fontFamily: 'vazir', fontSize: 32))),
 
                             // child: Image(image:),
                           ),
@@ -69,9 +77,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1401',
@@ -86,9 +94,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1400',
@@ -111,14 +119,28 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
-                            child: const Center(
-                                child: Text('1399',
-                                    style: TextStyle(
-                                        fontFamily: 'vazir', fontSize: 36))),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            MainMoview()));
+                              },
+                              child: const Center(
+                                  child: Text('1399',
+                                      style: TextStyle(
+                                          fontFamily: 'vazir', fontSize: 36))),
+                            ),
+
+                            // child: const Center(
+                            //     child: Text('1399',
+                            //         style: TextStyle(
+                            //             fontFamily: 'vazir', fontSize: 36))),
 
                             // child: Image(image:),
                           ),
@@ -128,9 +150,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1398',
@@ -145,9 +167,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1397',
@@ -170,9 +192,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1396',
@@ -187,9 +209,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1395',
@@ -204,9 +226,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1394',
@@ -229,9 +251,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1393',
@@ -246,9 +268,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1392',
@@ -263,9 +285,9 @@ class _MagazinListState extends State<MagazinList> {
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1391',
@@ -276,20 +298,21 @@ class _MagazinListState extends State<MagazinList> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 8,),
-                                            Row(
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-
                           Container(
                             decoration: BoxDecoration(
                               color: const Color.fromARGB(125, 0, 61, 165),
                               borderRadius: BorderRadius.circular(30),
                             ),
 
-                            width: 116,
+                            width: 96,
 
-                            height: 116,
+                            height: 96,
 
                             child: const Center(
                                 child: Text('1390',
@@ -312,3 +335,4 @@ class _MagazinListState extends State<MagazinList> {
         ));
   }
 }
+

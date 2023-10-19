@@ -47,12 +47,25 @@ class _Reilvideo extends State<Reilvideo> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: 
-               CustomVideoPlayer(
-              customVideoPlayerController: _customVideoPalayerController,),
-
+            Container(
+              width: double.infinity,
+              height: size.height / 3,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                image: AssetImage("assets/images/mockup.png"),
+                fit: BoxFit.cover,
+              )),
+              child: Container(
+                margin: const EdgeInsets.only(
+                    left: 16.0, top: 10.0, right: 16.0, bottom: 40.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: size.height / 3,
+                  child: CustomVideoPlayer(
+                    customVideoPlayerController: _customVideoPalayerController,
+                  ),
+                ),
+              ),
             ),
        
             SizedBox(

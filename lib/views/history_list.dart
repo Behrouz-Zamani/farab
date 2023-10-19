@@ -1,9 +1,11 @@
 import 'package:farab/about_Farab.dart';
+import 'package:farab/views/Magazine/magazine_list.dart';
 import 'package:farab/views/Tarikhche/dahe_aval.dart';
 import 'package:farab/views/Tarikhche/dahe_chaharom.dart';
 import 'package:farab/views/Tarikhche/dahe_dovom.dart';
 import 'package:farab/views/Tarikhche/dahe_sevom.dart';
 import 'package:flutter/material.dart';
+import 'package:farab/models/magazin_model.dart';
 
 class HostoryList extends StatefulWidget {
   const HostoryList({super.key});
@@ -13,6 +15,8 @@ class HostoryList extends StatefulWidget {
 }
 
 class _HostoryListState extends State<HostoryList> {
+
+  late final Magazine _magazin;
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -51,10 +55,10 @@ class _HostoryListState extends State<HostoryList> {
                   ],
                 ),
               ),
-              SizedBox(height: 16,),
+              const SizedBox(height: 16,),
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                                       color:Color.fromARGB(255, 185, 185, 185),
 
                     borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.circular(40)),

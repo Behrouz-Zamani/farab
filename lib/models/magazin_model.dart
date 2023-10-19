@@ -2,10 +2,10 @@ class Magazine {
   String? id;
   String? name;
   String? img;
-  String? sal;
+  String sal;
   String? pdfurl;
 
-  Magazine({this.id, this.sal, this.name, this.img, this.pdfurl});
+  Magazine({this.id, required this.sal, this.name, this.img, this.pdfurl});
 }
 List<Magazine> magazinlist =
 [
@@ -29,6 +29,6 @@ List<Magazine> magazinlist =
    Magazine(id: "18",sal:'1398', name: "63", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/63.pdf"),
    Magazine(id: "19",sal:'1397', name: "62", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/62.pdf"),
    Magazine(id: "20",sal:'1397', name: "61", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/61.pdf"),
-   Magazine(id: "20",sal:'1397', name: "60", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/60.pdf"),
-   Magazine(id: "20",sal:'1397', name: "59", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/59.pdf"),
+   Magazine(id: "21",sal:'1397', name: "60", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/60.pdf"),
+   Magazine(id: "22",sal:'1397', name: "59", img:"",pdfurl: "https://www.farab.com/fa/wp-content/uploads/2019/06/59.pdf"),
 ];
