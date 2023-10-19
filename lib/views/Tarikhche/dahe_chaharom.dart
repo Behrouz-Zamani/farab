@@ -58,15 +58,7 @@ class _DaheChaharomState extends State<DaheChaharom> {
                   isLoop: true,
                   children: [
                     Image.asset(
-                      'assets/images/1371.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
-                      'assets/images/1372.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
-                      'assets/images/1379.jpg',
+                      'assets/images/1384.jpg',
                       fit: BoxFit.cover,
                     ),
                     Image.asset(
@@ -74,7 +66,15 @@ class _DaheChaharomState extends State<DaheChaharom> {
                       fit: BoxFit.cover,
                     ),
                     Image.asset(
-                      'assets/images/1384.jpg',
+                      'assets/images/1379.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/1372.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/1371.jpg',
                       fit: BoxFit.cover,
                     ),
                   ],

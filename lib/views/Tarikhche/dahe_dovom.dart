@@ -58,19 +58,19 @@ class _DaheDovomState extends State<DaheDovom> {
                   isLoop: true,
                   children: [
                     Image.asset(
-                      'assets/images/1371.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
-                      'assets/images/1372.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
                       'assets/images/1379.jpg',
                       fit: BoxFit.cover,
                     ),
                     Image.asset(
                       'assets/images/1382.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/1371.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/1372.jpg',
                       fit: BoxFit.cover,
                     ),
                     Image.asset(

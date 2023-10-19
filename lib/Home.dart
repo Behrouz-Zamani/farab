@@ -2,7 +2,6 @@
 import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/views/Magazine/magazine_list.dart';
 import 'package:farab/views/Magazine/pdf_reader.dart';
-import 'package:farab/views/test_api.dart';
 import 'package:flutter/material.dart';
 
 import 'about_Farab.dart';
@@ -48,7 +47,8 @@ class _homeScreanPageState extends State<homeScreanPage> {
               children: [
                 Container(
                   width: double.infinity,
-                  height: size.height / 1.04,
+                  //height: double.infinity,
+                  //height: size.height /1.8,
                   color: const Color.fromARGB(255, 33, 58, 148),
                   child: Image.asset("assets/images/sspmain.jpg"),
                 ),
@@ -62,7 +62,7 @@ class _homeScreanPageState extends State<homeScreanPage> {
                             InkWell(
                                 child: Container(
                                   width: 48,
-                                  height:48,
+                                  height: 48,
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color:
@@ -224,8 +224,8 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                          //news_Farab()
-                                              const MagazinList() ));
+                                              //news_Farab()
+                                              const MagazinList()));
                                 }),
                             Padding(
                               padding: const EdgeInsets.only(left: 36.0),

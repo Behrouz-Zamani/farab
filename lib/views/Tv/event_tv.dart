@@ -1,3 +1,4 @@
+import 'package:farab/views/aks_event.dart';
 import 'package:farab/views/film_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -40,19 +41,26 @@ class _Sakhtemanvideo extends State<EventTvFarab> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                // color: Color.fromARGB(255, 100, 102, 105),
+              SizedBox(
                 width: double.infinity,
-                height: size.height / 3.2,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage("assets/images/mockup.png"),
-                  fit: BoxFit.cover,
-                )),
+                height: size.height / 2.8,
+                child: Stack(
+                  children: [
+                    SizedBox(
+                        width: double.infinity,
+                        height: size.height / 2,
+                        child: Image.asset("assets/images/lfarab.gif")),
+                    // const Positioned(
+                    //   right: 0,
+                    //   top: 0,
+                    //   left: 0,
+                    //   child: Padding(
+                    //     padding: EdgeInsets.fromLTRB(8, 16, 8, 0),
+                    //   ),
+                    // ),
+                  ],
+                ),
               ),
-            ),
             const SizedBox(
               height: 16,
             ),
@@ -77,8 +85,12 @@ class _Sakhtemanvideo extends State<EventTvFarab> {
                       ),
                       width: 120,
                       height: 120,
-                      child: const InkWell(
-                        child: Center(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context, 
+                          MaterialPageRoute(builder: (context) => const AksEventFarab()));
+                        },
+                        child: const Center(
                             child: Text(
                           'عکس',
                           style: TextStyle(fontSize: 22, color: Colors.white),

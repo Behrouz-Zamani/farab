@@ -51,9 +51,14 @@ class _HostoryListState extends State<HostoryList> {
                   ],
                 ),
               ),
+              SizedBox(height: 16,),
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                                      color:Color.fromARGB(255, 185, 185, 185),
+
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight: Radius.circular(40)),
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,7 +69,7 @@ class _HostoryListState extends State<HostoryList> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                             crossAxisAlignment: CrossAxisAlignment.center,
-
+                
                         children: [
                           Container(
                             decoration: const BoxDecoration(

@@ -2,9 +2,7 @@
 
 import 'package:farab/gallery_list.dart';
 import 'package:farab/movieList.dart';
-import 'package:farab/vakilimoview.dart';
 import 'package:farab/views/Tv/event_tv.dart';
-import 'package:farab/views/Tv/videos_test.dart';
 import 'package:farab/radio_List.dart';
 import 'package:farab/views/videomasoliyat.dart';
 import 'package:flutter/material.dart';
