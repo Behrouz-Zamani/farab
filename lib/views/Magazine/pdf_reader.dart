@@ -9,22 +9,20 @@ class PdfReaderFarab extends StatefulWidget {
 }
 
 class _PdfReaderFarabState extends State<PdfReaderFarab> {
-
   bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-      Center(
-        child:
-       isLoading
-                    ? const Center(
-                        child: CircularProgressIndicator(),
-                      )
-       : SfPdfViewer.network('https://www.farab.com/fa/wp-content/uploads/2023/08/farab-80.pdf',),
+      body: Center(
+        child: isLoading
+            ? const Center(
+                child: CircularProgressIndicator(),
+              )
+            : SfPdfViewer.network(
+                'https://www.farab.com/fa/wp-content/uploads/2023/08/farab-80.pdf',
+              ),
       ),
-
     );
   }
 }

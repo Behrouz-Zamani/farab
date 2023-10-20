@@ -1,6 +1,7 @@
 import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/gallery_list.dart';
 import 'package:farab/models/magazin_model.dart';
+import 'package:farab/views/Magazine/magazin_list_sal.dart';
 import 'package:flutter/material.dart';
 
 import '../../Home.dart';
@@ -129,7 +130,7 @@ class _MagazinListState extends State<MagazinList> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            MainMoview()));
+                                            const MagazinSalListFarab()));
                               },
                               child: const Center(
                                   child: Text('1399',
