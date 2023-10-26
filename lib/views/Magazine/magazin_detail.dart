@@ -5,17 +5,17 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class MagazinDetail extends StatelessWidget {
-Magazine magaznis;
-MagazinDetail(this.magaznis);
+Magazine magazinsalo;
+MagazinDetail(this.magazinsalo, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(title: Text('نشریه سال' + magaznis.sal),),
+      appBar: AppBar(title: Text('نشریه سال${magazinsalo.sal}'),),
       body: Center(
         child:
         SfPdfViewer.network(
-                magaznis.pdfurl,
+                magazinsalo.pdfurl,
               ),
       ),
     );

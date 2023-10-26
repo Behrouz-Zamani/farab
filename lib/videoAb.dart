@@ -25,6 +25,7 @@ class _Abvideo extends State<Abvideo> {
       _currentIndex = index;
     });
 
+    // ignore: deprecated_member_use
     _controller = VideoPlayerController.network(videoabmodel[_currentIndex].url)
       ..addListener(() => setState(() {}))
       ..initialize().then((value) => _controller.play());
@@ -68,17 +69,13 @@ class _Abvideo extends State<Abvideo> {
                   image: AssetImage("assets/images/mockup.png"),
                   fit: BoxFit.cover,
                 )),
-                child: Container(
-                    child: _controller.value.isInitialized
-                        ? Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 200,
-                                child: VideoPlayer(_controller),
-                              ),
-                            ],
-                          )
-                        : Container()),
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: SizedBox(
+                        width: double.infinity,
+                        height: size.height / 3,
+                        child: Image.asset("assets/images/lfarab.gif")),
+                ),
               ),
             ),
        

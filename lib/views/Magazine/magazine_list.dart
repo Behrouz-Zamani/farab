@@ -2,6 +2,7 @@ import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/gallery_list.dart';
 import 'package:farab/models/magazin_model.dart';
 import 'package:farab/views/Magazine/magazin_list_sal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../Home.dart';
@@ -14,9 +15,7 @@ class MagazinList extends StatefulWidget {
 }
 
 class _MagazinListState extends State<MagazinList> {
-   late final Magazine magagins;
-
-
+  late final Magazine magagins;
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +63,43 @@ class _MagazinListState extends State<MagazinList> {
                             width: 96,
 
                             height: 96,
-
+                            child: InkWell(
+                              onTap: (){
+                                 Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) =>
+                                             MagazinSalListFarab(salnumber :"1402")));
+                              },
                             child: const Center(
                                 child: Text('1402',
                                     style: TextStyle(
                                         fontFamily: 'vazir', fontSize: 32))),
 
-                            // child: Image(image:),
+                            ),// child: Image(image:),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(125, 0, 61, 165),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            width: 96,
+                            height: 96,
+                            child: InkWell(
+                              onTap: (){
+                                 Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) =>
+                                             MagazinSalListFarab(salnumber :"1401")));
+                              },
+                              child: const Center(
+                                  child: Text('1401',
+                                      style: TextStyle(
+                                          fontFamily: 'vazir', fontSize: 36))),
+
+                              // child: Image(image:),
+                            ),
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -82,27 +111,19 @@ class _MagazinListState extends State<MagazinList> {
 
                             height: 96,
 
-                            child: const Center(
-                                child: Text('1401',
-                                    style: TextStyle(
-                                        fontFamily: 'vazir', fontSize: 36))),
-
-                            // child: Image(image:),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(125, 0, 61, 165),
-                              borderRadius: BorderRadius.circular(30),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) =>
+                                             MagazinSalListFarab(salnumber :"1400")));
+                              },
+                              child: const Center(
+                                  child: Text('1400',
+                                      style: TextStyle(
+                                          fontFamily: 'vazir', fontSize: 36))),
                             ),
-
-                            width: 96,
-
-                            height: 96,
-
-                            child: const Center(
-                                child: Text('1400',
-                                    style: TextStyle(
-                                        fontFamily: 'vazir', fontSize: 36))),
 
                             // child: Image(image:),
                           ),
@@ -128,9 +149,9 @@ class _MagazinListState extends State<MagazinList> {
                               onTap: () {
                                 Navigator.push(
                                     context,
-                                    MaterialPageRoute(
+                                    CupertinoPageRoute(
                                         builder: (context) =>
-                                            const MagazinSalListFarab()));
+                                             MagazinSalListFarab(salnumber :"1399")));
                               },
                               child: const Center(
                                   child: Text('1399',
@@ -155,10 +176,19 @@ class _MagazinListState extends State<MagazinList> {
 
                             height: 96,
 
-                            child: const Center(
-                                child: Text('1398',
-                                    style: TextStyle(
-                                        fontFamily: 'vazir', fontSize: 36))),
+                          child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) =>
+                                             MagazinSalListFarab(salnumber :"1398")));
+                              },
+                                child: const Center(
+                                  child: Text('1398',
+                                      style: TextStyle(
+                                          fontFamily: 'vazir', fontSize: 36)),
+                                ),),
 
                             // child: Image(image:),
                           ),
@@ -171,11 +201,18 @@ class _MagazinListState extends State<MagazinList> {
                             width: 96,
 
                             height: 96,
-
+child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) =>
+                                             MagazinSalListFarab(salnumber :"1397")));
+                              },
                             child: const Center(
                                 child: Text('1397',
                                     style: TextStyle(
-                                        fontFamily: 'vazir', fontSize: 36))),
+                                        fontFamily: 'vazir', fontSize: 36))),),
 
                             // child: Image(image:),
                           ),
@@ -336,4 +373,3 @@ class _MagazinListState extends State<MagazinList> {
         ));
   }
 }
-

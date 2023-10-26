@@ -231,12 +231,23 @@ class _NiroHozehFarabState extends State<NiroHozehFarab> {
                                                   TextOverflow.fade,fontSize: 12))
                                     ]),
                                 onTap: () => {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  tajdid()))
-                                    }),
+                            showDialog(
+                                context: context,
+                                builder: (context) => const AlertDialog(
+                                      title: Text(
+                                        'پروژههای نیرو گاه خورشیدی',
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      content: Text(
+                                      'پروژههای نیرو گاه خورشیدی',
+                                        textDirection: TextDirection.rtl,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 28, color: Colors.red),
+                                      ),
+                                    ))
+                            // Navigator.push(context, MaterialPageRoute(builder: (context) =>  Nirogahvideo()))
+                          },),
                           ),
                           Container(
                             width: 105,

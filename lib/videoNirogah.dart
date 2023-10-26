@@ -66,17 +66,13 @@ class _Nirogahvideo extends State<Nirogahvideo> {
                   image: AssetImage("assets/images/mockup.png"),
                   fit: BoxFit.cover,
                 )),
-                child: Container(
-                    child: _controller.value.isInitialized
-                        ? Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 200,
-                                child: VideoPlayer(_controller),
-                              ),
-                            ],
-                          )
-                        : Container()),
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: SizedBox(
+                                          width: double.infinity,
+                                          height: size.height / 3,
+                                          child: Image.asset("assets/images/lfarab.gif")),
+                ),
               ),
             ),
        

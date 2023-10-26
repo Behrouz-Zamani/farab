@@ -69,30 +69,21 @@ class _MainMoview extends State<MainMoview> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
+                // color: Color.fromARGB(255, 100, 102, 105),
                 width: double.infinity,
-                height: size.height / 3,
+                height: size.height / 3.2,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                   image: AssetImage("assets/images/mockup.png"),
                   fit: BoxFit.cover,
                 )),
-                child: Container(
-                  margin: const EdgeInsets.only(
-                      left: 16.0, top: 10.0, right: 16.0, bottom: 40.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 80,
-            
-                    // color: Colors.amber,
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: SizedBox(
+                child: SizedBox(
                           width: double.infinity,
                           height: size.height / 3,
-                          child: Image.asset("assets/images/lfarab.gif")),
-                    ),
-                  ),
-                ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(32.0),
+                            child: Image.asset("assets/images/lfarab.gif"),
+                          )),
               ),
             ),
             SizedBox(
@@ -283,7 +274,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => bahrebardari()));
+                                      builder: (context) => const bahrebardari()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
@@ -326,7 +317,7 @@ class _MainMoview extends State<MainMoview> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Hoshmandvideo()));
+                                      builder: (context) => const Hoshmandvideo()));
                             }),
                       ),
                       // ignore: avoid_unnecessary_containers
