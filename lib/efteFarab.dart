@@ -1,8 +1,10 @@
 // ignore_for_file: file_names, camel_case_types
 
-import 'package:farab/about_Farab.dart';
 import 'package:flutter/material.dart';
-import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+
 
 
 void main() {
@@ -17,19 +19,11 @@ class efteFarab extends StatefulWidget {
 }
 
 class _efteFarab extends State<efteFarab> {
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
-  }
-}
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-    static const List<String> sampleImages = [
+  int activeIndex=0;
+  final controller=CarouselController();
+  
+final urlImages = [
     'https://www.farab-co.ir/efte/01.jpg',
     'https://www.farab-co.ir/efte/02.jpg',
     'https://www.farab-co.ir/efte/03.jpg',
@@ -60,43 +54,55 @@ class MyHomePage extends StatefulWidget {
     'https://www.farab-co.ir/efte/27.jpg',
     'https://www.farab-co.ir/efte/28.jpg',
     'https://www.farab-co.ir/efte/29.jpg',
+  ];
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    backgroundColor: Color.fromARGB(255, 198, 186, 245),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CarouselSlider.builder(
+                carouselController: controller,
+                itemCount: urlImages.length,
+                itemBuilder: (context, index, realIndex) {
+                  final urlImage = urlImages[index];
+                  return buildImage(urlImage, index);
+                },
+                options: CarouselOptions(
+                    height: 550,
+                    autoPlay: true,
+                    enableInfiniteScroll: false,
+                    autoPlayAnimationDuration: Duration(seconds: 2),
+                    enlargeCenterPage: true,
+                    onPageChanged: (index, reason) =>
+                        setState(() => activeIndex = index))),
+            SizedBox(height: 12),
+           // buildIndicator()
+          ],
+        ),
+  ));
+}
+
+
+Widget buildIndicator() => AnimatedSmoothIndicator(
+        onDotClicked: animateToSlide,
+        effect: const ExpandingDotsEffect(dotWidth: 15, activeDotColor: Color.fromARGB(255, 12, 42, 66)),
+        activeIndex: activeIndex,
+        count: urlImages.length,
+      );
+
+  void animateToSlide(int index) => controller.animateToPage(index);
+}
+
+Widget buildImage(String urlImage, int index) =>
+    Image.network(urlImage, fit: BoxFit.cover);
+
+
+
+  // int activeIndex=0;
+  
+
     
 
-  ];
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-leading: IconButton(
-    icon: const Icon(Icons.arrow_back, color: Colors.white),
-    onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const AboutFarab()))),
-  
-  title: const Text('افتخارات‌‌‌ فراب',style: TextStyle(fontFamily: 'vazir'),),
-    centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 0, 61, 165),
-
-  ),
-      body:
-       SafeArea(
-         child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const SizedBox(
-                  height: 100,
-                ),
-                FanCarouselImageSlider(imagesLink: MyHomePage.sampleImages, isAssets: false,autoPlay: true,)
-              ],
-            ),
-             ),
-       ),
-    );
-  }
-}

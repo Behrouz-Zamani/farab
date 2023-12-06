@@ -20,7 +20,7 @@ class _TestApiFarabState extends State<TestApiFarab> {
   }
 
   getData() async {
-    posted = await RemoteService().getPosts();
+    posted = await RemoteService().getvideos();
     if (posted != null) {
       setState(() {
         isLoaded = true;
@@ -32,7 +32,7 @@ class _TestApiFarabState extends State<TestApiFarab> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ApiTest For Farab'),
+        title: const Text("posted?.statusCode()"),
       ),
       body: Visibility(
         visible: isLoaded,
@@ -42,7 +42,7 @@ class _TestApiFarabState extends State<TestApiFarab> {
               itemCount: posted?.length,
               itemBuilder: (context, index) {
                 return Text(
-                  posted![index].title,
+                  posted![index].name,
                   style: const TextStyle(
                       fontFamily: 'vazir', fontSize: 16, wordSpacing: 2),
                 );

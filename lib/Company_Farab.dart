@@ -222,6 +222,30 @@ class _MainPageState extends State<MainCompany> {
                           },
                         ),
                       ),
+                                                                  Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          child: Container(
+                            width: size.width,
+                            height: size.width / 5,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.asset(
+                                          'assets/images/company/abvapars.jpg')
+                                      .image,
+                                  fit: BoxFit.fill),
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const AbParsCompany()));
+                          },
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: InkWell(
@@ -338,30 +362,7 @@ class _MainPageState extends State<MainCompany> {
                           },
                         ),
                       ),
-                                            Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: InkWell(
-                          child: Container(
-                            width: size.width,
-                            height: size.width / 5,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: Image.asset(
-                                          'assets/images/company/abvapars.jpg')
-                                      .image,
-                                  fit: BoxFit.fill),
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const AbParsCompany()));
-                          },
-                        ),
-                      ),
+
                     ],
                   ),
                 ),

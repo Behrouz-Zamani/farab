@@ -1,7 +1,10 @@
 // ignore_for_file: file_names
 
 import 'package:farab/efteFarab.dart';
+import 'package:farab/views/Slider/eftekharat_slider.dart';
+import 'package:farab/views/Slider/galleryexamplecarousel.dart';
 import 'package:farab/views/history_list.dart';
+import 'package:farab/views/test_api.dart';
 import 'package:flutter/material.dart';
 import 'Company_Farab.dart';
 import 'Home.dart';
@@ -77,7 +80,10 @@ class _AboutFarabState extends State<AboutFarab> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const eftekharatFarab()));
+                                         // const EftekharatSlider()));
+                                           const  TestApiFarab()));
+//eftekharatFarab()
+                                          
                             },
                           ),
                           // Text('تاریخچه فراب'),
@@ -90,6 +96,7 @@ class _AboutFarabState extends State<AboutFarab> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
+                                      // builder: (context) =>  ImageGalleryExamplesPage(title: 'ghjgjh',)));
                                       builder: (context) => const efteFarab()));
                             },
                           ),
