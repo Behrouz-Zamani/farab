@@ -35,8 +35,8 @@ class ListVideoHost
     // };
 }
 List<ListVideoHost> listVideoHost =[
-  ListVideoHost(id: '0',name: 'صنایع ریلی',thume: 'https://www.farab.com/fa/wp-content/uploads/2019/05/IMG_9128.jpg',videourl: 'https://farab-co.ir/videos/reili1.mp4'),
-  ListVideoHost(id: '1',name: 'مسئولیت اجتماعی',thume: 'https://www.farab.com/fa/wp-content/uploads/2019/07/DJI00108.jpg',videourl: 'https://farab-co.ir/videos/exipition.mp4'),
+  ListVideoHost(id: '0',name: 'صنایع ریلی',thume: 'https://www.farab.com/fa/wp-content/uploads/2019/05/IMG_9128.jpg',videourl: 'https://app.farab-co.ir/videos/reili1.mp4'),
+  ListVideoHost(id: '1',name: 'مسئولیت اجتماعی',thume: 'https://www.farab.com/fa/wp-content/uploads/2019/07/DJI00108.jpg',videourl: 'https://app.farab-co.ir/videos/exipition.mp4'),
   
   
 

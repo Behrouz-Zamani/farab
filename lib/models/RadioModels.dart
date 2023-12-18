@@ -1,10 +1,10 @@
-class RadioModels {
-  String name;
-  String url;
-  String img;
-  String description;
+class RadioFileModel {
+  String? name;
+  String? url;
+  String? img;
+  String? description;
 
-  RadioModels({
+  RadioFileModel({
     required this.name,
     required this.url,
     required this.img,
@@ -12,62 +12,62 @@ class RadioModels {
   });
 }
 
-List<RadioModels> radiomodels = [
-  RadioModels(
+List<RadioFileModel> radiomodels = [
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',
       img: 'assets/images/daf.jpg',
       description: 'ندارد'),
-  RadioModels(
+  RadioFileModel(
       name: 'دف نوازی همکار ',
       url:
           'https://www.farab.com/fa/wp-content/uploads/2023/03/dafnavazi-mohammad-vakili-farab.mp3',

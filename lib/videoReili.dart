@@ -15,7 +15,7 @@ class _Reilvideo extends State<Reilvideo> {
 
     late CustomVideoPlayerController _customVideoPalayerController;
   Uri uri = Uri.parse(
-      'https://farab-co.ir/videos/reili1.mp4');
+      'https://app.farab-co.ir/video/reili1.mp4');
   @override
   void initState() {
     super.initState();

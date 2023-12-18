@@ -14,6 +14,6 @@ class MasoliyatModel
 }
 List<MasoliyatModel> masoliyatlist =
 [
-  MasoliyatModel(id: '1', name: 'مسئولیت اجتماعی در سریلانکا', url: 'https://www.farab-co.ir/videos/serilanka.mp4', description: 'description'),
+  MasoliyatModel(id: '1', name: 'مسئولیت اجتماعی سریلانکا', url: 'http://app.farab-co.ir/video/exipition.mp4', description: 'description'),
 
 ];

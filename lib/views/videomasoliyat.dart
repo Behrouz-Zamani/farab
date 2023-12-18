@@ -1,32 +1,33 @@
-import 'package:appinio_video_player/appinio_video_player.dart';
-import 'package:farab/models/masoliyat_video.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+  import 'package:appinio_video_player/appinio_video_player.dart';
+  import 'package:farab/models/masoliyat_video.dart';
+  import 'package:flutter/material.dart';
+  import 'package:flutter_localizations/flutter_localizations.dart';
 
-class Masoliyatvideo extends StatefulWidget {
-  const Masoliyatvideo({super.key});
+  class Masoliyatvideo extends StatefulWidget {
+    const Masoliyatvideo({super.key});
 
-  @override
-  State<Masoliyatvideo> createState() => _Reilvideo();
-}
+    @override
+    State<Masoliyatvideo> createState() => _Masoliyatvideo();
+  }
 
-class _Reilvideo extends State<Masoliyatvideo> {
-  int selected = 0;
+    class _Masoliyatvideo extends State<Masoliyatvideo> {
+   int selected = 0;
+  bool isPlaying = true;
 
-  late CustomVideoPlayerController _customVideoPalayerController;
-  Uri uri = Uri.parse('https://farab-co.ir/videos/exipition.mp4');
+    late CustomVideoPlayerController _customVideoPalayerController;
+  Uri uri = Uri.parse(
+      'https://app.farab-co.ir/video/exipition.mp4');
   @override
   void initState() {
     super.initState();
     initializeVideoPlayer();
   }
-
   @override
   void dispose() {
     _customVideoPalayerController.dispose();
     super.dispose();
-  }
-
+  } 
+  
   @override
   Widget build(BuildContext context) {
     [
@@ -41,10 +42,7 @@ class _Reilvideo extends State<Masoliyatvideo> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'تلویزیون فراب - مسئولیت اجتماعی',
-          style: TextStyle(fontSize: 14),
-        ),
+        title: const Text('تلویزیون فراب - حوزه ریلی',style: TextStyle(fontSize: 14),),
         backgroundColor: const Color.fromARGB(255, 191, 13, 62),
       ),
       body: SafeArea(
@@ -70,9 +68,10 @@ class _Reilvideo extends State<Masoliyatvideo> {
                 ),
               ),
             ),
+       
             SizedBox(
-              // color: const Color.fromARGB(255, 255, 255, 255),
-              height: size.height / 2.4,
+             // color: const Color.fromARGB(255, 255, 255, 255),
+              height: size.height / 1.8,
               child: ListView.builder(
                 itemCount: masoliyatlist.length,
                 itemBuilder: (context, indext) {
@@ -94,12 +93,13 @@ class _Reilvideo extends State<Masoliyatvideo> {
                             Row(
                               children: [
                                 InkWell(
+                                 
                                   child: Text(
                                     masoliyatlist[indext].name,
                                     style: const TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'vazir',
-                                        fontSize: 14,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -115,22 +115,9 @@ class _Reilvideo extends State<Masoliyatvideo> {
             ),
           ],
         ),
+            
       ),
 
-      //    floatingActionButton: FloatingActionButton(
-      //    backgroundColor: const Color.fromARGB(255, 254, 80, 0),
-      //    onPressed: () {
-      //      setState(() {
-      //        _controller.value.isPlaying
-      //            ? _controller.pause()
-      //            : _controller.play();
-
-      //      });
-      //    },
-      //    child: Icon(
-      //       _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-      //    ),
-      //  ),
     );
   }
 

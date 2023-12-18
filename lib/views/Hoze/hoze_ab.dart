@@ -2,6 +2,9 @@ import 'package:farab/activity_farab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import '../../models/testapi.dart';
+import 'package:farab/services/remote_service.dart';
+
 
 class HozeAbFarab extends StatefulWidget {
   const HozeAbFarab({super.key});
@@ -11,6 +14,27 @@ class HozeAbFarab extends StatefulWidget {
 }
 
 class _HozeAbFarabState extends State<HozeAbFarab> {
+
+List<Post>? postes;
+var isLoaded=false;
+
+@override
+void initState() {
+  super.initState();
+  getData();
+}
+ getData() async {
+    postes = await RemoteService().getvideos();
+    if (postes != null) {
+      setState(() {
+        isLoaded = true;
+      });
+    }
+
+ }
+
+
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -131,10 +155,11 @@ class _HozeAbFarabState extends State<HozeAbFarab> {
                                 builder: (context) => const AlertDialog(
                                       title: Text(
                                         'پروژه خاتمه یافته',
+                                        // postes[index].name,
                                         textAlign: TextAlign.center,
                                       ),
                                       content: Text(
-                                        '5',
+                                        'postes![1].name',
                                         textDirection: TextDirection.rtl,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
@@ -161,8 +186,9 @@ class _HozeAbFarabState extends State<HozeAbFarab> {
                 height: size.height / 2.4,
                 child: SingleChildScrollView(
                   child: Column(
-                    children: const [
-                      Padding(
+                    children:  [
+                      Text(postes![1].name),
+                      const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
                           'فراب در سال 1384 به حوزه نفت، گاز و پتروشیمی وارد شد و تاکنون 15 پروژه بالادستی و پایین دستی را به روش EPC اخذ نموده است. گروه فراب در توسعه میادین نفت و گاز، مجتمع‌های فراساحلی، پالایشگاه‌های نفت و گاز، واحدهای یوتیلیتی و آفسایت، مجتمع‌های پتروشیمی و صنایع وابسته، خطوط لوله، ایستگاه‌‌های تقویت فشار و تلمبه‌خانه و نیز مخازن نفت فعالیت می‎کند.',
@@ -170,7 +196,7 @@ class _HozeAbFarabState extends State<HozeAbFarab> {
                           style: TextStyle(fontSize: 14, height: 2.2),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 16,
                       ),
                       // Padding(

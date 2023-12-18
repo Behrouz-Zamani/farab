@@ -38,15 +38,16 @@ class _TestApiFarabState extends State<TestApiFarab> {
         visible: isLoaded,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ListView.builder(
-              itemCount: posted?.length,
-              itemBuilder: (context, index) {
-                return Text(
-                  posted![index].name,
-                  style: const TextStyle(
-                      fontFamily: 'vazir', fontSize: 16, wordSpacing: 2),
-                );
-              }),
+          // child: ListView.builder(
+          //     itemCount: posted?.length,
+          //     itemBuilder: (context, index) {
+          //       return Text(
+          //         posted![index].name,
+          //         style: const TextStyle(
+          //             fontFamily: 'vazir', fontSize: 16, wordSpacing: 2),
+          //       );
+          //     }),
+          child: Text(posted![1].name),
         ),
       ),
     );
