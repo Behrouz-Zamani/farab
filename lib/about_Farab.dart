@@ -1,21 +1,41 @@
 // ignore_for_file: file_names
 
 import 'package:farab/efteFarab.dart';
-import 'package:farab/views/Slider/eftekharat_slider.dart';
-import 'package:farab/views/Slider/galleryexamplecarousel.dart';
 import 'package:farab/views/history_list.dart';
 import 'package:farab/views/test_api.dart';
 import 'package:flutter/material.dart';
 import 'Company_Farab.dart';
 import 'Home.dart';
-import 'eftekharatFarab.dart';
+import 'models/chaharom.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert' as convert;
 
 class AboutFarab extends StatefulWidget {
   const AboutFarab({super.key});
   @override
   State<AboutFarab> createState() => _AboutFarabState();
 }
+
 class _AboutFarabState extends State<AboutFarab> {
+  List<Chaharom> posted = [];
+  Future getResponse() async {
+    var url = "https://farab-co.ir/api/about";
+    var value = await http.get(Uri.parse(url));
+    if (value.statusCode == 200) {
+      List jsonList = convert.jsonDecode(value.body);
+      if (jsonList.isNotEmpty) {
+        for (int i = 0; i < jsonList.length; i++) {
+          setState(() {
+            posted.add(Chaharom(
+                name: jsonList[i]["name"],
+                description: jsonList[i]["description"]));
+          });
+        }
+      }
+    }
+    return value;
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -28,8 +48,7 @@ class _AboutFarabState extends State<AboutFarab> {
                 MaterialPageRoute(builder: (context) => const homeScrean()))),
         title: const Text('درباره فراب'),
         centerTitle: true,
-                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
-
+        backgroundColor: const Color.fromARGB(255, 0, 61, 165),
       ),
       body: SafeArea(
         child: Column(
@@ -80,13 +99,9 @@ class _AboutFarabState extends State<AboutFarab> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                         // const EftekharatSlider()));
-                                           const  TestApiFarab()));
-//eftekharatFarab()
-                                          
+                                          const TestApiFarab()));
                             },
                           ),
-                          // Text('تاریخچه فراب'),
                           InkWell(
                             child: const Text(
                               'افتخارات',
@@ -96,7 +111,6 @@ class _AboutFarabState extends State<AboutFarab> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      // builder: (context) =>  ImageGalleryExamplesPage(title: 'ghjgjh',)));
                                       builder: (context) => const efteFarab()));
                             },
                           ),
@@ -130,32 +144,39 @@ class _AboutFarabState extends State<AboutFarab> {
                   ),
                 )),
             Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 255, 253, 232),
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40))),
-                width: double.infinity,
-                height: size.height / 2.8,
-                //color: Colors.yellow,
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: SingleChildScrollView(
-                      child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'شرکت فراب، به عنوان پیمانکار اصلی احداث نیروگاه‌های آبی در ایران، فعالیت خود را از سال 1371 آغاز نمود. موفقیت در کسب و کار محوری، فراب را به گسترش محدوده فعالیت‌هایش ترغیب نمود و این شرکت گام به گام در پروژه‌های نفت، گاز و پتروشیمی، نیروگاه حرارتی، صنایع ریلی و بهره‌برداری و نگه‌داری وارد شد. اکنون، فراب یکی از پیمانکاران پیشرو در ایران با سابقه‌ای قابل اطمینان از نظر کیفیت، کارایی، اثربخشی و ایمنی در اجرای پروژه‌های زیربنایی است.',
-                      textDirection: TextDirection.rtl,
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'vazir',
-                          height: 2.3,
-                          color: Colors.black),
-                    ),
-                  )),
-                ),
+              child: FutureBuilder(
+                builder: (context, snapshot) {
+                  return snapshot.hasData
+                      ? Container(
+                          decoration: const BoxDecoration(
+                              color: Color.fromARGB(255, 255, 253, 232),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(40),
+                                  topRight: Radius.circular(40))),
+                          width: double.infinity,
+                          height: size.height / 2.8,
+                          //color: Colors.yellow,
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: SingleChildScrollView(
+                                child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                posted[4].description,
+                                textDirection: TextDirection.rtl,
+                                textAlign: TextAlign.justify,
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    fontFamily: 'vazir',
+                                    height: 2.3,
+                                    color: Colors.black),
+                              ),
+                            )),
+                          ),
+                        )
+                      : const Center(child: CircularProgressIndicator());
+                },
+                future: getResponse(),
               ),
             )
           ],

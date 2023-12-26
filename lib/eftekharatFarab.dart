@@ -1,9 +1,7 @@
 
 // ignore_for_file: camel_case_types
 
-import 'package:farab/about_Farab.dart';
 import 'package:flutter/material.dart';
-import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -62,7 +60,7 @@ class _eftekharatFarabState extends State<eftekharatFarab> {
  @override
 Widget build(BuildContext context) {
   return Scaffold(
-    backgroundColor: Color.fromARGB(255, 198, 186, 245),
+    backgroundColor: const Color.fromARGB(255, 198, 186, 245),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -105,8 +103,6 @@ Widget buildImage(String urlImage, int index) =>
     Image.network(urlImage, fit: BoxFit.cover);
 
 
-
-  // int activeIndex=0;
   
 
     

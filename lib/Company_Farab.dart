@@ -10,9 +10,13 @@ import 'package:farab/sarmaye.dart';
 import 'package:farab/tajdid.dart';
 import 'package:farab/tajhizat.dart';
 import 'package:farab/views/Company/abpars_company.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert' as convert;
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+
+import 'models/CopmanyModel.dart';
 // import 'niro_hozeh.dart';
 
 void main() {
@@ -42,6 +46,31 @@ class MainCompany extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainCompany> {
+  List<CompanyModel> company = [];
+
+  Future getResponse() async {
+    var url = "https://farab-co.ir/api/company";
+    var value = await http.get(Uri.parse(url));
+
+    if (value.statusCode == 200) {
+      List jsonData = convert.jsonDecode(value.body);
+      if (jsonData.length > 0) {
+        for (int i = 0; i < jsonData.length; i++) {
+          company.add(CompanyModel(
+              name: jsonData[i]["name"],
+              img: jsonData[i]["img"],
+              detail: jsonData[i]["detail"],
+              address: jsonData[i]["address"],
+              tel: jsonData[i]["tel"],
+              fax: jsonData[i]["fax"],
+              linked: jsonData[i]["linked"],
+              facebook: jsonData[i]["facebook"]));
+        }
+      }
+    }
+    return value;
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -56,8 +85,7 @@ class _MainPageState extends State<MainCompany> {
           style: TextStyle(fontFamily: 'vazir'),
         ),
         centerTitle: true,
-                  backgroundColor: const Color.fromARGB(255, 0, 61, 165),
-
+        backgroundColor: const Color.fromARGB(255, 0, 61, 165),
       ),
       body: SafeArea(
           child: Column(
@@ -222,7 +250,7 @@ class _MainPageState extends State<MainCompany> {
                           },
                         ),
                       ),
-                                                                  Padding(
+                      Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: InkWell(
                           child: Container(
@@ -357,12 +385,10 @@ class _MainPageState extends State<MainCompany> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ProjectPro()));
+                                    builder: (context) => const ProjectPro()));
                           },
                         ),
                       ),
-
                     ],
                   ),
                 ),

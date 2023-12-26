@@ -9,14 +9,18 @@ var id;
 
   RxBool loading = false.obs;
 
-  Rx<RadioFileModel> radioFileModel = RadioFileModel().obs;
 
   RxList<RadioFileModel> radiofileList = RxList();
 
   getRadioFile()
-  {
+  async {
     loading.value=true;
     var response = await DioService().getmethod("https://app.farab-co.ir/radio/");
+
+    if(response.statuCode==200){
+        for(var element in response.data["name"]){
+    }
   }
 
+}
 }

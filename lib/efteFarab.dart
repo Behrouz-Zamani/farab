@@ -58,7 +58,7 @@ final urlImages = [
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    backgroundColor: Color.fromARGB(255, 198, 186, 245),
+    backgroundColor: const Color.fromARGB(255, 198, 186, 245),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -74,11 +74,11 @@ Widget build(BuildContext context) {
                     height: 550,
                     autoPlay: true,
                     enableInfiniteScroll: false,
-                    autoPlayAnimationDuration: Duration(seconds: 2),
+                    autoPlayAnimationDuration: const Duration(seconds: 2),
                     enlargeCenterPage: true,
                     onPageChanged: (index, reason) =>
                         setState(() => activeIndex = index))),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
            // buildIndicator()
           ],
         ),

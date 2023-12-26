@@ -10,6 +10,8 @@ class RadioFileModel {
     required this.img,
     required this.description,
   });
+
+  // static RadioFileModel fromJson(element) {}
 }
 
 List<RadioFileModel> radiomodels = [

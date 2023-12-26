@@ -3,7 +3,6 @@ import 'package:farab/MultimediaFarab.dart';
 import 'package:farab/views/Magazine/magazine_list.dart';
 import 'package:farab/views/Magazine/pdf_reader.dart';
 import 'package:flutter/material.dart';
-
 import 'about_Farab.dart';
 import 'activity_farab.dart';
 
@@ -67,7 +66,6 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                       shape: BoxShape.circle,
                                       color:
                                           Color.fromARGB(255, 253, 250, 250)),
-                                  //child:  Image.asset("assets/images/niro.jpg"),
                                   child: Image(
                                       image: Image.asset("assets/images/a5.png")
                                           .image),
@@ -116,7 +114,6 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                       shape: BoxShape.circle,
                                       color:
                                           Color.fromARGB(255, 253, 250, 250)),
-                                  //child:  Image.asset("assets/images/niro.jpg"),
                                   child: Image(
                                       image: Image.asset("assets/images/a2.png")
                                           .image),
@@ -165,7 +162,6 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                       shape: BoxShape.circle,
                                       color:
                                           Color.fromARGB(255, 253, 250, 250)),
-                                  //child:  Image.asset("assets/images/niro.jpg"),
                                   child: Image(
                                       image: Image.asset("assets/images/a6.png")
                                           .image),
@@ -214,7 +210,6 @@ class _homeScreanPageState extends State<homeScreanPage> {
                                       shape: BoxShape.circle,
                                       color:
                                           Color.fromARGB(255, 253, 250, 250)),
-                                  //child:  Image.asset("assets/images/niro.jpg"),
                                   child: Image(
                                       image: Image.asset("assets/images/a3.png")
                                           .image),
